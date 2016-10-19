@@ -1,0 +1,30 @@
+analyticsKey = "VFrFyZj4WjHK96OwBAlTECvAQhC6jQDS"
+contactEmail = "info@anvilabs.co"
+hostname = "https://anvilabs.co"
+mailchimpActionUrl = "//yenbekbay.us11.list-manage.com/subscribe/post?u=983b78ee49621c4871e7a16ea&amp;id=0da8d3b335"
+
+
+[[menuLinks]]
+  to = "/work/"
+  title = "Работы"
+
+[[menuLinks]]
+  to = "/about/"
+  title = "О нас"
+
+[[menuLinks]]
+  to = "/contact/"
+  title = "Контакты"
+
+
+[[footerLinks]]
+  href = "https://twitter.com/anvilabs"
+  title = "Twitter"
+
+[[footerLinks]]
+  href = "https://facebook.com/anvilabs"
+  title = "Facebook"
+
+[[footerLinks]]
+  href = "https://github.com/anvilabs"
+  title = "Github"

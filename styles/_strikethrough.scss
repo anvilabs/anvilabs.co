@@ -1,0 +1,33 @@
+.strikethrough {
+  span {
+    position: relative;
+  }
+
+  span::after {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 0;
+    height: 3px;
+    margin: 0;
+    content: "";
+    background-color: $black-30;
+    transition: width 0.2s ease;
+  }
+
+  &.active span::after {
+    width: 100%;
+  }
+
+  @media #{$breakpoint-not-small} {
+    &.dim:hover,
+    &.dim:focus,
+    &.dim:active {
+      opacity: 1;
+    }
+
+    &:hover span::after {
+      width: 100%;
+    }
+  }
+}

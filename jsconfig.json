@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    ".vscode/",
+    "flow-typed/",
+    "node_modules/"
+  ]
+}

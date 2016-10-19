@@ -1,0 +1,12 @@
+body {
+  font-family: "roboto mono", monospace;
+}
+
+em {
+  font-style: normal;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, $black-10 50%, $black-10 100%);
+}
+
+hr {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><circle cx='5' cy='5' r='1' /></svg>") repeat;
+}

@@ -1,0 +1,90 @@
+{
+  "name": "anvilabs.co",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Website for Anvilabs",
+  "repository": "anvilabs/anvilabs.co",
+  "homepage": "https://github.com/anvilabs/anvilabs.co",
+  "license": "MIT",
+  "author": {
+    "name": "Ayan Yenbekbay",
+    "email": "ayan.yenb@gmail.com",
+    "url": "http://yenbekbay.me"
+  },
+  "engines": {
+    "node": ">=6.0",
+    "npm": ">=3.0"
+  },
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "rimraf public && gatsby build && gulp",
+    "test": "npm-run-all --parallel typecheck lint:js lint:css",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint --fix .",
+    "lint:css": "stylelint styles/**/*.scss",
+    "lint:css:fix": "stylefmt R styles/",
+    "typecheck": "flow check .",
+    "commitmsg": "validate-commit-msg",
+    "prepush": "npm test"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types"
+    }
+  },
+  "dependencies": {
+    "autobind-decorator": "^1.3.4",
+    "axios": "^0.15.1",
+    "classnames": "2.2.5",
+    "inline-style-prefixer": "^2.0.4",
+    "lodash": "^4.15.0",
+    "raf": "^3.3.0",
+    "react": "^15.3.2",
+    "react-formal": "^0.22.0",
+    "react-helmet": "3.1.0",
+    "react-router": "^2.8.1",
+    "sitemap": "^1.8.1",
+    "smoothscroll": "^0.2.2",
+    "tachyons-sass": "^4.5.5",
+    "yup": "^0.21.2"
+  },
+  "devDependencies": {
+    "@types/autobind-decorator": "^1.3.2",
+    "@types/axios": "^0.9.32",
+    "@types/classnames": "^0.0.31",
+    "@types/fs-extra": "^0.0.33",
+    "@types/react": "^0.14.41",
+    "@types/react-helmet": "^0.0.24",
+    "@types/react-router": "^2.0.38",
+    "babel-cli": "^6.14.0",
+    "babel-plugin-flow-react-proptypes": "^0.14.0",
+    "babel-plugin-lodash": "^3.2.8",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.14.0",
+    "chokidar": "^1.6.1",
+    "commitizen": "^2.8.6",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.5.0",
+    "eslint-config-anvilabs": "^1.4.0",
+    "flow-bin": "^0.33.0",
+    "gatsby": "^0.12.12",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-uncss": "^1.0.6",
+    "husky": "^0.11.9",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-svgo": "^5.2.0",
+    "npm-run-all": "^3.1.1",
+    "rimraf": "^2.5.4",
+    "stylefmt": "^4.3.1",
+    "stylelint": "^7.4.2",
+    "stylelint-config-primer": "^1.3.0",
+    "validate-commit-msg": "^2.8.2"
+  }
+}
