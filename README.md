@@ -1,20 +1,25 @@
 # anvilabs.co
-Website for Anvilabs
 
-# Installation
+[![Build Status](https://img.shields.io/travis/anvilabs/anvilabs.co.svg)](https://travis-ci.org/anvilabs/anvilabs.co)
+[![Dependency Status](https://img.shields.io/david/anvilabs/anvilabs.co.svg)](https://david-dm.org/anvilabs/anvilabs.co)
+[![devDependency Status](https://img.shields.io/david/dev/anvilabs/anvilabs.co.svg)](https://david-dm.org/anvilabs/anvilabs.co?type=dev)
+[![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli)
 
-Project requires node 6.2.1 and npm 3.9.3. The best way to manage node versions
-I found is [n](https://github.com/tj/n).
+[Website for Anvilabs](https://anvilabs.co).
 
-Installation.
+## Setup
 
-    $ sudo npm install -g n
-    $ n 6.2.1
+```bash
+git clone https://github.com/anvilabs/anvilabs.co.git
+cd anvilabs.co
+yarn # or npm install
+yarn start # or npm start
+```
 
-Type `n` to prompt selection of an installed node.
-Use the up / down arrow to navigate, and press enter or the right arrow to select, or ^C to cancel:
+If you don't have *[yarn](https://yarnpkg.com/)* installed (and want to use it), follow [these instructions](https://yarnpkg.com/en/docs/install).
 
-    $ n
+## License
 
-    ο 6.2.1
-      4.4.3
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+
+[CC-BY-4.0 License](./LICENSE) © Anvilabs LLC 
