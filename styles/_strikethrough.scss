@@ -19,15 +19,17 @@
     width: 100%;
   }
 
-  @media #{$breakpoint-not-small} {
-    &.dim:hover,
-    &.dim:focus,
-    &.dim:active {
-      opacity: 1;
-    }
+  @media (pointer: fine) {
+    @media #{$breakpoint-not-small} {
+      &.dim:hover,
+      &.dim:focus,
+      &.dim:active {
+        opacity: 1;
+      }
 
-    &:hover span::after {
-      width: 100%;
+      &:hover span::after {
+        width: 100%;
+      }
     }
   }
 }
