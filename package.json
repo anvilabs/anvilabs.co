@@ -16,6 +16,7 @@
     "npm": ">=3.0"
   },
   "scripts": {
+    "deploy": "npm run build && netlify deploy",
     "start": "gatsby develop",
     "build": "rimraf public && gatsby build && gulp",
     "test": "npm-run-all --parallel typecheck lint:js lint:css",
@@ -81,6 +82,7 @@
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^5.2.0",
+    "netlify": "^1.1.0",
     "npm-run-all": "^3.1.1",
     "rimraf": "^2.5.4",
     "stylefmt": "^4.3.1",

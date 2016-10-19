@@ -1098,7 +1098,7 @@ balanced-match@~0.1.0, balanced-match@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.1.0.tgz#b504bd05869b39259dd0c5efc35d843176dccc4a"
 
-base64-js@^1.0.2:
+base64-js@^1.0.2, base64-js@>=0.0.4:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.0.tgz#a39992d723584811982be5e290bb6a53d86700f1"
 
@@ -3457,7 +3457,7 @@ glob@^6.0.1, glob@~6.0.1:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.0.6:
+glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.0.6, glob@>=3.2.6:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
   dependencies:
@@ -3612,7 +3612,7 @@ got@^5.0.0:
     unzip-response "^1.0.0"
     url-parse-lax "^1.0.0"
 
-graceful-fs@^3.0.0:
+graceful-fs@^3.0.0, graceful-fs@^3.0.4:
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-3.0.11.tgz#7613c778a1afea62f25c630a086d7f3acbbdd818"
   dependencies:
@@ -5360,6 +5360,16 @@ ncp@^2.0.0:
 negotiator@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+netlify:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/netlify/-/netlify-1.1.0.tgz#03962ed8793c993abf9f542c5a90ba9189948e14"
+  dependencies:
+    base64-js ">=0.0.4"
+    glob ">=3.2.6"
+    graceful-fs "^3.0.4"
+    semaphore "^1.0.5"
+    when "^3.7.5"
 
 netrc@^0.1.3:
   version "0.1.4"
@@ -7263,6 +7273,10 @@ seek-bzip@^1.0.3:
   resolved "https://registry.yarnpkg.com/seek-bzip/-/seek-bzip-1.0.5.tgz#cfe917cb3d274bcffac792758af53173eb1fabdc"
   dependencies:
     commander "~2.8.1"
+
+semaphore@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/semaphore/-/semaphore-1.0.5.tgz#b492576e66af193db95d65e25ec53f5f19798d60"
 
 semver-regex@^1.0.0, semver-regex@1.0.0:
   version "1.0.0"
