@@ -27,7 +27,7 @@ const WorkList = ({ works, compact }: {
         className={cx(
           'w-100 flex flex-wrap content-start',
           compact ? 'w-30-l' : 'justify-between-l',
-          (!compact && idx < works.length - 1) && 'mb6',
+          idx < works.length - 1 && (compact ? 'mb6 mb0-l' : 'mb6'),
         )}
       >
         <div
