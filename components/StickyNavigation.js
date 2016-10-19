@@ -197,8 +197,9 @@ export default class StickyNavigation extends Component {
           style={{
             maxHeight: mobileMenuVisible ? '100%' : 0,
             opacity: mobileMenuVisible ? 1 : 0,
+            visibility: mobileMenuVisible ? 'visible' : 'hidden',
             transform: `translateY(${mobileMenuVisible ? '0' : '-2em'})`,
-            transition: 'transform 0.2s ease, opacity 0.2s ease',
+            transition: 'transform 0.2s ease, opacity 0.2s ease, visibility 0s',
           }}
         >
           {menuLinks.map((
