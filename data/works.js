@@ -14,7 +14,7 @@ const works = [{
   subtitle: 'Независимая социальная сеть для политических выборов. Наше первое приложение написанное на React Native.',
   links: [{
     title: 'Скачать с App Store',
-    href: 'http://apple.co/1PqQ5tt',
+    href: 'http://apple.co/2ekJnQh',
   }, {
     title: 'Скачать с Google Play',
     href: 'http://bit.ly/2ePNfIc',
