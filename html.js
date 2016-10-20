@@ -48,6 +48,7 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <link rel="manifest" href={require('!file?name=/[hash].[ext]!./static/manifest.json')} />
         <link rel="mask-icon" href={require('./static/safari-pinned-tab.svg')} color="#ba4519" />
         <link rel="shortcut icon" href={require('!file?name=/[hash].[ext]!./static/favicon.ico')} />
+        <link rel="alternate" href={`${hostname}/feed.xml`} type="application/rss+xml" title="Блог компании Anvilabs" />
         <meta name="apple-mobile-web-app-title" content="Anvilabs" />
         <meta name="application-name" content="Anvilabs" />
         <meta name="msapplication-config" content={require('!file?name=/[hash].[ext]!./static/browserconfig.xml')} />
