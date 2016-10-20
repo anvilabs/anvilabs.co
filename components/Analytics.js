@@ -22,14 +22,13 @@ const Analytics = (
   `;
   /* eslint-enable max-len */
 
-  /* eslint-disable react/no-danger */
   return (
     <script
       type="text/javascript"
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: snippet }}
     />
   );
-  /* eslint-enable react/no-danger */
 };
 
 export default Analytics;

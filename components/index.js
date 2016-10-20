@@ -9,6 +9,7 @@ import PageHelmet from './PageHelmet';
 import Separator from './Separator';
 import StickyNavigation from './StickyNavigation';
 import TeamList from './TeamList';
+import WebFonts from './WebFonts';
 import WorkList from './WorkList';
 
 export {
@@ -21,5 +22,6 @@ export {
   Separator,
   StickyNavigation,
   TeamList,
+  WebFonts,
   WorkList,
 };

@@ -4,7 +4,7 @@ import { config } from 'config';
 import Helmet from 'react-helmet';
 import React from 'react';
 
-import { Analytics } from './components';
+import { Analytics, WebFonts } from './components';
 
 const BUILD_TIME = new Date().getTime();
 
@@ -38,8 +38,6 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <meta httpEquiv="Cache-Control" content="private" />
         {head.title.toComponent()}
         {head.meta.toComponent()}
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&amp;subset=cyrillic" />
         {css}
 
         <link rel="apple-touch-icon" sizes="180x180" href={require('./static/apple-touch-icon.png')} />
@@ -70,6 +68,13 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
           dangerouslySetInnerHTML={{ __html: body }}
         />
         <Analytics writeKey={config.analyticsKey} />
+        <WebFonts
+          config={{
+            google: {
+              families: ['Roboto+Mono:300,400:cyrillic'],
+            },
+          }}
+        />
         <script src={`/bundle.js?t=${BUILD_TIME}`} />
       </body>
     </html>
