@@ -3,8 +3,16 @@
 import smoothScroll from 'smoothscroll';
 
 const onRouteUpdate = (location: Object) => {
-  if (location.action === 'PUSH') {
-    smoothScroll(document.querySelector('#content'));
+  if (location.hash) {
+    setTimeout(() => {
+      smoothScroll(document.querySelector(`${location.hash}`));
+    }, 0);
+  } else if (
+    location.action === 'PUSH' && !location.pathname.startsWith('/blog')
+  ) {
+    setTimeout(() => {
+      smoothScroll(document.querySelector('#content'));
+    }, 0);
   }
 };
 
