@@ -10,6 +10,8 @@ type FooterLink = {
 };
 
 type Config = {
+  siteTitle: string,
+  siteDescription: string,
   analyticsKey: string,
   contactEmail: string,
   hostname: string,
@@ -18,6 +20,8 @@ type Config = {
   footerLinks: Array<FooterLink>,
 };
 const emptyConfig: Config = {
+  siteTitle: '',
+  siteDescription: '',
   analyticsKey: '',
   contactEmail: '',
   hostname: '',

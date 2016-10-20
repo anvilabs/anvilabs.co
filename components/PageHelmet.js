@@ -6,7 +6,7 @@ import _ from 'lodash/fp';
 import Helmet from 'react-helmet';
 import React, { PropTypes } from 'react';
 
-const { hostname } = config;
+const { siteTitle, siteDescription, hostname } = config;
 
 const PageHelmet = (
   {
@@ -67,9 +67,8 @@ const PageHelmet = (
 };
 
 PageHelmet.defaultProps = {
-  title: 'Кузница мобильных решений | Anvilabs',
-  // eslint-disable-next-line max-len
-  description: 'Anvilabs - Проектируем и разрабатываем инновационные мобильные и веб приложения. (Алматы, Казахстан)',
+  title: siteTitle,
+  description: siteDescription,
 };
 PageHelmet.contextTypes = {
   location: PropTypes.object.isRequired,
