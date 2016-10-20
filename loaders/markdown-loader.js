@@ -46,7 +46,8 @@ const md = markdownIt({
     permalink: true,
     permalinkBefore: true,
     permalinkSymbol: '§',
-  });
+  })
+  .use(require('markdown-it-attrs'));
 
 export default function (content: string) {
   this.cacheable();

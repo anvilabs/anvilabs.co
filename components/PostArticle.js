@@ -12,6 +12,7 @@ const PostArticle = ({ post, full }: {
   <article
     itemScope
     itemType="http://schema.org/Article"
+    className="post"
   >
     <h1 itemProp="name" className="f4 f3-l ma0">
       {post.path ? (
@@ -23,25 +24,32 @@ const PostArticle = ({ post, full }: {
         </Link>
       ) : post.title}
     </h1>
-    <p className="mb4 gray">
+    <p className="mb4 gray f6">
       <time dateTime={post.date}>{post.formattedDate}</time>
+      {' // '}
+      <a
+        href={`https://github.com/${post.author}/`}
+        className="link red dim"
+      >
+        @{post.author}
+      </a>
       {' // '}
       {post.numberOfWords}
       {' // '}
       время чтения: {post.readingTime}
     </p>
-    {full ? (
+    <div>
       <div
         itemProp="articleBody"
         // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: post.body }}
+        dangerouslySetInnerHTML={{
+          __html: full ? post.body : post.excerpt,
+        }}
       />
-    ) : (
-      <div itemProp="articleBody">
-        {`${post.description} `}
+      {!full && (
         <Link to={post.path} className="link red dim">Читать дальше ➞</Link>
-      </div>
-    )}
+      )}
+    </div>
   </article>
 );
 

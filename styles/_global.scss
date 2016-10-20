@@ -10,3 +10,12 @@ strong {
 hr {
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><circle cx='5' cy='5' r='1' /></svg>") repeat;
 }
+
+a {
+  color: inherit;
+}
+
+.post p,
+.post ul {
+  margin-bottom: 2rem;
+}

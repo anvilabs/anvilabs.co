@@ -72,7 +72,7 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <WebFonts
           config={{
             google: {
-              families: ['Roboto+Mono:300,400:cyrillic'],
+              families: ['Roboto+Mono:300,400,300i,400i:cyrillic'],
             },
           }}
         />
