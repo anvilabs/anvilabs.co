@@ -1,6 +1,6 @@
 /* @flow */
 
-import smoothScroll from 'smoothScroll';
+import smoothScroll from 'smoothscroll';
 
 const onRouteUpdate = (location: Object) => {
   if (location.action === 'PUSH') {
