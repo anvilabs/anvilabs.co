@@ -12,6 +12,7 @@ import raf from 'raf';
 import React, { Component } from 'react';
 
 import NavigationLink from './NavigationLink';
+import ResponsiveImage from './ResponsiveImage';
 
 const { menuLinks } = config;
 
@@ -169,8 +170,12 @@ export default class StickyNavigation extends Component {
             to="/"
             className="link dim"
           >
-            <img
-              src={require('../static/logo.png')}
+            <ResponsiveImage
+              srcSet={[
+                require('../static/logo.png'),
+                require('../static/logo@2x.png'),
+                require('../static/logo@3x.png'),
+              ]}
               alt="Anvilabs Logo"
               className="dib w-auto"
               style={{ height: '3rem' }}
