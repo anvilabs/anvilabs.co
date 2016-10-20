@@ -13,7 +13,6 @@ import {
 } from '../components';
 import works from '../data/works';
 
-/* eslint-disable max-len */
 const Homepage = (): React$Element<any> => (
   <main>
     <PageHelmet mixpanelTitle="Home" />
@@ -31,6 +30,5 @@ const Homepage = (): React$Element<any> => (
     <PageFooter />
   </main>
 );
-/* eslint-enable max-len */
 
 export default Homepage;

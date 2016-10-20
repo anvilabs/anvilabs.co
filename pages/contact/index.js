@@ -11,7 +11,6 @@ import {
   Separator,
 } from '../../components';
 
-/* eslint-disable max-len */
 const ContactPage = (): React$Element<any> => (
   <main>
     <PageHelmet mixpanelTitle="Contact" />
@@ -25,6 +24,5 @@ const ContactPage = (): React$Element<any> => (
     <PageFooter />
   </main>
 );
-/* eslint-enable max-len */
 
 export default ContactPage;

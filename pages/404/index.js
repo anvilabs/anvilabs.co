@@ -10,7 +10,6 @@ import {
   Separator,
 } from '../../components';
 
-/* eslint-disable max-len */
 const NotFoundPage = (): React$Element<any> => (
   <main>
     <PageHelmet
@@ -32,6 +31,5 @@ const NotFoundPage = (): React$Element<any> => (
     <PageFooter />
   </main>
 );
-/* eslint-enable max-len */
 
 export default NotFoundPage;
