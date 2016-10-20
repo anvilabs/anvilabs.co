@@ -7,6 +7,7 @@ import React from 'react';
 
 import { Analytics, WebFonts } from './components';
 
+const { hostname } = config;
 const BUILD_TIME = new Date().getTime();
 
 const Html = ({ body }: { body: string }): React$Element<any> => {
@@ -44,21 +45,21 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <link rel="apple-touch-icon" sizes="180x180" href={require('./static/apple-touch-icon.png')} />
         <link rel="icon" type="image/png" href={require('./static/favicon-32x32.png')} sizes="32x32" />
         <link rel="icon" type="image/png" href={require('./static/favicon-16x16.png')} sizes="16x16" />
-        <link rel="manifest" href={require('!file?name=[hash].[ext]!./static/manifest.json')} />
+        <link rel="manifest" href={require('!file?name=/[hash].[ext]!./static/manifest.json')} />
         <link rel="mask-icon" href={require('./static/safari-pinned-tab.svg')} color="#ba4519" />
-        <link rel="shortcut icon" href={require('!file?name=[hash].[ext]!./static/favicon.ico')} />
+        <link rel="shortcut icon" href={require('!file?name=/[hash].[ext]!./static/favicon.ico')} />
         <meta name="apple-mobile-web-app-title" content="Anvilabs" />
         <meta name="application-name" content="Anvilabs" />
-        <meta name="msapplication-config" content={require('!file?name=[hash].[ext]!./static/browserconfig.xml')} />
+        <meta name="msapplication-config" content={require('!file?name=/[hash].[ext]!./static/browserconfig.xml')} />
         <meta name="theme-color" content="#ffffff" />
 
         <meta property="og:site_name" content="Anvilabs" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={require('./static/og-image.jpg')} />
+        <meta property="og:image" content={`${hostname}${((require('./static/og-image.jpg'): any): string)}`} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@anvilabs" />
-        <meta name="twitter:image" content={require('./static/twitter-image.jpg')} />
+        <meta name="twitter:image" content={`${hostname}${((require('./static/twitter-image.jpg'): any): string)}`} />
 
         {head.link.toComponent()}
       </head>
