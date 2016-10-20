@@ -24,7 +24,7 @@ const PostArticle = ({ post, full }: {
       ) : post.title}
     </h1>
     <p className="mb4 gray">
-      <time dateTime={post.isoDate}>{post.formattedDate}</time>
+      <time dateTime={post.date}>{post.formattedDate}</time>
       {' // '}
       {post.numberOfWords}
       {' // '}

@@ -29,7 +29,7 @@ const BlogPage = ({ route }: {
       <Headroom><TopNavigation /></Headroom>
       <ContentContainer className="mw7-l">
         {blogPosts.map((post: BlogPost, idx: number) => (
-          <div key={post.isoDate}>
+          <div key={post.date}>
             <PostArticle post={post} full={false} />
             {idx < blogPosts.length - 1 && <Separator className="pv5" />}
           </div>

@@ -58,13 +58,11 @@ export default function (content: string) {
     words: numberOfWords,
   } = readingTime(striptags(body));
   const { description, date } = meta.attributes;
-  const momentDate = moment(date);
 
   const result = {
     ...meta.attributes,
     description: description || excerptHtml(body, { pruneLength: 250 }),
-    formattedDate: momentDate.format('D MMMM YYYY г.'),
-    isoDate: momentDate.toISOString(),
+    formattedDate: moment(date).format('D MMMM YYYY г.'),
     readingTime: moment(timeToRead)
       .from(0, true)
       .replace('несколько секунд', 'меньше минуты'),

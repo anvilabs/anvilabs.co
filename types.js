@@ -22,9 +22,11 @@ export type BlogPost = {
   title: string,
   body: string,
   description: string,
+  author: string,
   formattedDate: string,
-  isoDate: string,
+  date: string,
   readingTime: string,
   numberOfWords: string,
   path?: string,
+  requirePath?: string,
 };
