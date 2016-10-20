@@ -28,7 +28,7 @@ const PageHeader = ({ title, subtitle }: {
 );
 
 PageHeader.defaultProps = {
-  title: <span>Кузница<br /><em>мобильных</em><br />решений.</span>,
+  title: <span>Кузница<br /><strong>мобильных</strong><br />решений.</span>,
   // eslint-disable-next-line max-len
   subtitle: 'Проектируем и разрабатываем инновационные мобильные и веб приложения.',
 };

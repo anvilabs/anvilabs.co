@@ -2,8 +2,8 @@ body {
   font-family: "roboto mono", consolas, monaco, monospace;
 }
 
-em {
-  font-style: normal;
+strong {
+  font-weight: inherit;
   background: linear-gradient(to bottom, transparent 0%, transparent 50%, $black-10 50%, $black-10 100%);
 }
 
