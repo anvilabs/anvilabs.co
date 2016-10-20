@@ -18,7 +18,7 @@ import type { BlogPost } from './types';
 const config = parseToml(
   String(fs.readFileSync(path.join(__dirname, '/config.toml'))),
 );
-const { hostname } = config;
+const { siteTitle, siteDescription, hostname } = config;
 
 const generateSitemapUrl = (page: mixed): ?Object => {
   /* eslint-disable fp/no-let, fp/no-mutation */

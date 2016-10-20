@@ -11,7 +11,7 @@ const PageHelmet = (
   {
     title,
     mixpanelTitle,
-    description: rawDescription,
+    description,
   }: {
     title?: string,
     mixpanelTitle: string,
