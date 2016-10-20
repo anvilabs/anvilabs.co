@@ -34,7 +34,7 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
     >
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="initial-scale=1.0" />
         <meta httpEquiv="Cache-Control" content="private" />
         {head.title.toComponent()}
         {head.meta.toComponent()}
