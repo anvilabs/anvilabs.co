@@ -13,6 +13,10 @@ mailchimpActionUrl = "//yenbekbay.us11.list-manage.com/subscribe/post?u=983b78ee
   title = "О нас"
 
 [[menuLinks]]
+  to = "/blog/"
+  title = "Блог"
+
+[[menuLinks]]
   to = "/contact/"
   title = "Контакты"
 
