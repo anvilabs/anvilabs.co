@@ -34,7 +34,7 @@
       "path": "cz-conventional-changelog"
     },
     "validate-commit-msg": {
-      "types": "conventional-commit-types"
+      "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "chore", "revert", "blog"]
     }
   },
   "dependencies": {
