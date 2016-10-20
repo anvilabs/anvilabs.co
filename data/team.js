@@ -1,6 +1,8 @@
 /* @flow */
 
-const team = [{
+import type { TeamMember } from '../types';
+
+const team: Array<TeamMember> = [{
   name: 'Аян Енбекбай',
   role: 'Сооснователь, CEO',
   photoUrl: '/about/ayan.jpg',

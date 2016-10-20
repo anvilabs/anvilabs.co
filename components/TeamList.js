@@ -3,16 +3,7 @@
 import React from 'react';
 
 import ResponsiveImage, { srcSetFromImageUrl } from './ResponsiveImage';
-
-type TeamMember = {
-  name: string,
-  role: string,
-  photoUrl: string,
-  links?: Array<{
-    title: string,
-    href: string,
-  }>,
-};
+import type { TeamMember } from '../types';
 
 const TeamList = ({ team }: {
   team: Array<TeamMember>,

@@ -4,16 +4,7 @@ import cx from 'classnames';
 import React from 'react';
 
 import ResponsiveImage, { srcSetFromImageUrl } from './ResponsiveImage';
-
-type Work = {
-  title: string,
-  subtitle: string,
-  links?: Array<{
-    title: string,
-    href: string,
-  }>,
-  imageUrl: string,
-};
+import type { Work } from '../types';
 
 const WorkList = ({ works, compact }: {
   works: Array<Work>,
