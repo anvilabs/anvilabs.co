@@ -1,6 +1,5 @@
 /* @flow */
 
-import _ from 'lodash/fp';
 import Headroom from 'react-headroom';
 import React from 'react';
 
@@ -12,23 +11,13 @@ import {
   Separator,
   TopNavigation,
 } from '../../components';
+import { blogPostsFromPages } from '../../utils';
 import type { BlogPost } from '../../types';
 
 const BlogPage = ({ route }: {
   route: { pages: Array<Object> },
 }): React$Element<any> => {
-  const blogPostPathRegex = /^\/blog\/.+/;
-  const blogPosts = _.flow(
-    _.filter(_.flow(
-      _.get('path'),
-      blogPostPathRegex.test.bind(blogPostPathRegex),
-    )),
-    _.sortBy(_.get('data.isoDate')),
-    _.map(
-      ({ data, path }: { data: Object, path: string }) => ({ ...data, path }),
-    ),
-    _.reverse,
-  )(route.pages);
+  const blogPosts = blogPostsFromPages(route.pages);
 
   return (
     <main>
