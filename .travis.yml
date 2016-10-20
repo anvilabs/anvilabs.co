@@ -9,4 +9,4 @@ cache:
     - ~/.yarn
     - ~/.nvm
 script:
-  - npm run test
+  - yarn test
