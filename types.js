@@ -18,3 +18,13 @@ export type TeamMember = {
     href: string,
   }>,
 };
+export type BlogPost = {
+  title: string,
+  body: string,
+  description: string,
+  formattedDate: string,
+  isoDate: string,
+  readingTime: string,
+  numberOfWords: string,
+  path?: string,
+};

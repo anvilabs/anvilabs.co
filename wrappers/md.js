@@ -1,27 +1,40 @@
 /* @flow */
 
+import Headroom from 'react-headroom';
 import React from 'react';
 
-const MdWrapper = ({ route }: {
+import {
+  ContentContainer,
+  PageFooter,
+  PageHelmet,
+  PostArticle,
+  Separator,
+  TopNavigation,
+} from '../components';
+import type { BlogPost } from '../types';
+
+const MarkdownWrapper = ({ route }: {
   route: {
-    page: {
-      data: {
-        title: string,
-        body: string,
-      },
-    },
+    page: { data: BlogPost },
   },
 }): React$Element<any> => {
   const post = route.page.data;
 
-  /* eslint-disable react/no-danger */
   return (
-    <div className="markdown">
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.body }} />
-    </div>
+    <main>
+      <PageHelmet
+        title={post.title}
+        mixpanelTitle={post.title}
+        description={post.description}
+      />
+      <Headroom><TopNavigation /></Headroom>
+      <ContentContainer className="mw7-l">
+        <PostArticle post={post} full />
+      </ContentContainer>
+      <Separator />
+      <PageFooter />
+    </main>
   );
-  /* eslint-enable react/no-danger */
 };
 
-export default MdWrapper;
+export default MarkdownWrapper;
