@@ -7,8 +7,8 @@ import HeaderTitle from './HeaderTitle';
 import HeaderSubtitle from './HeaderSubtitle';
 
 const PageHeader = ({ title, subtitle }: {
-  title: string | React$Element<any> | Array<React$Element<any>>,
-  subtitle: string | React$Element<any> | Array<React$Element<any>>,
+  title?: string | React$Element<any> | Array<React$Element<any>>,
+  subtitle?: string | React$Element<any> | Array<React$Element<any>>,
 }) => (
   <header
     className="pa3 pa5-ns flex flex-column flex-row-l justify-between"
@@ -26,5 +26,11 @@ const PageHeader = ({ title, subtitle }: {
     </div>
   </header>
 );
+
+PageHeader.defaultProps = {
+  title: <span>Кузница<br /><em>мобильных</em><br />решений.</span>,
+  // eslint-disable-next-line max-len
+  subtitle: 'Проектируем и разрабатываем инновационные мобильные и веб приложения.',
+};
 
 export default PageHeader;

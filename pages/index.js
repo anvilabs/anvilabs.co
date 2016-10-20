@@ -16,15 +16,8 @@ import works from '../data/works';
 /* eslint-disable max-len */
 const Homepage = (): React$Element<any> => (
   <main>
-    <PageHelmet
-      title="Кузница мобильных решений | Anvilabs"
-      mixpanelTitle="Home"
-      description="Anvilabs - Проектируем и разрабатываем инновационные мобильные и веб приложения. (Алматы, Казахстан)"
-    />
-    <PageHeader
-      title={<span>Кузница<br /><em>мобильных</em><br />решений.</span>}
-      subtitle="Проектируем и разрабатываем инновационные мобильные и веб приложения."
-    />
+    <PageHelmet mixpanelTitle="Home" />
+    <PageHeader />
     <Separator />
     <ContentContainer>
       <WorkList works={works} compact />

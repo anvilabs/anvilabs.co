@@ -12,9 +12,9 @@ const PageHelmet = (
     mixpanelTitle,
     description,
   }: {
-    title: string,
+    title?: string,
     mixpanelTitle: string,
-    description: string,
+    description?: string,
   },
   { location }: {
     location: { pathname: string },
@@ -59,6 +59,11 @@ const PageHelmet = (
   );
 };
 
+PageHelmet.defaultProps = {
+  title: 'Кузница мобильных решений | Anvilabs',
+  // eslint-disable-next-line max-len
+  description: 'Anvilabs - Проектируем и разрабатываем инновационные мобильные и веб приложения. (Алматы, Казахстан)',
+};
 PageHelmet.contextTypes = {
   location: PropTypes.object.isRequired,
 };

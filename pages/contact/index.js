@@ -14,15 +14,8 @@ import {
 /* eslint-disable max-len */
 const ContactPage = (): React$Element<any> => (
   <main>
-    <PageHelmet
-      title="Кузница мобильных решений | Anvilabs"
-      mixpanelTitle="Contact"
-      description="Anvilabs - Проектируем и разрабатываем инновационные мобильные и веб приложения. (Алматы, Казахстан)"
-    />
-    <PageHeader
-      title={<span>Кузница<br /><em>мобильных</em><br />решений.</span>}
-      subtitle="Проектируем и разрабатываем инновационные мобильные и веб приложения."
-    />
+    <PageHelmet mixpanelTitle="Contact" />
+    <PageHeader />
     <Separator />
     <ContentContainer>
       <p className="mt0 mb4">Свяжитесь с нами для бесплатной консультации!</p>
