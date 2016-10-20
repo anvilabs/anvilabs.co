@@ -2,9 +2,8 @@
 
 import _ from 'lodash/fp';
 import Helmet from 'react-helmet';
-import React, { Component, PropTypes } from 'react';
+import { Component, PropTypes } from 'react';
 
-import { StickyNavigation } from '../components';
 import '../styles/styles.scss';
 
 const trackPageView = () => {
@@ -56,12 +55,7 @@ class Template extends Component {
   }
 
   render(): React$Element<any> {
-    return (
-      <div>
-        <StickyNavigation />
-        {this.props.children}
-      </div>
-    );
+    return this.props.children;
   }
 }
 

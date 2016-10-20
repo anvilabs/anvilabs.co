@@ -9,6 +9,7 @@ import {
   PageHeader,
   PageHelmet,
   Separator,
+  StickyNavigation,
   WorkList,
 } from '../components';
 import works from '../data/works';
@@ -16,6 +17,7 @@ import works from '../data/works';
 const Homepage = (): React$Element<any> => (
   <main>
     <PageHelmet mixpanelTitle="Home" />
+    <StickyNavigation />
     <PageHeader />
     <Separator />
     <ContentContainer>

@@ -9,11 +9,13 @@ import {
   PageHeader,
   PageHelmet,
   Separator,
+  StickyNavigation,
 } from '../../components';
 
 const ContactPage = (): React$Element<any> => (
   <main>
     <PageHelmet mixpanelTitle="Contact" />
+    <StickyNavigation />
     <PageHeader />
     <Separator />
     <ContentContainer>

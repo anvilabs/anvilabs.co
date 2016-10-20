@@ -8,6 +8,7 @@ import {
   PageHeader,
   PageHelmet,
   Separator,
+  StickyNavigation,
 } from '../../components';
 
 const NotFoundPage = (): React$Element<any> => (
@@ -17,6 +18,7 @@ const NotFoundPage = (): React$Element<any> => (
       mixpanelTitle="404"
       description="Страница, которую вы искали, не существует."
     />
+    <StickyNavigation />
     <PageHeader
       title="404 – Страница не найдена."
       subtitle={

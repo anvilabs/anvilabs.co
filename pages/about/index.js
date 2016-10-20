@@ -8,6 +8,7 @@ import {
   PageHeader,
   PageHelmet,
   Separator,
+  StickyNavigation,
   TeamList,
 } from '../../components';
 import team from '../../data/team';
@@ -16,6 +17,7 @@ import team from '../../data/team';
 const ContactPage = (): React$Element<any> => (
   <main>
     <PageHelmet mixpanelTitle="About" />
+    <StickyNavigation />
     <PageHeader />
     <Separator />
     <ContentContainer>
