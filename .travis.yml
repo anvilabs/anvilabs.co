@@ -6,7 +6,7 @@ install:
   - yarn
 cache:
   directories:
-    - ~/.yarn
+    - ~/.yarn-cache
     - ~/.nvm
 script:
   - yarn test
