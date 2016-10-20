@@ -20,8 +20,12 @@ If you don't have *[yarn](https://yarnpkg.com/)* installed (and want to use it),
 
 ## License
 
+### Content
+
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
-[CC-BY-4.0 License](./LICENSE) © Anvilabs LLC 
+Images and md/text files containing information are licensed under [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/).
 
-Everything except "content files" (images, md/text files containing informations, etc) is licensed under [MIT](https://opensource.org/licenses/MIT) and can be used for your learning purposes.
+### Code
+
+Everything except content files is licensed under [MIT](https://opensource.org/licenses/MIT) and can be used for your learning purposes.
