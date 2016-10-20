@@ -58,16 +58,24 @@ export default function (content: string) {
     words: numberOfWords,
   } = readingTime(striptags(body));
   const { description, date } = meta.attributes;
+  const excerpt = description && md.render(description);
 
   const result = {
     ...meta.attributes,
-    description: description || excerptHtml(body, { pruneLength: 250 }),
+    body,
+    description: (excerpt && striptags(excerpt)) || excerptHtml(body, {
+      stripTags: true,
+      pruneLength: 250,
+    }),
+    excerpt: excerpt || excerptHtml(body, {
+      stripTags: false,
+      pruneLength: 300,
+    }),
     formattedDate: moment(date).format('D MMMM YYYY г.'),
     readingTime: moment(timeToRead)
       .from(0, true)
       .replace('несколько секунд', 'меньше минуты'),
     numberOfWords: plural(numberOfWords, '%d слово', '%d слова', '%d слов'),
-    body,
   };
 
   this.value = result;

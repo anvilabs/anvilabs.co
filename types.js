@@ -22,6 +22,7 @@ export type BlogPost = {
   title: string,
   body: string,
   description: string,
+  excerpt: string,
   author: string,
   formattedDate: string,
   date: string,
