@@ -3,11 +3,14 @@
 import fs from 'fs';
 import path from 'path';
 
+import { parse as parseToml } from 'toml';
 import _ from 'lodash/fp';
 import sm from 'sitemap';
 
-// FIXME: unable to reference config from here, so use hardcoded url for now
-const hostname = 'https://anvilabs.co';
+const config = parseToml(
+  String(fs.readFileSync(path.join(__dirname, '/config.toml'))),
+);
+const { hostname } = config;
 
 const generateSitemapUrl = (page: mixed): ?Object => {
   /* eslint-disable fp/no-let, fp/no-mutation */
