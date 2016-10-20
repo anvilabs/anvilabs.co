@@ -11,8 +11,9 @@ const FooterLinks = ({ className }: { className?: string }) => (
     {footerLinks.map(({ href, title }: { href: string, title: string }) => (
       <li
         key={href}
+        className="h2"
       >
-        <a href={href} className="link dim red">{title}</a>
+        <a href={href} className="v-mid link dim red">{title}</a>
       </li>
     ))}
   </ul>
