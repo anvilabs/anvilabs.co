@@ -1,5 +1,6 @@
 /* @flow */
 
+// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { config } from 'config';
 import Helmet from 'react-helmet';
 import React, { PropTypes } from 'react';

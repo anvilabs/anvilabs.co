@@ -1,5 +1,6 @@
 /* @flow */
 
+// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { config } from 'config';
 import cx from 'classnames';
 import React from 'react';

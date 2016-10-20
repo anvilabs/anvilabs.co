@@ -1,9 +1,11 @@
 /* @flow */
 
+/* eslint-disable import/no-extraneous-dependencies */
 import cssnano from 'gulp-cssnano';
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import uncss from 'gulp-uncss';
+/* eslint-enable import/no-extraneous-dependencies */
 
 gulp.task('uncss', () => gulp
   .src('./public/styles.css')

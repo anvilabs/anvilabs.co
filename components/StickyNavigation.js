@@ -2,6 +2,7 @@
 
 /* heavily borrows from https://github.com/KyleAMathews/react-headroom */
 
+// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { config } from 'config';
 import { Link } from 'react-router';
 import autobind from 'autobind-decorator';
