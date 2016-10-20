@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import ResponsiveImage, { srcSetFromImageUrl } from './ResponsiveImage';
+
 type TeamMember = {
   name: string,
   role: string,
@@ -19,8 +21,8 @@ const TeamList = ({ team }: {
     {team.map(({ name, role, photoUrl, links }: TeamMember) => (
       <article key={name} className="w-100 w-third-ns">
         <div className="aspect-ratio aspect-ratio--1x1">
-          <img
-            src={photoUrl}
+          <ResponsiveImage
+            srcSet={srcSetFromImageUrl(photoUrl)}
             alt={name}
             className="db bg-center cover aspect-ratio--object"
           />

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700px" height="620px" viewBox="0 0 700 620" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Anvil Textured</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="81.6401631%" y1="5.54929886%" x2="64.9212473%" y2="73.4467155%" id="linearGradient-1">
+            <stop stop-color="#CA410C" offset="0%"></stop>
+            <stop stop-color="#933C05" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="58.7916135%" y1="36.42977%" x2="27.694449%" y2="73.1175996%" id="linearGradient-2">
+            <stop stop-color="#5B1D05" offset="0%"></stop>
+            <stop stop-color="#661E06" offset="47.066795%"></stop>
+            <stop stop-color="#741C09" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="70.5900196%" y1="27.1379827%" x2="32.4400786%" y2="65.8927322%" id="linearGradient-3">
+            <stop stop-color="#741C09" offset="0%"></stop>
+            <stop stop-color="#611F06" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="22.0152955%" y1="90.2672773%" x2="35.9495213%" y2="10.3465478%" id="linearGradient-4">
+            <stop stop-color="#601B06" offset="0%"></stop>
+            <stop stop-color="#671708" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="94.6665881%" y1="91.4909479%" x2="31.5416575%" y2="22.3413278%" id="linearGradient-5">
+            <stop stop-color="#6E2007" offset="0%"></stop>
+            <stop stop-color="#7B1B0B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="68.6124887%" y1="20.1146679%" x2="3.6142763%" y2="96.0814855%" id="linearGradient-6">
+            <stop stop-color="#9E2C0C" offset="0%"></stop>
+            <stop stop-color="#702805" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="32.3528623%" y1="95.8342149%" x2="55.9899209%" y2="19.7705723%" id="linearGradient-7">
+            <stop stop-color="#E35C08" offset="0%"></stop>
+            <stop stop-color="#E76E36" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.0695185%" y1="19.0194452%" x2="50%" y2="94.8174595%" id="linearGradient-8">
+            <stop stop-color="#7F2608" offset="0%"></stop>
+            <stop stop-color="#6D2805" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="34.7278979%" y1="71.1731184%" x2="87.1141761%" y2="50%" id="linearGradient-9">
+            <stop stop-color="#A34206" offset="0%"></stop>
+            <stop stop-color="#973408" offset="65.2518979%"></stop>
+            <stop stop-color="#913008" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="27.2247676%" x2="47.2586402%" y2="69.2192584%" id="linearGradient-10">
+            <stop stop-color="#B33E09" offset="0%"></stop>
+            <stop stop-color="#A14006" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="61.2140399%" y1="8.56628991%" x2="51.7809243%" y2="88.6030245%" id="linearGradient-11">
+            <stop stop-color="#E76626" offset="0%"></stop>
+            <stop stop-color="#E65909" offset="59.7337372%"></stop>
+            <stop stop-color="#D55707" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="89.6559448%" y1="5.06169717%" x2="23.7735321%" y2="80.6744202%" id="linearGradient-12">
+            <stop stop-color="#ED7121" offset="0%"></stop>
+            <stop stop-color="#F47507" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="70.9503531%" y1="5.92145723%" x2="71.04085%" y2="73.0835722%" id="linearGradient-13">
+            <stop stop-color="#DA4F0A" offset="0%"></stop>
+            <stop stop-color="#CC4F08" offset="35.7543842%"></stop>
+            <stop stop-color="#B84F06" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="88.7203893%" y1="16.121564%" x2="50%" y2="39.2179314%" id="linearGradient-14">
+            <stop stop-color="#C7480A" offset="0%"></stop>
+            <stop stop-color="#B84607" offset="45.9921105%"></stop>
+            <stop stop-color="#A74305" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="23.8076836%" y1="27.41844%" x2="5.65991676%" y2="75.4265327%" id="linearGradient-15">
+            <stop stop-color="#E65D1B" offset="0%"></stop>
+            <stop stop-color="#C05206" offset="51.3395323%"></stop>
+            <stop stop-color="#B04E04" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="43.5271045%" y1="32.6259202%" x2="90.52576%" y2="90.8170081%" id="linearGradient-16">
+            <stop stop-color="#F38F46" offset="0%"></stop>
+            <stop stop-color="#F48F40" offset="22.426105%"></stop>
+            <stop stop-color="#F78D2E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="21.4840709%" y1="93.4543754%" x2="32.742627%" y2="29.4312619%" id="linearGradient-17">
+            <stop stop-color="#F78B21" offset="0%"></stop>
+            <stop stop-color="#F6984A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="91.8300669%" y1="9.18943727%" x2="50%" y2="91.3097033%" id="linearGradient-18">
+            <stop stop-color="#F5A367" offset="0%"></stop>
+            <stop stop-color="#F88B26" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.1698758%" y1="92.7061346%" x2="47.3512541%" y2="21.6311152%" id="linearGradient-19">
+            <stop stop-color="#BD5C03" offset="0%"></stop>
+            <stop stop-color="#EA6A05" offset="55.2295295%"></stop>
+            <stop stop-color="#EF7623" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="61.3084728%" y1="44.6577372%" x2="72.7195225%" y2="88.611099%" id="linearGradient-20">
+            <stop stop-color="#F06D05" offset="0%"></stop>
+            <stop stop-color="#DC6D03" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="86.2321201%" y1="36.3686038%" x2="13.7383795%" y2="50%" id="linearGradient-21">
+            <stop stop-color="#F9912B" offset="0%"></stop>
+            <stop stop-color="#F98713" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="2.07738155%" y1="46.5779714%" x2="68.1828632%" y2="46.5779722%" id="linearGradient-22">
+            <stop stop-color="#FDAB4F" offset="0%"></stop>
+            <stop stop-color="#FCA242" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="58.15889%" y1="0%" x2="52.6374168%" y2="64.4187879%" id="linearGradient-23">
+            <stop stop-color="#FAB26C" offset="0%"></stop>
+            <stop stop-color="#FFB255" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="44.648473%" y1="68.0983255%" x2="52.4142372%" y2="8.32914407%" id="linearGradient-24">
+            <stop stop-color="#FFAE4D" offset="0%"></stop>
+            <stop stop-color="#FAA752" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="68.3918332%" y1="0%" x2="52.2091588%" y2="92.5906541%" id="linearGradient-25">
+            <stop stop-color="#FBAF60" offset="0%"></stop>
+            <stop stop-color="#FEB153" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Works" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Anvil-Textured">
+            <g id="Vector-Symbol" transform="translate(-104.000000, -48.000000)">
+                <polygon id="Path-2-Copy-26" fill="url(#linearGradient-1)" points="543.814596 280.892914 800.804922 498.073555 838.702261 213.354705"></polygon>
+                <polygon id="Path-2-Copy-25" fill="url(#linearGradient-2)" points="838.702261 213.35471 651.433096 31.0321041 543.814596 280.892914"></polygon>
+                <polygon id="Path-2-Copy-24" fill="url(#linearGradient-3)" points="450.252814 163.321602 543.814601 280.892913 651.433096 31.0321041"></polygon>
+                <polygon id="Path-2-Copy-23" fill="url(#linearGradient-4)" points="450.252829 163.321609 405.341726 0.402145589 651.433096 31.0321041"></polygon>
+                <polygon id="Path-2-Copy-22" fill="url(#linearGradient-5)" points="306.602087 79.8684923 450.252814 163.321602 405.341726 0.402145589"></polygon>
+                <polygon id="Path-2-Copy-21" fill="url(#linearGradient-6)" points="193.753672 284.876053 306.602087 79.8684917 450.252814 163.321602"></polygon>
+                <polygon id="Path-2-Copy-20" fill="url(#linearGradient-7)" points="59.6875516 388.749748 0.282495515 233.165039 193.753672 284.876053 59.6875515 388.749741 193.753668 284.876045 59.6875516 388.749748 193.753668 284.876045"></polygon>
+                <polygon id="Path-2-Copy-19" fill="url(#linearGradient-8)" points="482.146613 295.377587 450.252814 163.321602 543.814596 280.892914"></polygon>
+                <polygon id="Path-2-Copy-18" fill="url(#linearGradient-9)" points="277.677054 388.749748 450.252829 163.321602 482.146613 295.377587 450.252814 163.321602 482.146617 295.377585"></polygon>
+                <polygon id="Path-2-Copy-17" fill="url(#linearGradient-10)" points="193.753672 284.876053 277.677054 388.749748 450.252829 163.321602 193.753668 284.876045 277.677055 388.749748"></polygon>
+                <polygon id="Path-2-Copy-16" fill="url(#linearGradient-11)" points="59.6875515 388.749741 277.677054 388.749748 193.753668 284.876045"></polygon>
+                <polygon id="Path-2-Copy-15" fill="url(#linearGradient-12)" points="59.6875516 388.749748 277.677054 388.749748 115.189398 530.276863"></polygon>
+                <polygon id="Path-2-Copy-14" fill="url(#linearGradient-13)" points="277.677054 388.749748 482.146613 295.377587 277.677055 388.749748 550.450708 445.292069 482.146617 295.377585"></polygon>
+                <polygon id="Path-2-Copy-13" fill="url(#linearGradient-14)" points="482.146613 295.377587 550.450708 445.292069 482.146617 295.377585 543.814596 280.892914 550.45074 445.292067 482.146617 295.377585 550.450725 445.292075"></polygon>
+                <polygon id="Path-2-Copy-12" fill="url(#linearGradient-15)" points="550.450708 445.292069 800.804927 498.073546 543.814596 280.892914 800.804922 498.073555 543.814601 280.892913"></polygon>
+                <polygon id="Path-2-Copy-11" fill="url(#linearGradient-16)" points="783.711799 556.899727 800.804927 498.073546 550.45074 445.292067"></polygon>
+                <polygon id="Path-2-Copy-10" fill="url(#linearGradient-17)" points="550.45074 587.504821 783.711799 556.899727 550.450721 587.50483 783.711818 556.899718 550.45074 445.292067"></polygon>
+                <polygon id="Path-2-Copy-9" fill="url(#linearGradient-18)" points="550.45074 587.504821 363.721255 564.146758 550.450708 445.292069"></polygon>
+                <polygon id="Path-2-Copy-8" fill="url(#linearGradient-19)" points="363.721255 564.146758 277.677057 388.749741 550.450708 445.292069"></polygon>
+                <polygon id="Path-2-Copy-7" fill="url(#linearGradient-20)" points="115.189399 530.276863 277.677054 388.749748 363.721247 564.146774"></polygon>
+                <polygon id="Path-2-Copy-6" fill="url(#linearGradient-21)" points="182.203918 630.127541 115.189399 530.27687 363.721247 564.146774"></polygon>
+                <polygon id="Path-2-Copy-5" fill="url(#linearGradient-22)" points="240.490028 706.975655 182.203918 630.127541 363.721247 564.146774"></polygon>
+                <polygon id="Path-2-Copy-4" fill="url(#linearGradient-23)" points="240.490028 706.975655 450.252814 729.255684 363.721255 564.146758"></polygon>
+                <polygon id="Path-2-Copy-3" fill="url(#linearGradient-24)" points="450.252814 729.255684 550.450721 587.50483 363.721247 564.146774"></polygon>
+                <polygon id="Path-2-Copy-2" fill="url(#linearGradient-25)" points="450.252818 729.255675 596.05152 706.975655 550.450721 587.50483"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

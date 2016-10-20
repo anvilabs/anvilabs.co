@@ -6,6 +6,7 @@ import cx from 'classnames';
 import React from 'react';
 
 import NavigationLink from '../NavigationLink';
+import ResponsiveImage from '../ResponsiveImage';
 
 const { menuLinks } = config;
 
@@ -15,8 +16,12 @@ const SideNavigation = ({ className }: { className?: string }) => (
       to="/"
       className="v-mid dark-gray link dim fr fn-l"
     >
-      <img
-        src={require('../../static/logo.png')}
+      <ResponsiveImage
+        srcSet={[
+          require('../../static/logo.png'),
+          require('../../static/logo@2x.png'),
+          require('../../static/logo@3x.png'),
+        ]}
         alt="Anvilabs Logo"
         className="dib h3 w-auto"
       />

@@ -3,6 +3,8 @@
 import cx from 'classnames';
 import React from 'react';
 
+import ResponsiveImage, { srcSetFromImageUrl } from './ResponsiveImage';
+
 type Work = {
   title: string,
   subtitle: string,
@@ -37,8 +39,8 @@ const WorkList = ({ works, compact }: {
             (!compact && idx % 2 !== 0) && 'order-1-l',
           )}
         >
-          <img
-            src={imageUrl}
+          <ResponsiveImage
+            srcSet={srcSetFromImageUrl(imageUrl)}
             alt={title}
             className="db w-100"
           />
