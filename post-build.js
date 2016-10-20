@@ -88,6 +88,7 @@ const generateFeed = (pages: Array<mixed>) => {
   // eslint-disable-next-line lodash-fp/no-unused-result
   _.flow(
     blogPostsFromPages,
+    _.filter(({ draft }: { draft?: boolean }) => !draft),
     _.map((post: BlogPost & {
       path: string,
       requirePath: string,
