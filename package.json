@@ -19,6 +19,7 @@
     "deploy": "npm run build && netlify deploy",
     "start": "gatsby develop",
     "build": "rimraf public && gatsby build && gulp",
+    "commit": "git-cz",
     "test": "npm-run-all --parallel typecheck lint:js lint:css",
     "lint:js": "eslint .",
     "lint:js:fix": "eslint --fix .",
