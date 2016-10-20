@@ -8,6 +8,7 @@ import { StickyNavigation } from '../components';
 import '../styles/styles.scss';
 
 const trackPageView = () => {
+  // $FlowMissingDefinition
   const helmet = Helmet.peek();
 
   window.analytics.page('Website', {

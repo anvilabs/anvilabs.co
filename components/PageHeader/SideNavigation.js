@@ -28,7 +28,7 @@ const SideNavigation = ({ className }: { className?: string }) => (
     </Link>
     <ul className="list pa0 mt0 mt5-l fl fn-l">
       {menuLinks.map((
-        { to, title, }: { to: string, title: string },
+        { to, title }: { to: string, title: string },
       ) => (
         <li key={to} className="db">
           <NavigationLink
