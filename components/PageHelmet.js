@@ -2,6 +2,7 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { config } from 'config';
+import _ from 'lodash/fp';
 import Helmet from 'react-helmet';
 import React, { PropTypes } from 'react';
 
@@ -11,7 +12,7 @@ const PageHelmet = (
   {
     title,
     mixpanelTitle,
-    description,
+    description: rawDescription,
   }: {
     title?: string,
     mixpanelTitle: string,
@@ -21,6 +22,11 @@ const PageHelmet = (
     location: { pathname: string },
   },
 ): React$Element<any> => {
+  const description = _.truncate({
+    length: 155,
+    separator: /,?\.* +/,
+  }, rawDescription);
+
   const meta: Array<{
     name?: string,
     property?: string,
