@@ -1,6 +1,6 @@
 /* @flow */
 
 import blogPostsFromPages from './blogPostsFromPages';
+import transformBlogPostTitle from './transformBlogPostTitle';
 
-// eslint-disable-next-line import/prefer-default-export
-export { blogPostsFromPages };
+export { blogPostsFromPages, transformBlogPostTitle };
