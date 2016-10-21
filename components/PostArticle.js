@@ -1,6 +1,7 @@
 /* @flow */
 
 import { Link } from 'react-router';
+import cx from 'classnames';
 import React from 'react';
 
 import type { BlogPost } from '../types';
@@ -12,9 +13,11 @@ const PostArticle = ({ post, full }: {
   <article
     itemScope
     itemType="http://schema.org/Article"
-    className="post"
   >
-    <h1 itemProp="name" className="f4 f3-l ma0">
+    <h1
+      itemProp="name"
+      className={cx('ma0', full ? 'tc f3 f2-l' : 'f4 f3-l')}
+    >
       {post.path ? (
         <Link
           to={post.path}
@@ -24,7 +27,7 @@ const PostArticle = ({ post, full }: {
         </Link>
       ) : post.title}
     </h1>
-    <p className="mb4 gray f6">
+    <p className={cx('mb4 gray f6', full && 'tc mb5')}>
       <time dateTime={post.date}>{post.formattedDate}</time>
       {' // '}
       <a
@@ -36,11 +39,12 @@ const PostArticle = ({ post, full }: {
       {' // '}
       {post.numberOfWords}
       {' // '}
-      время чтения: {post.readingTime}
+      <span className="nowrap">время чтения: {post.readingTime}</span>
     </p>
     <div>
       <div
         itemProp="articleBody"
+        className="article-body"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: full ? post.body : post.excerpt,
