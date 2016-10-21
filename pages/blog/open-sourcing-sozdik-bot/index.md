@@ -1,14 +1,14 @@
 ---
 title: Открываем исходный код Sozdik Bot 
 date: 2016-10-21 01:00:00
-description: Больше года назад я [написал простого бота на *Telegram*](https://sozdik.kz/ru/news/telegram/) для русско↔︎казахского онлайн словаря [sozdik.kz](https://sozdik.kz). Сегодня я рад объявить, что весь исходный код для *Sozdik Bot* [доступен публично на GitHub-е](https://github.com/anvilabs/sozdik-bot).
+description: Больше года назад я [написал простого бота на *Telegram*](https://sozdik.kz/ru/news/telegram/) для русско↔︎казахского онлайн словаря [sozdik.kz](https://sozdik.kz). Сегодня я рад объявить, что весь исходный код для *Sozdik Bot* [доступен публично на GitHub‑е](https://github.com/anvilabs/sozdik-bot).
 author: yenbekbay
 draft: true
 ---
 
 Больше года назад я [написал простого бота на *Telegram*](https://sozdik.kz/ru/news/telegram/) для русско↔︎казахского онлайн словаря [sozdik.kz](https://sozdik.kz). 
 
-Это был мой первый опыт в этом деле, и будучи комфортным в *Python*-е, первую версию бота я написал именно на этом языке. С тех пор, однако, бот был полностью переписан, и со старой версией сейчас не имеет практически ничего общего. Более того, с появлением [поддержки ботов в Facebook Messenger](https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/), я решил попробовать расширить функционал бота и на эту платформу. Сегодня я рад объявить, что весь исходный код для *Sozdik Bot* [доступен публично на GitHub-е](https://github.com/anvilabs/sozdik-bot).
+Это был мой первый опыт в этом деле, и будучи комфортным в *Python*‑е, первую версию бота я написал именно на этом языке. С тех пор, однако, бот был полностью переписан, и со старой версией сейчас не имеет практически ничего общего. Более того, с появлением [поддержки ботов в Facebook Messenger](https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/), я решил попробовать расширить функционал бота и на эту платформу. Сегодня я рад объявить, что весь исходный код для *Sozdik Bot* [доступен публично на GitHub‑е](https://github.com/anvilabs/sozdik-bot).
 
 <!-- more -->
 
