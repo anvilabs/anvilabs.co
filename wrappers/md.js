@@ -28,7 +28,7 @@ const MarkdownWrapper = ({ route }: {
         description={post.description}
       />
       <Headroom><TopNavigation /></Headroom>
-      <ContentContainer className="mw7-l">
+      <ContentContainer className="mw7-l center">
         <PostArticle post={post} full />
       </ContentContainer>
       <Separator />

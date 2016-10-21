@@ -27,7 +27,7 @@ const BlogPage = ({ route }: {
         mixpanelTitle="Blog"
       />
       <Headroom><TopNavigation /></Headroom>
-      <ContentContainer className="mw7-l">
+      <ContentContainer className="mw7-l center">
         {blogPosts.map((post: BlogPost, idx: number) => (
           <div key={post.date}>
             <PostArticle post={post} full={false} />
