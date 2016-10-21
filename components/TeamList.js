@@ -10,7 +10,7 @@ const TeamList = ({ team }: {
 }) => (
   <section className="flex w-100 flex-wrap">
     {team.map(({ name, role, photoUrl, links }: TeamMember) => (
-      <article key={name} className="w-100 w-third-ns">
+      <article key={name} className="w-100 w-50-m w-25-l">
         <div className="aspect-ratio aspect-ratio--1x1">
           <ResponsiveImage
             srcSet={srcSetFromImageUrl(photoUrl)}
