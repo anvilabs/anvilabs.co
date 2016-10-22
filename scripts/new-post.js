@@ -27,6 +27,11 @@ const questions = [
     name: 'description',
     message: 'Describe this post:',
   },
+  {
+    type: 'input',
+    name: 'author',
+    message: 'Who is the author of this post (GitHub username):',
+  },
 ];
 
 prompt(questions)
@@ -34,6 +39,7 @@ prompt(questions)
     title: string,
     slug: string,
     description: string,
+    author: string,
   }) => {
     const dir = `./pages/blog/${answers.slug}`;
     mkdirpSync(dir);
@@ -42,6 +48,7 @@ prompt(questions)
       title: answers.title,
       date: moment().format(),
       description: answers.description,
+      author: answers.author,
       draft: true,
     };
     writeFileSync(
