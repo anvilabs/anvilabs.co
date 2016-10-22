@@ -76,15 +76,14 @@ const PageHelmet = (
   );
 };
 
-/* eslint-disable import/newline-after-import */
+/* eslint-disable import/newline-after-import, max-len */
 PageHelmet.defaultProps = {
   title: siteTitle,
   description: siteDescription,
   ogImageSrc: `${hostname}${((require('../static/og-image.jpg'): any): string)}`,
-  // eslint-disable-next-line max-len
   twitterImageSrc: `${hostname}${((require('../static/twitter-image.jpg'): any): string)}`,
 };
-/* eslint-enable import/newline-after-import */
+/* eslint-enable import/newline-after-import, max-len */
 PageHelmet.contextTypes = {
   location: PropTypes.object.isRequired,
 };
