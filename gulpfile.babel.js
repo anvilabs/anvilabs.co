@@ -28,7 +28,7 @@ gulp.task('pageres', () => {
         crop: true,
         filename: 'screenshot-<%= size %>',
         delay: 2,
-        css: '.headroom-wrapper { display: none }',
+        css: '.headroom-wrapper { display: none } #content { padding: 2rem }',
         format: 'jpg',
       });
 
