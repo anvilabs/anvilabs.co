@@ -18,6 +18,10 @@ yarn start # or npm start
 
 If you don't have *[yarn](https://yarnpkg.com/)* installed (and want to use it), follow [these instructions](https://yarnpkg.com/en/docs/install).
 
+## Development
+
+To write a new blog post, run: `yarn run new:post`.
+
 ## License
 
 ### Content

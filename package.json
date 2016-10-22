@@ -17,6 +17,7 @@
   },
   "scripts": {
     "deploy": "npm run build && netlify deploy",
+    "new:post": "babel-node scripts/new-post",
     "start": "gatsby develop",
     "build": "rimraf public && gatsby build && gulp",
     "commit": "git-cz",
@@ -34,7 +35,18 @@
       "path": "cz-conventional-changelog"
     },
     "validate-commit-msg": {
-      "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "chore", "revert", "blog"]
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert",
+        "blog"
+      ]
     }
   },
   "dependencies": {
@@ -46,13 +58,17 @@
     "front-matter": "^2.1.0",
     "highlight.js": "^9.7.0",
     "inline-style-prefixer": "^2.0.4",
+    "inquirer": "^1.2.2",
+    "js-yaml": "^3.6.1",
     "lodash": "^4.15.0",
     "markdown-it": "^8.0.1",
     "markdown-it-anchor": "^2.5.0",
     "markdown-it-attrs": "^0.8.0",
     "markdown-it-implicit-figures": "^0.3.2",
     "markdown-it-link-attributes": "^1.0.0",
+    "mkdirp": "^0.5.1",
     "moment": "^2.15.1",
+    "open": "^0.0.5",
     "plural-ru": "^1.1.1",
     "raf": "^3.3.0",
     "react": "^15.3.2",
@@ -63,6 +79,7 @@
     "reading-time": "^1.1.0",
     "rss": "^1.2.1",
     "sitemap": "^1.8.2",
+    "slug": "^0.9.1",
     "smoothscroll": "^0.2.2",
     "striptags": "^2.1.1",
     "tachyons-sass": "^4.5.5",
@@ -74,6 +91,10 @@
     "@types/axios": "^0.9.32",
     "@types/classnames": "^0.0.31",
     "@types/fs-extra": "^0.0.33",
+    "@types/inquirer": "^0.0.29",
+    "@types/js-yaml": "^3.5.28",
+    "@types/mkdirp": "^0.3.29",
+    "@types/open": "^0.0.29",
     "@types/react": "^0.14.41",
     "@types/react-helmet": "^0.0.24",
     "@types/react-router": "^2.0.38",

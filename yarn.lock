@@ -18,9 +18,28 @@
   dependencies:
     "@types/node" "*"
 
+"@types/inquirer":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@types/inquirer/-/inquirer-0.0.29.tgz#52349d4be855462f404517fc444e666eafcafc58"
+  dependencies:
+    "@types/rx" "*"
+    "@types/through" "*"
+
+"@types/js-yaml":
+  version "3.5.28"
+  resolved "https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-3.5.28.tgz#efd7614f8eb1b924c41235ff653b7370da467fac"
+
+"@types/mkdirp":
+  version "0.3.29"
+  resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
+
 "@types/node@*":
   version "6.0.45"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.45.tgz#c4842a9d653d767831e4ff495b6008cc0d579966"
+
+"@types/open":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@types/open/-/open-0.0.29.tgz#3de910012674909db14d608d1fde44ffa7a9ecea"
 
 "@types/react-helmet@^0.0.24":
   version "0.0.24"
@@ -35,6 +54,16 @@
 "@types/react@*", "@types/react@^0.14.41":
   version "0.14.41"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-0.14.41.tgz#c8fea92dc28814b2a4f6a86e634fbdb30b54f778"
+
+"@types/rx@*":
+  version "2.5.33"
+  resolved "https://registry.yarnpkg.com/@types/rx/-/rx-2.5.33.tgz#1867f4ac98e57428fe82b284d1a80c9c1f611bb7"
+
+"@types/through@*":
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/@types/through/-/through-0.0.28.tgz#1effa9a6d00fb48572b4cc9f44df25b0100db7fc"
+  dependencies:
+    "@types/node" "*"
 
 abab@^1.0.0:
   version "1.0.3"
@@ -1344,6 +1373,22 @@ buffer@^4.3.0, buffer@^4.9.0:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
     isarray "^1.0.0"
+
+"bufferjs@>= 2.0.0":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/bufferjs/-/bufferjs-3.0.1.tgz#0692e829cb10a10550e647390b035eb06c38e8ef"
+
+"bufferstream@>= 0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/bufferstream/-/bufferstream-0.6.2.tgz#a5f27e10d3c760084d14b35126615007319e3731"
+  dependencies:
+    bufferjs ">= 2.0.0"
+  optionalDependencies:
+    buffertools ">= 1.0.3"
+
+"buffertools@>= 1.0.3":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/buffertools/-/buffertools-2.1.4.tgz#62d4e1584c0090a0c7d3587f25934a84b8b38de4"
 
 builtin-modules@^1.0.0, builtin-modules@^1.1.1:
   version "1.1.1"
@@ -2994,7 +3039,7 @@ extend@^3.0.0, extend@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.0.tgz#5a474353b9f3353ddd8176dfd37b91c83a46f1d4"
 
-external-editor@^1.0.1:
+external-editor@^1.0.1, external-editor@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/external-editor/-/external-editor-1.1.0.tgz#c7fe15954b09af852b89aaec82a2707a0dc5597a"
   dependencies:
@@ -4215,6 +4260,25 @@ inline-style-prefixer:
     bowser "^1.0.0"
     hyphenate-style-name "^1.0.1"
 
+inquirer:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-1.2.2.tgz#f725c1316f0020e7f3d538c8c5ad0c2732c1c451"
+  dependencies:
+    ansi-escapes "^1.1.0"
+    chalk "^1.0.0"
+    cli-cursor "^1.0.1"
+    cli-width "^2.0.0"
+    external-editor "^1.1.0"
+    figures "^1.3.5"
+    lodash "^4.3.0"
+    mute-stream "0.0.6"
+    pinkie-promise "^2.0.0"
+    run-async "^2.2.0"
+    rx "^4.1.0"
+    string-width "^1.0.1"
+    strip-ansi "^3.0.0"
+    through "^2.3.6"
+
 inquirer@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-0.12.0.tgz#1ef2bfd63504df0bc75785fff8c2c41df12f077e"
@@ -4665,7 +4729,7 @@ js-types@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/js-types/-/js-types-1.0.0.tgz#d242e6494ed572ad3c92809fc8bed7f7687cbf03"
 
-js-yaml@^3.4.3, js-yaml@^3.4.6, js-yaml@^3.5.1, js-yaml@^3.5.2, js-yaml@~3.6.1:
+js-yaml, js-yaml@^3.4.3, js-yaml@^3.4.6, js-yaml@^3.5.1, js-yaml@^3.5.2, js-yaml@~3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
   dependencies:
@@ -5477,7 +5541,7 @@ minimist@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
-mkdirp@^0.5.0, mkdirp@^0.5.1, "mkdirp@>=0.5 0", mkdirp@~0.5.0, mkdirp@~0.5.1:
+mkdirp, mkdirp@^0.5.0, mkdirp@^0.5.1, "mkdirp@>=0.5 0", mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -5869,6 +5933,10 @@ onecolor@~2.4.0:
 onetime@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/onetime/-/onetime-1.1.0.tgz#a1f7838f8314c516f05ecefcbc4ccfe04b4ed789"
+
+open:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
 
 opn@^4.0.2:
   version "4.0.2"
@@ -7606,6 +7674,12 @@ slice-ansi@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
 
+slug:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/slug/-/slug-0.9.1.tgz#af08f608a7c11516b61778aa800dce84c518cfda"
+  dependencies:
+    unicode ">= 0.3.1"
+
 smoothscroll:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/smoothscroll/-/smoothscroll-0.2.2.tgz#c689e65ce790a5fa77c98dbb5a35250a3af56dbc"
@@ -8434,6 +8508,12 @@ uncss@^0.14.1:
 underscore@^1.7.0:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
+
+"unicode@>= 0.3.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/unicode/-/unicode-0.6.1.tgz#ec69e3c4537e2b9650b826133bcb068f0445d0bc"
+  dependencies:
+    bufferstream ">= 0.6.2"
 
 uniq@^1.0.1:
   version "1.0.1"

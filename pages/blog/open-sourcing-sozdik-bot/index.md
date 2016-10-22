@@ -1,9 +1,8 @@
 ---
 title: Открываем исходный код Sozdik Bot 
-date: 2016-10-21 01:00:00
+date: '2016-10-21T01:00:00+06:00'
 description: Больше года назад я [написал простого бота на Telegram](https://sozdik.kz/ru/news/telegram/) для русско↔︎казахского онлайн словаря [sozdik.kz](https://sozdik.kz). Сегодня я рад объявить, что весь исходный код для Sozdik Bot [доступен публично на GitHub](https://github.com/anvilabs/sozdik-bot).
 author: yenbekbay
-draft: true
 ---
 
 Больше года назад я [написал простого бота на Telegram](https://sozdik.kz/ru/news/telegram/) для русско↔︎казахского онлайн словаря [sozdik.kz](https://sozdik.kz). 
