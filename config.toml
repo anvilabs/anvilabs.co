@@ -34,3 +34,7 @@ mailchimpActionUrl = "//yenbekbay.us11.list-manage.com/subscribe/post?u=983b78ee
 [[footerLinks]]
   href = "https://github.com/anvilabs"
   title = "Github"
+
+[[footerLinks]]
+  href = "https://medium.com/anvilabs"
+  title = "Medium"
