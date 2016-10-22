@@ -3,7 +3,6 @@ title: Как настроить подпись Git коммитов через 
 date: '2016-10-22T16:20:08+06:00'
 description: Некоторое время назад в [GitHub](https://github.com/blog/2144-gpg-signature-verification) официально [добавили систему](https://github.com/blog/2144-gpg-signature-verification) для проверки подлинности коммитов с помощью GPG ключей.
 author: yenbekbay
-draft: true
 ---
 
 Недавно в [GitHub](https://github.com/blog/2144-gpg-signature-verification) официально [добавили систему](https://github.com/blog/2144-gpg-signature-verification) для проверки подлинности коммитов с помощью GPG ключей. Если вы сейчас в замешательстве и не понимаете о чём идет речь, в документации Git есть [отличный ресурс, посвященный это теме](http://bit.ly/2dIVZOL).
