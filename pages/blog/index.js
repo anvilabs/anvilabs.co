@@ -17,7 +17,8 @@ import type { BlogPost } from '../../types';
 const BlogPage = ({ route }: {
   route: { pages: Array<Object> },
 }): React$Element<any> => {
-  const blogPosts = blogPostsFromPages(route.pages);
+  const blogPosts = blogPostsFromPages(route.pages)
+    .filter(({ draft }: { draft?: boolean }) => !draft);
 
   return (
     <main>
