@@ -12,10 +12,14 @@ const PageHelmet = (
     title,
     mixpanelTitle,
     description,
+    ogImageSrc,
+    twitterImageSrc,
   }: {
     title?: string,
     mixpanelTitle: string,
     description?: string,
+    ogImageSrc?: string,
+    twitterImageSrc?: string,
   },
   { location }: {
     location: { pathname: string },
@@ -43,12 +47,20 @@ const PageHelmet = (
       content: `${hostname}${location.pathname}`,
     },
     {
+      property: 'og:image',
+      content: ogImageSrc,
+    },
+    {
       name: 'twitter:title',
       content: title,
     },
     {
       name: 'twitter:description',
       content: description,
+    },
+    {
+      name: 'twitter:image',
+      content: twitterImageSrc,
     },
   ];
 
@@ -60,10 +72,15 @@ const PageHelmet = (
   );
 };
 
+/* eslint-disable import/newline-after-import */
 PageHelmet.defaultProps = {
   title: siteTitle,
   description: siteDescription,
+  ogImageSrc: `${hostname}${((require('../static/og-image.jpg'): any): string)}`,
+  // eslint-disable-next-line max-len
+  twitterImageSrc: `${hostname}${((require('../static/twitter-image.jpg'): any): string)}`,
 };
+/* eslint-enable import/newline-after-import */
 PageHelmet.contextTypes = {
   location: PropTypes.object.isRequired,
 };

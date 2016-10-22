@@ -56,11 +56,9 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
 
         <meta property="og:site_name" content="Anvilabs" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${hostname}${((require('./static/og-image.jpg'): any): string)}`} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@anvilabs" />
-        <meta name="twitter:image" content={`${hostname}${((require('./static/twitter-image.jpg'): any): string)}`} />
 
         {head.link.toComponent()}
       </head>
