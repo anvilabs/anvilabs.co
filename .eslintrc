@@ -1,6 +1,7 @@
 {
   "extends": [
     "anvilabs",
+    "anvilabs/jest",
     "anvilabs/react"
   ],
   "rules": {

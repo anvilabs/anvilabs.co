@@ -9,4 +9,4 @@ cache:
     - ~/.yarn-cache
     - ~/.nvm
 script:
-  - yarn test
+  - yarn test:ci

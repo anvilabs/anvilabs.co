@@ -21,7 +21,10 @@
     "start": "gatsby develop",
     "build": "rimraf public && gatsby build && gulp",
     "commit": "git-cz",
-    "test": "npm-run-all --parallel typecheck lint:js lint:css",
+    "test": "npm-run-all --parallel typecheck lint:* jest",
+    "test:ci": "npm-run-all --parallel typecheck lint:* jest:coverage && codecov",
+    "jest": "jest",
+    "jest:coverage": "jest --coverage",
     "lint:js": "eslint .",
     "lint:js:fix": "eslint --fix .",
     "lint:css": "stylelint styles/**/*.scss",
@@ -29,6 +32,18 @@
     "typecheck": "flow check .",
     "commitmsg": "validate-commit-msg",
     "prepush": "npm test"
+  },
+  "jest": {
+    "coverageReporters": [
+      "lcov"
+    ],
+    "testPathDirs": [
+      "<rootDir>/components"
+    ],
+    "testRegex": "/__tests__/.*-test\\.js$",
+    "collectCoverageFrom": [
+      "components/**/*.js"
+    ]
   },
   "config": {
     "commitizen": {
@@ -93,6 +108,7 @@
     "@types/classnames": "^0.0.31",
     "@types/fs-extra": "^0.0.33",
     "@types/inquirer": "^0.0.29",
+    "@types/jest": "^15.1.32",
     "@types/js-yaml": "^3.5.28",
     "@types/mkdirp": "^0.3.29",
     "@types/open": "^0.0.29",
@@ -100,12 +116,15 @@
     "@types/react-helmet": "^0.0.24",
     "@types/react-router": "^2.0.38",
     "babel-cli": "^6.14.0",
+    "babel-jest": "^16.0.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-flow-react-proptypes": "^0.14.0",
     "babel-plugin-lodash": "^3.2.8",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-flow-strip-types": "^6.14.0",
+    "babel-preset-react": "^6.16.0",
     "chokidar": "^1.6.1",
+    "codecov": "^1.0.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.8.1",
@@ -122,9 +141,11 @@
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^5.2.0",
+    "jest": "^16.0.2",
     "netlify": "^1.1.0",
     "npm-run-all": "^3.1.1",
     "pageres": "^4.2.0",
+    "react-test-renderer": "^15.3.2",
     "rimraf": "^2.5.4",
     "stylefmt": "^4.3.1",
     "stylelint": "^7.4.2",
