@@ -1,4 +1,6 @@
-body {
+body,
+code,
+.code {
   font-family: "roboto mono", consolas, monaco, monospace;
 }
 
@@ -13,9 +15,4 @@ hr {
 
 a {
   color: inherit;
-}
-
-.article-body p,
-.article-body ul {
-  margin-bottom: 2rem;
 }

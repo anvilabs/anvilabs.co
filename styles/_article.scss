@@ -1,0 +1,40 @@
+.article-body {
+  p,
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    .header-anchor {
+      display: inline;
+      float: left;
+      margin-top: -0.1em;
+      margin-left: -1em;
+      text-decoration: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    &:hover {
+      .header-anchor {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+code {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0 0.25em;
+  margin: 0;
+  vertical-align: middle;
+  background: $near-white;
+  border-radius: 0.25em;
+
+  pre & {
+    display: block;
+    padding: 1rem 1.5rem 1rem 1rem;
+    overflow: auto;
+  }
+}
