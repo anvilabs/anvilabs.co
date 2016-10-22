@@ -43,6 +43,10 @@ const PageHelmet = (
       content: title,
     },
     {
+      name: 'og:description',
+      content: description,
+    },
+    {
       property: 'og:url',
       content: `${hostname}${location.pathname}`,
     },
