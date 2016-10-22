@@ -1,5 +1,6 @@
 /* @flow */
 
+import _ from 'lodash/fp';
 import excerptHtml from 'excerpt-html';
 import frontMatter from 'front-matter';
 import hljs from 'highlight.js';
@@ -7,6 +8,7 @@ import markdownIt from 'markdown-it';
 import moment from 'moment';
 import plural from 'plural-ru';
 import readingTime from 'reading-time';
+import slug from 'slug';
 import striptags from 'striptags';
 
 moment.locale('ru');
@@ -46,6 +48,7 @@ const md = markdownIt({
     permalink: true,
     permalinkBefore: true,
     permalinkSymbol: '§',
+    slugify: _.curry(slug)(_, { lower: true }),
   })
   .use(require('markdown-it-attrs'));
 
