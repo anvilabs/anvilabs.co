@@ -3,9 +3,9 @@
 import fs from 'fs';
 import path from 'path';
 
+import { load as parseHtml } from 'cheerio';
 import { parse as parseToml } from 'toml';
 import _ from 'lodash/fp';
-import absolutify from 'absolutify';
 import frontMatter from 'front-matter';
 import markdownIt from 'markdown-it';
 import moment from 'moment';
@@ -99,14 +99,19 @@ const generateFeed = (pages: Array<mixed>) => {
       );
       // extract yaml meta tags
       const meta = frontMatter(content);
+      // render markdown to html
+      const html = md.render(meta.body);
       // replace relative links with absolute ones
-      const body = absolutify(
-        md.render(meta.body),
-        // remove trailing slashes from url
-        `${hostname}${post.path}`.replace(/\/$/, ''),
-      );
+      const $ = parseHtml(html, {
+        recognizeSelfClosing: true,
+        decodeEntities: false,
+      });
+      $('img').each((idx: number, elem: Object) => {
+        const src = _.last($(elem).attr('src').split('./'));
+        $(elem).attr('src', `${hostname}${post.path}${src}`);
+      });
 
-      return { ...post, body };
+      return { ...post, body: $.html() };
     }),
     _.forEach((post: BlogPost & { path: string }) => {
       feed.item({
