@@ -9,7 +9,7 @@ import {
   PageHelmet,
   Separator,
   StickyNavigation,
-} from '../../components';
+} from '../components';
 
 const NotFoundPage = (): React$Element<any> => (
   <main>
