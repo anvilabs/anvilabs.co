@@ -61,7 +61,9 @@ export default function (content: string) {
   const {
     time: timeToRead,
     words: numberOfWords,
-  } = readingTime(striptags(body));
+  } = readingTime(striptags(body), {
+    wordsPerMinute: 275, // from Medium
+  });
   const { description, date } = meta.attributes;
   const excerpt = description && md.render(description);
 
@@ -77,7 +79,7 @@ export default function (content: string) {
       pruneLength: 300,
     }),
     formattedDate: moment(date).format('D MMMM YYYY г.'),
-    readingTime: moment(timeToRead)
+    readingTime: moment(timeToRead + (60 * 1000)) // normalize
       .from(0, true)
       .replace('несколько секунд', 'меньше минуты'),
     numberOfWords: plural(numberOfWords, '%d слово', '%d слова', '%d слов'),
