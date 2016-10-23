@@ -12,14 +12,14 @@ const NavigationLink = ({ to, title, className }: {
   to.startsWith('#') ? (
     <a
       href={to}
-      className={cx('link dim dark-gray strikethrough', className)}
+      className={cx('dark-gray strikethrough', className)}
     >
       <span>{title}</span>
     </a>
   ) : (
     <Link
       to={to}
-      className={cx('link dim dark-gray strikethrough', className)}
+      className={cx('dark-gray strikethrough', className)}
       activeClassName="active"
       onlyActiveOnIndex
     >

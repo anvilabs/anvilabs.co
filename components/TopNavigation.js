@@ -55,7 +55,7 @@ export default class TopNavigation extends Component {
           className="z-1 relative pa3 ph5-ns bg-white flex items-center justify-between"
         >
           <a
-            className="link dim dark-gray f4 dib db dn-ns pointer"
+            className="dark-gray f4 dib db dn-ns pointer"
             onClick={() => {
               this.setState({
                 mobileMenuVisible: !mobileMenuVisible,
@@ -64,10 +64,7 @@ export default class TopNavigation extends Component {
           >
             {mobileMenuVisible ? 'Закрыть' : 'Меню'}
           </a>
-          <Link
-            to="/"
-            className="link dim"
-          >
+          <Link to="/">
             <ResponsiveImage
               srcSet={[
                 require('../static/logo.png'),

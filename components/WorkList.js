@@ -51,7 +51,7 @@ const WorkList = ({ works, compact }: {
                 <li key={link.href} className="db mb2">
                   <a
                     href={link.href}
-                    className="dib link dim ph3 pv2 dark-gray ba b--dark-gray"
+                    className="dib ph3 pv2 dark-gray ba b--dark-gray"
                   >
                     {link.title}
                   </a>

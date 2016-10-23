@@ -11,10 +11,7 @@ const ErrorMessage = (): React$Element<any> => (
     <p className="fw4 f4">Произошла ошибка при отправке сообщения.</p>
     <p>
       {'Извиняемся за неудобства. Пожалуйста, напишите нам на '}
-      <a
-        href={`mailto:${contactEmail}`}
-        className="link red dim"
-      >
+      <a href={`mailto:${contactEmail}`}>
         {contactEmail}
       </a>.
     </p>

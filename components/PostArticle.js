@@ -31,7 +31,7 @@ const PostArticle = ({ post, full }: {
       {post.path ? (
         <Link
           to={post.path}
-          className="link dark-gray dim"
+          className="dark-gray"
         >
           <PostTitle title={post.title} />
         </Link>
@@ -43,7 +43,6 @@ const PostArticle = ({ post, full }: {
       {' // '}
       <a
         href={`https://github.com/${post.author}/`}
-        className="link red dim"
       >
         @{post.author}
       </a>
@@ -60,7 +59,7 @@ const PostArticle = ({ post, full }: {
         }}
       />
       {!full && (
-        <Link to={post.path} className="link red dim">Читать дальше ➞</Link>
+        <Link to={post.path}>Читать дальше ➞</Link>
       )}
     </div>
   </article>

@@ -27,10 +27,11 @@ const PageHeader = ({ title, subtitle }: {
   </header>
 );
 
+/* eslint-disable max-len */
 PageHeader.defaultProps = {
-  title: <span>Кузница<br /><strong>мобильных</strong><br />решений.</span>,
-  // eslint-disable-next-line max-len
+  title: <span>Кузница<br /><span className="emphasize">мобильных</span><br />решений.</span>,
   subtitle: 'Проектируем и разрабатываем инновационные мобильные и веб приложения.',
 };
+/* eslint-enable max-len */
 
 export default PageHeader;

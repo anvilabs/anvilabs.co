@@ -25,7 +25,7 @@ const NotFoundPage = (): React$Element<any> => (
         <span>
           Страница, которую вы искали, не существует.
           <br /><br />
-          <Link to="/" className="link red dim">Перейти на главную.</Link>
+          <Link to="/">Перейти на главную.</Link>
         </span>
       }
     />

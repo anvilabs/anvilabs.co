@@ -14,7 +14,7 @@ const FooterLinks = ({ className }: { className?: string }) => (
         key={href}
         className="h2"
       >
-        <a href={href} className="v-mid link dim red">{title}</a>
+        <a href={href} className="v-mid">{title}</a>
       </li>
     ))}
   </ul>

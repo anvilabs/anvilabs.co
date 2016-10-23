@@ -14,5 +14,8 @@ hr {
 }
 
 a {
-  color: inherit;
+  @extend .link;
+  @extend .red;
+  @extend .dim;
+}
 }

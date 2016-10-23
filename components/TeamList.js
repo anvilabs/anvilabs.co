@@ -30,7 +30,7 @@ const TeamList = ({ team }: {
                 <li key={href} className="db">
                   <a
                     href={href}
-                    className="link dim dark-gray i"
+                    className="dark-gray i"
                   >
                     {title}
                   </a>

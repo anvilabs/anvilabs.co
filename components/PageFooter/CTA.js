@@ -13,7 +13,7 @@ const CTA = ({ className }: { className?: string }) => (
     <br />
     <a
       href={`mailto:${contactEmail}`}
-      className="dib link f3 f2-l dim red mt3"
+      className="dib f3 f2-l mt3"
     >
       {contactEmail}
     </a>

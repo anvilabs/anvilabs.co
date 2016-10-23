@@ -23,7 +23,7 @@ const Homepage = (): React$Element<any> => (
     <ContentContainer>
       <WorkList works={works} compact />
       <div className="tr">
-        <Link to="/work/" className="link red dim f4 f3-l">
+        <Link to="/work/" className="f4 f3-l">
           Посмотрите, что еще мы сделали ➞
         </Link>
       </div>

@@ -15,7 +15,7 @@ const SideNavigation = ({ className }: { className?: string }) => (
   <nav id="side-nav" className={cx('cf', className)}>
     <Link
       to="/"
-      className="v-mid dark-gray link dim fr fn-l"
+      className="v-mid dark-gray fr fn-l"
     >
       <ResponsiveImage
         srcSet={[
