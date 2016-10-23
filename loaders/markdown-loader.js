@@ -50,7 +50,8 @@ const md = markdownIt({
     permalinkSymbol: '§',
     slugify: _.curry(slug)(_, { lower: true }),
   })
-  .use(require('markdown-it-attrs'));
+  .use(require('markdown-it-attrs'))
+  .use(require('markdown-it-footnote'));
 
 export default function (content: string) {
   this.cacheable();

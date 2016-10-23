@@ -6029,6 +6029,10 @@ markdown-it-attrs:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/markdown-it-attrs/-/markdown-it-attrs-0.8.0.tgz#11ad35725f01d7e249e897d7ce8b21403dc28f16"
 
+markdown-it-footnote:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-footnote/-/markdown-it-footnote-3.0.1.tgz#7f3730747cacc86e2fe0bf8a17a710f34791517a"
+
 markdown-it-implicit-figures:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/markdown-it-implicit-figures/-/markdown-it-implicit-figures-0.3.2.tgz#2b84732c6425b9233e648d44e7dd8a9d455647c8"

@@ -79,6 +79,7 @@
     "markdown-it": "^8.0.1",
     "markdown-it-anchor": "^2.5.0",
     "markdown-it-attrs": "^0.8.0",
+    "markdown-it-footnote": "^3.0.1",
     "markdown-it-implicit-figures": "^0.3.2",
     "markdown-it-link-attributes": "^1.0.0",
     "mkdirp": "^0.5.1",
