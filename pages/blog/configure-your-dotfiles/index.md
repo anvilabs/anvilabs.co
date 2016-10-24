@@ -71,4 +71,4 @@ $ less +F ~/Library/Logs/update.sh.log
 
 ---
 
-Если вы не разбираетесь в VIM, но хотите научиться – рекомендую [этот отличный туториал](https://danielmiessler.com/study/vim/#gs.KNp0SO4). Вот [еще один только для tmux](https://danielmiessler.com/study/tmux/).
+Если вы не разбираетесь в Vim, но хотите научиться – рекомендую [этот отличный туториал](https://danielmiessler.com/study/vim/#gs.KNp0SO4). Вот [еще один только для tmux](https://danielmiessler.com/study/tmux/).
