@@ -13,3 +13,5 @@ script:
 deploy:
   provider: script
   script: yarn run deploy -- -t $NETLIFY_TOKEN
+  on:
+    branch: master
