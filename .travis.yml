@@ -10,3 +10,6 @@ cache:
     - ~/.nvm
 script:
   - yarn test:ci
+deploy:
+  provider: script
+  script: yarn run deploy -- -t $NETLIFY_TOKEN

@@ -51,6 +51,7 @@
     },
     "validate-commit-msg": {
       "types": [
+        "ci",
         "feat",
         "fix",
         "docs",
