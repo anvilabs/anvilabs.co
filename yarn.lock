@@ -2945,20 +2945,21 @@ eslint-config-airbnb@^12.0.0:
   dependencies:
     eslint-config-airbnb-base "^8.0.0"
 
-eslint-config-anvilabs:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-anvilabs/-/eslint-config-anvilabs-1.4.0.tgz#220b2580d886580af6888bc89776384f9647682d"
+eslint-config-anvilabs@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-anvilabs/-/eslint-config-anvilabs-1.6.2.tgz#4c3d8d0f995d4a994633b4c3fa8017fc1428ba3d"
   dependencies:
     eslint-config-airbnb "^12.0.0"
     eslint-plugin-babel "^3.3.0"
-    eslint-plugin-flowtype "^2.20.0"
+    eslint-plugin-eslint-comments "^0.1.1"
+    eslint-plugin-flowtype "^2.23.0"
     eslint-plugin-fp "^2.2.0"
     eslint-plugin-import "^1.16.0"
     eslint-plugin-jasmine "^1.8.1"
     eslint-plugin-jsx-a11y "^2.2.3"
     eslint-plugin-lodash-fp "^2.1.1"
     eslint-plugin-no-use-extend-native "^0.3.11"
-    eslint-plugin-promise "^3.0.0"
+    eslint-plugin-promise "^3.3.0"
     eslint-plugin-react "^6.3.0"
     eslint-plugin-react-native "^2.0.0"
     eslint-plugin-unicorn "^1.0.0"
@@ -2975,9 +2976,15 @@ eslint-plugin-babel@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-babel/-/eslint-plugin-babel-3.3.0.tgz#2f494aedcf6f4aa4e75b9155980837bc1fbde193"
 
-eslint-plugin-flowtype@^2.20.0:
-  version "2.20.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.20.0.tgz#69b90576174ee6a305362c777720825e7db9464b"
+eslint-plugin-eslint-comments@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-comments/-/eslint-plugin-eslint-comments-0.1.1.tgz#8ad9535b61db5f86d202d5c73d6e06720d8307af"
+  dependencies:
+    escape-string-regexp "^1.0.5"
+
+eslint-plugin-flowtype@^2.23.0:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.23.0.tgz#e6c5ce5770743cb0653da30ca082cbfaa4c61574"
   dependencies:
     lodash "^4.15.0"
 
@@ -3040,9 +3047,9 @@ eslint-plugin-no-use-extend-native@^0.3.11:
     is-obj-prop "^1.0.0"
     is-proto-prop "^1.0.0"
 
-eslint-plugin-promise@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.0.0.tgz#1528635d0160f3484e425cce2169cb74cec0186a"
+eslint-plugin-promise@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.3.0.tgz#20a1ef58b4243ffdaef82ee9360a02353a7cca89"
 
 eslint-plugin-react-native@^2.0.0:
   version "2.0.0"
