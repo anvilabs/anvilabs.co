@@ -12,3 +12,7 @@ npm-debug.log
 _design/
 public/
 .gatsby-context.js
+
+# Flow
+#
+flow-coverage/

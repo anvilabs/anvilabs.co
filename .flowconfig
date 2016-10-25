@@ -2,6 +2,7 @@
 .*/node_modules/babel-plugin-flow-react-proptypes/src/__test__/
 .*/node_modules/fbjs/
 .*/node_modules/findup/test/
+.*/node_modules/flow-coverage-report/
 .*/node_modules/gatsby/
 .*/node_modules/systemjs-builder/
 
