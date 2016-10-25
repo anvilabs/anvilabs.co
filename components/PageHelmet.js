@@ -76,14 +76,14 @@ const PageHelmet = (
   );
 };
 
-/* eslint-disable import/newline-after-import, max-len */
+/* eslint-disable max-len */
 PageHelmet.defaultProps = {
   title: siteTitle,
   description: siteDescription,
   ogImageSrc: `${hostname}${((require('../static/og-image.jpg'): any): string)}`,
   twitterImageSrc: `${hostname}${((require('../static/twitter-image.jpg'): any): string)}`,
 };
-/* eslint-enable import/newline-after-import, max-len */
+/* eslint-enable max-len */
 PageHelmet.contextTypes = {
   location: PropTypes.object.isRequired,
 };

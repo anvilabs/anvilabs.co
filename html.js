@@ -14,9 +14,9 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
   const head = Helmet.rewind();
   const attrs = head.htmlAttributes.toComponent();
 
-  /* eslint-disable fp/no-let, fp/no-mutation */
   let css;
   if (process.env.NODE_ENV !== 'development') {
+    // eslint-disable-next-line fp/no-mutation
     css = (
       <style
         // eslint-disable-next-line react/no-danger
@@ -26,7 +26,6 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
       />
     );
   }
-  /* eslint-enable fp/no-let, fp/no-mutation */
 
   /* eslint-disable max-len */
   return (
