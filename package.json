@@ -138,7 +138,7 @@
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
-    "gulp-imagemin": "^3.0.3",
+    "gulp-imagemin": "^3.1.0",
     "gulp-uncss": "^1.0.6",
     "husky": "^0.11.9",
     "imagemin-gifsicle": "^5.1.0",
