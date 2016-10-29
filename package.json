@@ -132,7 +132,7 @@
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.8.1",
     "eslint-config-anvilabs": "^1.6.2",
-    "flow-bin": "^0.33.0",
+    "flow-bin": "^0.34.0",
     "flow-coverage-report": "^0.1.0",
     "gatsby": "^0.12.14",
     "glob": "^7.1.1",
