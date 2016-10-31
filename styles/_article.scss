@@ -31,9 +31,9 @@
 code {
   display: inline-block;
   max-width: 100%;
-  padding: 0 0.25em;
+  padding: 0.1em 0;
   margin: 0;
-  vertical-align: middle;
+  font-size: 85%;
   background: $near-white;
   border-radius: 0.25em;
 
@@ -41,5 +41,11 @@ code {
     display: block;
     padding: 1rem 1.5rem 1rem 1rem;
     overflow: auto;
+  }
+
+  &::before,
+  &::after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
   }
 }
