@@ -6,6 +6,8 @@ author: binchik
 
 Команда Anvilabs – большие фанаты нативной разработки на iOS. Наши приложения – [Сеансы](https://itunes.apple.com/app/id980255991), [BeautyBook](https://itunes.apple.com/kz/app/beautybook/id1069411501?mt=8), [Never Drink Alone](https://github.com/yenbekbay/never-drink-alone), [Kogershin](https://itunes.apple.com/ml/app/kogershin-treking-posylok/id1043220890?mt=8), [Metio](https://itunes.apple.com/ml/app/metio-intuitivnyj-mestnyj/id1055506207?mt=8) и множество других проектов, в которых мы принимали участие вне работы в Anvilabs – были написаны на Objective-C и Swift. Мы обожаем активно развивающийся Swift, протокольно-ориентированное программирование, архитектурные паттерны MVVM и VIPER.
 
+<!-- more -->
+
 В общем, мы не могли представить, как можно было оставить всю эту экосистему в пользу JavaScript фреймворков. Мобильные приложения на [Titanium](http://www.appcelerator.com), [Ionic](http://ionicframework.com) и подобных платформах казались и все еще кажутся нам страшной идеей. JavaScript был для нас языком третьего сорта. Отсутствие строгой системы типов, прототипно-ориентированное программирование и дурная слава сделали свое дело – мы боялись его.
 
 <img src="mistake-hobbit.jpg" alt="Мем 'мы еще никогда так не ошибались'" width="639" />
