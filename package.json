@@ -119,7 +119,7 @@
     "@types/react-helmet": "^0.0.24",
     "@types/react-router": "^2.0.38",
     "babel-cli": "^6.14.0",
-    "babel-jest": "^16.0.0",
+    "babel-jest": "^17.0.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-flow-react-proptypes": "^0.15.0",
     "babel-plugin-lodash": "^3.2.8",
