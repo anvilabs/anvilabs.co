@@ -131,7 +131,7 @@
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.8.1",
-    "eslint-config-anvilabs": "^1.6.2",
+    "eslint-config-anvilabs": "^2.0.1",
     "flow-bin": "^0.34.0",
     "flow-coverage-report": "^0.1.0",
     "gatsby": "^0.12.14",
