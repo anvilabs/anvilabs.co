@@ -8,7 +8,9 @@ const onRouteUpdate = (location: Object) => {
       smoothScroll(document.querySelector(`${location.hash}`));
     }, 0);
   } else if (
-    location.action === 'PUSH' && !location.pathname.startsWith('/blog')
+    location.action === 'PUSH' &&
+    !location.pathname.startsWith('/blog') &&
+    location.pathname !== '/'
   ) {
     setTimeout(() => {
       smoothScroll(document.querySelector('#content'));
