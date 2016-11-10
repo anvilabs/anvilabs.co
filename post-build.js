@@ -21,14 +21,12 @@ const config = parseToml(
 const { siteTitle, siteDescription, hostname } = config;
 
 const generateSitemapUrl = (page: mixed): ?Object => {
-  /* eslint-disable fp/no-mutation */
   let pagePath;
   if (typeof page === 'object' && page !== null) {
     pagePath = page.path;
   } else {
     pagePath = page;
   }
-  /* eslint-enable fp/no-mutation */
 
   const nonIndexedPages = ['/404/'];
   const importantPages = ['/', '/work/', '/blog/'];

@@ -34,13 +34,15 @@ const questions = [
   },
 ];
 
-prompt(questions)
-  .then((answers: {
-    title: string,
-    slug: string,
-    description: string,
-    author: string,
-  }) => {
+(async () => {
+  try {
+    const answers: {
+      title: string,
+      slug: string,
+      description: string,
+      author: string,
+    } = await prompt(questions);
+
     const dir = `./pages/blog/${answers.slug}`;
     mkdirpSync(dir);
 
@@ -59,10 +61,8 @@ prompt(questions)
     console.log(`\n${dir}`);// eslint-disable-line no-console
 
     open(`${dir}/index.md`);
-
-    return;
-  })
-  .catch((err: Error) => {
+  } catch (err) {
     console.error(err); // eslint-disable-line no-console
     process.exit(1); // eslint-disable-line unicorn/no-process-exit
-  });
+  }
+})();

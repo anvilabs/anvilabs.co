@@ -16,7 +16,6 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
 
   let css;
   if (process.env.NODE_ENV !== 'development') {
-    // eslint-disable-next-line fp/no-mutation
     css = (
       <link
         data-inline
