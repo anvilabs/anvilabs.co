@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import cx from 'classnames';
 import React from 'react';
 
-import { transformBlogPostTitle } from '../utils';
+import { isDarkMode, transformBlogPostTitle } from '../utils';
 import type { BlogPost } from '../types';
 
 const PostTitle = ({ title }: { title: string }) => (
@@ -31,14 +31,18 @@ const PostArticle = ({ post, full }: {
       {post.path ? (
         <Link
           to={post.path}
-          className="dark-gray"
+          className={cx(isDarkMode ? 'white' : 'dark-gray')}
         >
           <PostTitle title={post.title} />
         </Link>
       ) : <PostTitle title={post.title} />
     }
     </h1>
-    <p className={cx('mb4 gray f6', full && 'tc mb5')}>
+    <p
+      className={cx(
+        'mb4 f6', isDarkMode ? 'white-60' : 'gray', full && 'tc mb5',
+      )}
+    >
       <time dateTime={post.date}>{post.formattedDate}</time>
       {' // '}
       <a

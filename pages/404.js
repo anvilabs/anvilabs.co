@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import React from 'react';
 
 import {
+  Main,
   PageFooter,
   PageHeader,
   PageHelmet,
@@ -12,7 +13,7 @@ import {
 } from '../components';
 
 const NotFoundPage = (): React$Element<any> => (
-  <main>
+  <Main>
     <PageHelmet
       title="404 – Страница не найдена | Anvilabs"
       mixpanelTitle="404"
@@ -31,7 +32,7 @@ const NotFoundPage = (): React$Element<any> => (
     />
     <Separator />
     <PageFooter />
-  </main>
+  </Main>
 );
 
 export default NotFoundPage;

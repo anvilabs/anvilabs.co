@@ -3,6 +3,7 @@
 import Analytics from './Analytics';
 import ContactForm from './ContactForm';
 import ContentContainer from './ContentContainer';
+import Main from './Main';
 import PageFooter from './PageFooter';
 import PageHeader from './PageHeader';
 import PageHelmet from './PageHelmet';
@@ -18,6 +19,7 @@ export {
   Analytics,
   ContactForm,
   ContentContainer,
+  Main,
   PageFooter,
   PageHeader,
   PageHelmet,

@@ -1,13 +1,15 @@
 /* @flow */
 
+import cx from 'classnames';
 import React from 'react';
 
+import { isDarkMode } from '../../utils';
 import CTA from './CTA';
 import FooterLinks from './FooterLinks';
 import NewsletterForm from './NewsletterForm';
 
 const PageFooter = () => (
-  <footer className="pa3 pa5-ns dark-gray lh-copy">
+  <footer className={cx('pa3 pa5-ns lh-copy', !isDarkMode && 'dark-gray')}>
     <div className="flex flex-wrap justify-between mb5">
       <CTA className="w-100 w-40-l ma0 mb5 mb0-l" />
       <FooterLinks className="w-100 w-40-m w-10-l ma0 mb5 mb0-ns" />

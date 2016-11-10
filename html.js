@@ -61,7 +61,7 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
 
         {head.link.toComponent()}
       </head>
-      <body className="bg-white fw3">
+      <body>
         <div
           id="react-mount"
           // eslint-disable-next-line react/no-danger

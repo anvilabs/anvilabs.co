@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 import cx from 'classnames';
 import React, { Component } from 'react';
 
+import { isDarkMode } from '../utils';
 import NavigationLink from './NavigationLink';
 import ResponsiveImage from './ResponsiveImage';
 
@@ -51,11 +52,16 @@ export default class TopNavigation extends Component {
     return (
       <nav className={className} style={style}>
         <div
-          // eslint-disable-next-line max-len
-          className="z-1 relative pa3 ph5-ns bg-white flex items-center justify-between"
+          className={cx(
+            'z-1 relative pa3 ph5-ns flex items-center justify-between',
+            isDarkMode ? 'bg-dark-gray' : 'bg-white',
+          )}
         >
           <a
-            className="dark-gray f4 dib db dn-ns pointer"
+            className={cx(
+              'f4 dib db dn-ns pointer',
+              isDarkMode ? 'white' : 'dark-gray',
+            )}
             onClick={() => {
               this.setState({
                 mobileMenuVisible: !mobileMenuVisible,
@@ -66,7 +72,11 @@ export default class TopNavigation extends Component {
           </a>
           <Link to="/">
             <ResponsiveImage
-              srcSet={[
+              srcSet={isDarkMode ? [
+                require('../static/logo-white.png'),
+                require('../static/logo-white@2x.png'),
+                require('../static/logo-white@3x.png'),
+              ] : [
                 require('../static/logo.png'),
                 require('../static/logo@2x.png'),
                 require('../static/logo@3x.png'),

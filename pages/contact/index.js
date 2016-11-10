@@ -5,6 +5,7 @@ import React from 'react';
 import {
   ContactForm,
   ContentContainer,
+  Main,
   PageFooter,
   PageHeader,
   PageHelmet,
@@ -13,7 +14,7 @@ import {
 } from '../../components';
 
 const ContactPage = (): React$Element<any> => (
-  <main>
+  <Main>
     <PageHelmet mixpanelTitle="Contact" />
     <StickyNavigation />
     <PageHeader />
@@ -24,7 +25,7 @@ const ContactPage = (): React$Element<any> => (
     </ContentContainer>
     <Separator />
     <PageFooter />
-  </main>
+  </Main>
 );
 
 export default ContactPage;

@@ -4,7 +4,7 @@ import React from 'react';
 
 const Separator = ({ className }: { className?: string }) => (
   <div className={className}>
-    <hr className="ma0 w-100 h3 bn" />
+    <div className="separator ma0 w-100 h3" />
   </div>
 );
 

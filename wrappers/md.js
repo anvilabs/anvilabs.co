@@ -7,6 +7,7 @@ import React from 'react';
 
 import {
   ContentContainer,
+  Main,
   PageFooter,
   PageHelmet,
   PostArticle,
@@ -25,7 +26,7 @@ const MarkdownWrapper = ({ route }: {
   const { data: post, path } = route.page;
 
   return (
-    <main>
+    <Main>
       <PageHelmet
         title={post.title}
         mixpanelTitle={post.title}
@@ -39,7 +40,7 @@ const MarkdownWrapper = ({ route }: {
       </ContentContainer>
       <Separator />
       <PageFooter />
-    </main>
+    </Main>
   );
 };
 

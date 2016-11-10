@@ -35,7 +35,6 @@ code {
   padding: 0.1em 0;
   margin: 0;
   font-size: 85%;
-  background: $near-white;
   border-radius: 0.25em;
 
   pre & {
@@ -48,5 +47,13 @@ code {
   &::after {
     letter-spacing: -0.2em;
     content: "\00a0";
+  }
+
+  @at-root .light-mode & {
+    background: #fafafa;
+  }
+
+  @at-root .dark-mode & {
+    background: #2b303b;
   }
 }

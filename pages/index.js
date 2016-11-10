@@ -5,6 +5,7 @@ import React from 'react';
 
 import {
   ContentContainer,
+  Main,
   PageFooter,
   PageHeader,
   PageHelmet,
@@ -15,7 +16,7 @@ import {
 import works from '../data/works';
 
 const Homepage = (): React$Element<any> => (
-  <main>
+  <Main>
     <PageHelmet mixpanelTitle="Home" />
     <StickyNavigation />
     <PageHeader />
@@ -30,7 +31,7 @@ const Homepage = (): React$Element<any> => (
     </ContentContainer>
     <Separator />
     <PageFooter />
-  </main>
+  </Main>
 );
 
 export default Homepage;

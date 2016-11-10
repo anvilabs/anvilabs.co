@@ -1,13 +1,13 @@
 /* @flow */
 
+import cx from 'classnames';
 import React from 'react';
 
+import { isDarkMode } from '../utils';
 import ResponsiveImage, { srcSetFromImageUrl } from './ResponsiveImage';
 import type { TeamMember } from '../types';
 
-const TeamList = ({ team }: {
-  team: Array<TeamMember>,
-}) => (
+const TeamList = ({ team }: { team: Array<TeamMember> }) => (
   <section className="flex w-100 flex-wrap">
     {team.map(({ name, role, photoUrl, links }: TeamMember) => (
       <article key={name} className="w-100 w-50-m w-25-l">
@@ -30,7 +30,7 @@ const TeamList = ({ team }: {
                 <li key={href} className="db">
                   <a
                     href={href}
-                    className="dark-gray i"
+                    className={cx('i', isDarkMode ? 'white' : 'dark-gray')}
                   >
                     {title}
                   </a>

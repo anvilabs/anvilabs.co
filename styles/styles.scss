@@ -1,7 +1,9 @@
 $red: #de671e;
+$dark-gray: #393f4b;
 
 @import "~tachyons-sass/tachyons";
 @import "article";
 @import "global";
-@import "highlight";
+@import "highlight-dark";
+@import "highlight-light";
 @import "strikethrough";

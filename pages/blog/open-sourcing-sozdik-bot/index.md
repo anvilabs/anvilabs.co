@@ -11,8 +11,8 @@ author: yenbekbay
 
 <!-- more -->
 
-![Скриншот в Telegram](sozdik-telegram-bot.jpg)
-![Скриншот в Facebook Messenger](sozdik-messenger-bot.jpg)
+![Скриншот в Telegram](sozdik-telegram-bot.png)
+![Скриншот в Facebook Messenger](sozdik-messenger-bot.png)
 
 В этом проекте есть несколько вещей, которые делают его действительно интересным:
 

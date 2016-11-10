@@ -2,7 +2,10 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { config } from 'config';
+import cx from 'classnames';
 import React from 'react';
+
+import { isDarkMode } from '../../utils';
 
 const NewsletterForm = ({ className }: { className?: string }) => (
   <form
@@ -15,13 +18,21 @@ const NewsletterForm = ({ className }: { className?: string }) => (
   >
     <fieldset className="bn ma0 pa0">
       <legend>Подпишитесь на нашу рассылку</legend>
-      <div className="flex bb b--black mt2">
+      <div
+        className={cx(
+          'flex bb mt2',
+          isDarkMode ? 'b--white' : 'b--dark-gray',
+        )}
+      >
         <input
           type="email"
           defaultValue=""
           name="EMAIL"
           placeholder="username@gmail.com"
-          className="input-reset bn pv2 outline-0 w-100"
+          className={cx(
+            'bg-transparent input-reset bn pv2 outline-0 w-100',
+            isDarkMode ? 'white' : 'dark-gray',
+          )}
           style={{ flexGrow: 1 }}
         />
         <div style={{ position: 'absolute', left: -5000 }} aria-hidden>
@@ -36,8 +47,10 @@ const NewsletterForm = ({ className }: { className?: string }) => (
           type="submit"
           value="↵"
           name="subscribe"
-          // eslint-disable-next-line max-len
-          className="dim input-reset outline-0 bn tr pv2 pointer w3 bg-transparent"
+          className={cx(
+            'dim input-reset outline-0 bn tr pv2 pointer w3 bg-transparent',
+            isDarkMode ? 'white' : 'dark-gray',
+          )}
         />
       </div>
     </fieldset>

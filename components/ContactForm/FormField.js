@@ -1,7 +1,10 @@
 /* @flow */
 
+import cx from 'classnames';
 import React from 'react';
 import Form from 'react-formal';
+
+import { isDarkMode } from '../../utils';
 
 const FormField = ({ name, placeholder, className, textarea }: {
   name: string,
@@ -13,7 +16,10 @@ const FormField = ({ name, placeholder, className, textarea }: {
     <Form.Field
       name={name}
       placeholder={placeholder}
-      className="dib outline-0 pa2 mb1 input-reset ba b--black w-100"
+      className={cx(
+        'dib outline-0 pa2 mb1 input-reset ba w-100 bg-transparent',
+        isDarkMode ? 'b--white white' : 'b--dark-gray dark-gray',
+      )}
       errorClass="b--red"
       {...(textarea ? {
         type: 'textarea',

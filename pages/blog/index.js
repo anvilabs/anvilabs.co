@@ -5,6 +5,7 @@ import React from 'react';
 
 import {
   ContentContainer,
+  Main,
   PageFooter,
   PageHelmet,
   PostArticle,
@@ -21,7 +22,7 @@ const BlogPage = ({ route }: {
     .filter(({ draft }: { draft?: boolean }) => !draft);
 
   return (
-    <main>
+    <Main>
       <PageHelmet
         title="Блог | Anvilabs"
         description="Блог компании Anvilabs"
@@ -38,7 +39,7 @@ const BlogPage = ({ route }: {
       </ContentContainer>
       <Separator />
       <PageFooter />
-    </main>
+    </Main>
   );
 };
 

@@ -10,7 +10,7 @@ const works: Array<Work> = [{
     title: 'Пройти на seansy.kz',
     href: 'http://seansy.kz',
   }],
-  imageUrl: '/work/seansy.jpg',
+  imageUrl: '/work/seansy.png',
 }, {
   title: 'WeVote',
   subtitle: 'Независимая социальная сеть для политических выборов. Наше первое приложение написанное на React Native.',
@@ -21,7 +21,7 @@ const works: Array<Work> = [{
     title: 'Скачать с Google Play',
     href: 'http://bit.ly/2ePNfIc',
   }],
-  imageUrl: '/work/wevote.jpg',
+  imageUrl: '/work/wevote.png',
 }, {
   title: 'BeautyBook',
   subtitle: 'Бронирование услуг в салонах красоты и спа на территории Алматы, Казахстан.',
@@ -29,7 +29,7 @@ const works: Array<Work> = [{
     title: 'Скачать с App Store',
     href: 'http://apple.co/1PqQ5tt',
   }],
-  imageUrl: '/work/beautybook.jpg',
+  imageUrl: '/work/beautybook.png',
 }, {
   title: 'Sozdik Bot',
   subtitle: 'Бот на Telegram и Facebook Messenger, умеющий переводить слова и фразы с русского на казахский и обратно.',
@@ -40,7 +40,7 @@ const works: Array<Work> = [{
     title: 'Написать в Messenger',
     href: 'http://m.me/sozdikbot',
   }],
-  imageUrl: '/work/sozdik-bot.jpg',
+  imageUrl: '/work/sozdik-bot.png',
 }, {
   title: 'Never Drink Alone',
   subtitle: 'Одно деловое знакомство в день с самыми интересными людьми города (Проект закрыт).',
@@ -48,7 +48,7 @@ const works: Array<Work> = [{
     title: 'Посмотреть исходный код',
     href: 'https://github.com/yenbekbay/never-drink-alone',
   }],
-  imageUrl: '/work/never-drink-alone.jpg',
+  imageUrl: '/work/never-drink-alone.png',
 }, {
   title: 'Kogershin',
   subtitle: 'Самый удобный способ следить за вашими посылками через сервис Казпочты.',
@@ -56,7 +56,7 @@ const works: Array<Work> = [{
     title: 'Скачать с App Store',
     href: 'http://apple.co/2ejDOgR',
   }],
-  imageUrl: '/work/kogershin.jpg',
+  imageUrl: '/work/kogershin.png',
 }, {
   title: 'Metio',
   subtitle: 'Местная погода на простом языке со всей нужной информацией для принятия решения.',
@@ -64,7 +64,7 @@ const works: Array<Work> = [{
     title: 'Скачать с App Store',
     href: 'http://apple.co/2dNr1SZ',
   }],
-  imageUrl: '/work/metio.jpg',
+  imageUrl: '/work/metio.png',
 }];
 /* eslint-enable max-len */
 

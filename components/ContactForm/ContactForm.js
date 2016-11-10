@@ -9,6 +9,7 @@ import Form from 'react-formal';
 import React, { Component } from 'react';
 import yup from 'yup';
 
+import { isDarkMode } from '../../utils';
 import ErrorMessage from './ErrorMessage';
 import FormField from './FormField';
 import ThankYouMessage from './ThankYouMessage';
@@ -88,7 +89,11 @@ export default class ContactForm extends Component {
         onSubmit={this._onSubmit}
       >
         <fieldset
-          className={cx('pa3 mb3', status === 'submitting' && 'o-50')}
+          className={cx(
+            'pa3 mb3',
+            isDarkMode ? 'b--white' : 'b--dark-gray',
+            status === 'submitting' && 'o-50',
+          )}
           style={submitting ? { pointerEvents: 'none' } : {}}
         >
           <legend className="ph3 f4 f3-l">Написать нам</legend>
@@ -115,8 +120,10 @@ export default class ContactForm extends Component {
         </fieldset>
         <Form.Button
           type="submit"
-          // eslint-disable-next-line max-len
-          className="dim input-reset ph3 pv2 outline-0 ba b--black pointer bg-transparent"
+          className={cx(
+            'dim input-reset ph3 pv2 outline-0 ba pointer bg-transparent',
+            isDarkMode ? 'b--white white' : 'b--dark-gray dark-gray',
+          )}
         >
           {status === 'submitting' ? 'Отправляется' : 'Отправить'}
         </Form.Button>

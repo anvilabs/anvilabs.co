@@ -19,6 +19,10 @@
     width: 100%;
   }
 
+  @at-root .dark-mode & span::after {
+    background-color: $white-30;
+  }
+
   @media (pointer: fine) {
     @media #{$breakpoint-not-small} {
       &.dim:hover,

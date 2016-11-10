@@ -3,6 +3,7 @@
 import cx from 'classnames';
 import React from 'react';
 
+import { isDarkMode } from '../utils';
 import ResponsiveImage, { srcSetFromImageUrl } from './ResponsiveImage';
 import type { Work } from '../types';
 
@@ -25,7 +26,7 @@ const WorkList = ({ works, compact }: {
       >
         <div
           className={cx(
-            'w-100 mb4',
+            'w-100 mb4 mw6',
             !compact && 'w-40-l mb0-l',
             (!compact && idx % 2 !== 0) && 'order-1-l',
           )}
@@ -51,7 +52,10 @@ const WorkList = ({ works, compact }: {
                 <li key={link.href} className="db mb2">
                   <a
                     href={link.href}
-                    className="dib ph3 pv2 dark-gray ba b--dark-gray"
+                    className={cx(
+                      'dib ph3 pv2 ba',
+                      isDarkMode ? 'white b--white' : 'dark-gray b--dark-gray',
+                    )}
                   >
                     {link.title}
                   </a>

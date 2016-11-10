@@ -4,6 +4,7 @@ import React from 'react';
 
 import {
   ContentContainer,
+  Main,
   PageFooter,
   PageHeader,
   PageHelmet,
@@ -15,7 +16,7 @@ import team from '../../data/team';
 
 /* eslint-disable max-len */
 const ContactPage = (): React$Element<any> => (
-  <main>
+  <Main>
     <PageHelmet mixpanelTitle="About" />
     <StickyNavigation />
     <PageHeader />
@@ -30,7 +31,7 @@ const ContactPage = (): React$Element<any> => (
     </ContentContainer>
     <Separator />
     <PageFooter />
-  </main>
+  </Main>
 );
 /* eslint-enable max-len */
 
