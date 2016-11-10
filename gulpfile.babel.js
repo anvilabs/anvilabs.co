@@ -17,10 +17,14 @@ gulp.task('uncss', () => gulp
   .pipe(uncss({
     html: ['public/**/*.html'],
     ignore: [
-      'b--white',
-      'bg-dark-gray',
-      'white-60',
-      'white',
+      '.b--dark-gray',
+      '.b--white',
+      '.bg-dark-gray',
+      '.bg-white',
+      '.dark-gray',
+      '.gray',
+      '.white-60',
+      '.white',
     ],
   }))
   .pipe(cssnano())
