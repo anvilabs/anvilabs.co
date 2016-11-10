@@ -25,6 +25,8 @@ gulp.task('uncss', () => gulp
       '.gray',
       '.white-60',
       '.white',
+      /^\.dark-mode .+/,
+      /^\.light-mode .+/,
     ],
   }))
   .pipe(cssnano())
