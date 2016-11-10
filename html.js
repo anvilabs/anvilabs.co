@@ -7,7 +7,7 @@ import React from 'react';
 
 import { Analytics, WebFonts } from './components';
 
-const { hostname } = config;
+const { hostname, analyticsKey } = config;
 const BUILD_TIME = new Date().getTime();
 
 const Html = ({ body }: { body: string }): React$Element<any> => {
@@ -18,11 +18,10 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
   if (process.env.NODE_ENV !== 'development') {
     // eslint-disable-next-line fp/no-mutation
     css = (
-      <style
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{
-          __html: require('!raw!./public/styles.css'),
-        }}
+      <link
+        data-inline
+        rel="stylesheet"
+        href="/styles.css"
       />
     );
   }
@@ -39,7 +38,6 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <meta httpEquiv="Cache-Control" content="private" />
         {head.title.toComponent()}
         {head.meta.toComponent()}
-        {css}
 
         <link rel="apple-touch-icon" sizes="180x180" href={require('./static/apple-touch-icon.png')} />
         <link rel="icon" type="image/png" href={require('./static/favicon-32x32.png')} sizes="32x32" />
@@ -48,6 +46,8 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <link rel="mask-icon" href={require('./static/safari-pinned-tab.svg')} color="#ba4519" />
         <link rel="shortcut icon" href={require('!file?name=/[hash].[ext]!./static/favicon.ico')} />
         <link rel="alternate" href={`${hostname}/feed.xml`} type="application/rss+xml" title="Блог компании Anvilabs" />
+        {css}
+
         <meta name="apple-mobile-web-app-title" content="Anvilabs" />
         <meta name="application-name" content="Anvilabs" />
         <meta name="msapplication-config" content={require('!file?name=/[hash].[ext]!./static/browserconfig.xml')} />
@@ -67,7 +67,7 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: body }}
         />
-        <Analytics writeKey={config.analyticsKey} />
+        <Analytics writeKey={analyticsKey} />
         <WebFonts
           config={{
             google: {

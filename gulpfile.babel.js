@@ -7,6 +7,7 @@ import cssnano from 'gulp-cssnano';
 import glob from 'glob';
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
+import inlinesource from 'gulp-inline-source';
 import Pageres from 'pageres';
 import uncss from 'gulp-uncss';
 /* eslint-enable import/no-extraneous-dependencies */
@@ -17,6 +18,12 @@ gulp.task('uncss', () => gulp
     html: ['public/**/*.html'],
   }))
   .pipe(cssnano())
+  .pipe(gulp.dest('./public')),
+);
+
+gulp.task('inlinesource', ['uncss'], () => gulp
+  .src('./public/**/*.html')
+  .pipe(inlinesource({ attribute: 'data-inline' }))
   .pipe(gulp.dest('./public')),
 );
 
@@ -51,4 +58,4 @@ gulp.task('imagemin', () => gulp
   .pipe(gulp.dest('./public')),
 );
 
-gulp.task('default', ['uncss', 'pageres']);
+gulp.task('default', ['uncss', 'inlinesource', 'pageres']);
