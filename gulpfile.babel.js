@@ -16,6 +16,12 @@ gulp.task('uncss', () => gulp
   .src('./public/styles.css')
   .pipe(uncss({
     html: ['public/**/*.html'],
+    ignore: [
+      'b--white',
+      'bg-dark-gray',
+      'white-60',
+      'white',
+    ],
   }))
   .pipe(cssnano())
   .pipe(gulp.dest('./public')),

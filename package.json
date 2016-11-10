@@ -17,6 +17,7 @@
   },
   "scripts": {
     "deploy": "npm run build && netlify deploy",
+    "serve": "gatsby serve-build",
     "new:post": "babel-node scripts/new-post",
     "start": "gatsby develop",
     "build": "rimraf public && gatsby build && gulp",
