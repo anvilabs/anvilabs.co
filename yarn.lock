@@ -342,6 +342,13 @@ array-unique@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/array-unique/-/array-unique-0.2.1.tgz#a1d97ccafcbc2625cc70fadceb36a50c58b01a53"
 
+array.prototype.find@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/array.prototype.find/-/array.prototype.find-2.0.0.tgz#56a9ab1edde2a7701ed6d9166acec338919d8430"
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.5.0"
+
 arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
@@ -680,11 +687,12 @@ babel-plugin-check-es2015-constants@^6.3.13:
   dependencies:
     babel-runtime "^6.0.0"
 
-babel-plugin-flow-react-proptypes@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-flow-react-proptypes/-/babel-plugin-flow-react-proptypes-0.15.0.tgz#3fce79f951ac43f99425a7caf078c8b4cc0f34d4"
+babel-plugin-flow-react-proptypes:
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-flow-react-proptypes/-/babel-plugin-flow-react-proptypes-0.17.2.tgz#f74303d5cb482c33cfc644753049c9b8f7f79d29"
   dependencies:
     babel-template "^6.16.0"
+    babel-traverse "^6.18.0"
     babel-types "^6.18.0"
 
 babel-plugin-istanbul@^2.0.0:
@@ -1216,6 +1224,13 @@ babel-register@^6.18.0:
 babel-runtime@^6.0.0, babel-runtime@^6.11.6, babel-runtime@^6.2.0, babel-runtime@^6.6.1, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.18.0.tgz#0f4177ffd98492ef13b9f823e9994a02584c9078"
+  dependencies:
+    core-js "^2.4.0"
+    regenerator-runtime "^0.9.5"
+
+babel-runtime@6.11.6:
+  version "6.11.6"
+  resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.11.6.tgz#6db707fef2d49c49bfa3cb64efdb436b518b8222"
   dependencies:
     core-js "^2.4.0"
     regenerator-runtime "^0.9.5"
@@ -2814,7 +2829,7 @@ error-stack-parser@^1.3.6:
   dependencies:
     stackframe "^0.3.1"
 
-es-abstract@^1.4.3:
+es-abstract@^1.4.3, es-abstract@^1.5.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.6.1.tgz#bb8a2064120abcf928a086ea3d9043114285ec99"
   dependencies:
@@ -3581,14 +3596,18 @@ flow-bin@^0.34.0:
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.34.0.tgz#093ed36981e8fafc39d16f0b0878d0968aa80fad"
 
-flow-coverage-report@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/flow-coverage-report/-/flow-coverage-report-0.1.0.tgz#2c66ceb31c536d99ead50c2385455ddece04041f"
+flow-coverage-report:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/flow-coverage-report/-/flow-coverage-report-0.2.0.tgz#8529729ecc440c676c5960b32d1393d2eeddad57"
   dependencies:
+    array.prototype.find "2.0.0"
+    babel-runtime "6.11.6"
     glob "7.0.5"
+    minimatch "3.0.3"
     mkdirp "0.5.1"
     react "15.3.1"
     react-dom "15.3.1"
+    temp "0.8.3"
     terminal-table "0.0.12"
     yargs "5.0.0"
 
@@ -6332,7 +6351,7 @@ minimatch@^2.0.1, minimatch@2.x:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@~3.0.2, "minimatch@2 || 3":
+minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@~3.0.2, "minimatch@2 || 3", minimatch@3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
   dependencies:
@@ -7914,16 +7933,16 @@ react-dom@15.3.1:
   version "15.3.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.1.tgz#6d42cd2b64c8c5e0b693f3ffaec301e6e627e24e"
 
-react-formal@^0.22.0:
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/react-formal/-/react-formal-0.22.0.tgz#a90186c8885369e6ba3406c2478e4656a5bb8c44"
+react-formal:
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/react-formal/-/react-formal-0.23.1.tgz#5acf817a2c2723d3bb62a3c8e0f128ba2f96b3ea"
   dependencies:
     chain-function "^1.0.0"
     classnames "^2.2.5"
     invariant "^2.2.1"
     lodash "^4.16.3"
     property-expr "^1.3.1"
-    react-input-message "^0.14.1"
+    react-input-message "^0.14.2"
     react-prop-types "^0.3.2"
     react-pure-render "^1.0.2"
     spy-on-component "^1.0.2"
@@ -7961,7 +7980,7 @@ react-hot-loader@^1.3.0:
     react-hot-api "^0.4.5"
     source-map "^0.4.4"
 
-react-input-message@^0.14.1:
+react-input-message@^0.14.2:
   version "0.14.2"
   resolved "https://registry.yarnpkg.com/react-input-message/-/react-input-message-0.14.2.tgz#134f8d99d84261234d78929ad855f71eed39687b"
   dependencies:
@@ -9283,7 +9302,7 @@ tar@^2.0.0, tar@~2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-temp@^0.8.0:
+temp@^0.8.0, temp@0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/temp/-/temp-0.8.3.tgz#e0c6bc4d26b903124410e4fed81103014dfc1f59"
   dependencies:
