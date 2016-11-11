@@ -104,7 +104,10 @@ export default class TopNavigation extends Component {
           </div>
         </div>
         <div
-          className="relative pa3 db dn-ns w-100 bg-white"
+          className={cx(
+            'relative pa3 db dn-ns w-100',
+            isDarkMode ? 'bg-dark-gray' : 'bg-white',
+          )}
           style={{
             maxHeight: mobileMenuVisible ? '100%' : 0,
             opacity: mobileMenuVisible ? 1 : 0,
