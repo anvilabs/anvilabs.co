@@ -41,15 +41,15 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <link rel="apple-touch-icon" sizes="180x180" href={require('./static/apple-touch-icon.png')} />
         <link rel="icon" type="image/png" href={require('./static/favicon-32x32.png')} sizes="32x32" />
         <link rel="icon" type="image/png" href={require('./static/favicon-16x16.png')} sizes="16x16" />
-        <link rel="manifest" href={require('!file?name=/[hash].[ext]!./static/manifest.json')} />
+        <link rel="manifest" href={require('!file?name=[name]-[hash].[ext]!./static/manifest.json')} />
         <link rel="mask-icon" href={require('./static/safari-pinned-tab.svg')} color="#ba4519" />
-        <link rel="shortcut icon" href={require('!file?name=/[hash].[ext]!./static/favicon.ico')} />
+        <link rel="shortcut icon" href={require('!file?name=[name]-[hash].[ext]!./static/favicon.ico')} />
         <link rel="alternate" href={`${hostname}/feed.xml`} type="application/rss+xml" title="Блог компании Anvilabs" />
         {css}
 
         <meta name="apple-mobile-web-app-title" content="Anvilabs" />
         <meta name="application-name" content="Anvilabs" />
-        <meta name="msapplication-config" content={require('!file?name=/[hash].[ext]!./static/browserconfig.xml')} />
+        <meta name="msapplication-config" content={require('!file?name=[name]-[hash].[ext]!./static/browserconfig.xml')} />
         <meta name="theme-color" content="#ffffff" />
 
         <meta property="og:site_name" content="Anvilabs" />

@@ -7,8 +7,8 @@ const modifyWebpackConfig = (
   stage: string,
 ) => {
   const imageLoader = stage !== 'develop'
-    ? 'file-loader?name=/[name]-[hash].[ext]'
-    : 'file-loader';
+    ? 'file?name=[name]-[hash].[ext]'
+    : 'file';
 
   config.removeLoader('images');
   config.loader('images', {
