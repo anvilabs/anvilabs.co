@@ -2,7 +2,6 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { config } from 'config';
-import autobind from 'autobind-decorator';
 import axios from 'axios';
 import cx from 'classnames';
 import Form from 'react-formal';
@@ -42,8 +41,7 @@ export default class ContactForm extends Component {
     status: 'filling',
   };
 
-  @autobind
-  _onSubmit() {
+  _onSubmit = () => {
     this.setState({ status: 'submitting' });
 
     const action = `https://formspree.io/${contactEmail}`;
@@ -52,26 +50,23 @@ export default class ContactForm extends Component {
       .post(action, this.state.model)
       .then(this._onSubmitSuccess)
       .catch(this._showError);
-  }
+  };
 
-  @autobind
-  _onSubmitSuccess({ status }: { status: number }) {
+  _onSubmitSuccess = ({ status }: { status: number }) => {
     if (status === 200) {
       this._showThankYou();
     } else {
       this._showError();
     }
-  }
+  };
 
-  @autobind
-  _showError() {
+  _showError = () => {
     this.setState({ status: 'error' });
-  }
+  };
 
-  @autobind
-  _showThankYou() {
+  _showThankYou = () => {
     this.setState({ status: 'submitted' });
-  }
+  };
 
   render(): React$Element<any> {
     const { status } = this.state;

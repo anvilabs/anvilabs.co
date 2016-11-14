@@ -1,6 +1,5 @@
 /* @flow */
 
-import autobind from 'autobind-decorator';
 import prefixAll from 'inline-style-prefixer/static';
 import raf from 'raf';
 import React, { Component } from 'react';
@@ -62,16 +61,14 @@ export default class StickyNavigation extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  @autobind
-  handleScroll() {
+  handleScroll = () => {
     if (!this.ticking) {
       this.ticking = true;
       raf(this.update);
     }
-  }
+  };
 
-  @autobind
-  update() {
+  update = () => {
     const currentScrollY = getScrollY();
     const scrollerPhysicalHeight = getViewportHeight();
     const scrollerHeight = getDocumentHeight();
@@ -95,7 +92,7 @@ export default class StickyNavigation extends Component {
 
     this.lastKnownScrollY = currentScrollY;
     this.ticking = false;
-  }
+  };
 
   render(): React$Element<any> {
     return (
