@@ -5,7 +5,7 @@
 [![devDependency Status](https://img.shields.io/david/dev/anvilabs/anvilabs.co.svg)](https://david-dm.org/anvilabs/anvilabs.co?type=dev)
 [![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli)
 
-[Website for Anvilabs](https://anvilabs.co).
+[Website for Anvilabs](https://anvilabs.co). Built with [Gatsby](https://github.com/gatsbyjs/gatsby) and [Tachyons](http://tachyons.io/).
 
 ## Setup
 
@@ -15,8 +15,6 @@ cd anvilabs.co
 yarn # or npm install
 yarn start # or npm start
 ```
-
-If you don't have *[yarn](https://yarnpkg.com/)* installed (and want to use it), follow [these instructions](https://yarnpkg.com/en/docs/install).
 
 ## Development
 
