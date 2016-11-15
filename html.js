@@ -69,8 +69,9 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <Analytics writeKey={analyticsKey} />
         <WebFonts
           config={{
-            google: {
-              families: ['Roboto+Mono:300,400,300i,400i:cyrillic'],
+            custom: {
+              families: ['Roboto Mono'],
+              urls: ['/fonts.css'],
             },
           }}
         />

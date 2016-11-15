@@ -5,6 +5,7 @@ import path from 'path';
 /* eslint-disable import/no-extraneous-dependencies */
 import cssnano from 'gulp-cssnano';
 import glob from 'glob';
+import googleWebFonts from 'gulp-google-webfonts';
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import inlinesource from 'gulp-inline-source';
@@ -62,6 +63,16 @@ gulp.task('pageres', () => {
     });
 });
 
+gulp.task('fonts', () => gulp
+  .src('./fonts.list')
+  .pipe(googleWebFonts({
+    fontsDir: 'fonts/',
+    cssDir: './',
+    cssFilename: 'fonts.css',
+  }))
+  .pipe(gulp.dest('./public')),
+);
+
 // we don't actually need to use this
 // since images are already compressed with imageoptim
 gulp.task('imagemin', () => gulp
@@ -70,4 +81,4 @@ gulp.task('imagemin', () => gulp
   .pipe(gulp.dest('./public')),
 );
 
-gulp.task('default', ['uncss', 'inlinesource', 'pageres']);
+gulp.task('default', ['uncss', 'inlinesource', 'pageres', 'fonts']);
