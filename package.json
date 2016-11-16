@@ -68,7 +68,6 @@
     }
   },
   "dependencies": {
-    "@segment/snippet": "^4.0.1",
     "axios": "^0.15.2",
     "cheerio": "^0.22.0",
     "classnames": "2.2.5",
