@@ -67,6 +67,7 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
           dangerouslySetInnerHTML={{ __html: body }}
         />
         <Analytics writeKey={analyticsKey} />
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js" />
         <WebFonts
           config={{
             custom: {

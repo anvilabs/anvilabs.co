@@ -1,7 +1,15 @@
 body,
 code,
 .code {
-  font-family: "roboto mono", consolas, monaco, monospace;
+  font-family: consolas, monaco, monospace;
+}
+
+.wf-active {
+  body,
+  code,
+  .code {
+    font-family: "roboto mono";
+  }
 }
 
 a {
