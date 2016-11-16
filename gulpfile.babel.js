@@ -19,15 +19,18 @@ gulp.task('uncss', () => gulp
     html: ['public/**/*.html'],
     ignore: [
       '.b--dark-gray',
+      '.b--red',
       '.b--white',
       '.bg-dark-gray',
       '.bg-white',
       '.dark-gray',
       '.gray',
+      '.red',
       '.white-60',
       '.white',
       /^\.dark-mode .+/,
       /^\.light-mode .+/,
+      /^\.wf-active .+/,
     ],
   }))
   .pipe(gulp.dest('./public')),
