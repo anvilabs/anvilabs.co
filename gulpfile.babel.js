@@ -3,12 +3,12 @@
 import path from 'path';
 
 /* eslint-disable import/no-extraneous-dependencies */
-import cssnano from 'gulp-cssnano';
 import glob from 'glob';
 import googleWebFonts from 'gulp-google-webfonts';
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import inlinesource from 'gulp-inline-source';
+import minifyInline from 'gulp-minify-inline';
 import Pageres from 'pageres';
 import uncss from 'gulp-uncss';
 /* eslint-enable import/no-extraneous-dependencies */
@@ -30,7 +30,6 @@ gulp.task('uncss', () => gulp
       /^\.light-mode .+/,
     ],
   }))
-  .pipe(cssnano())
   .pipe(gulp.dest('./public')),
 );
 
@@ -40,7 +39,23 @@ gulp.task('inlinesource', ['uncss'], () => gulp
   .pipe(gulp.dest('./public')),
 );
 
-gulp.task('pageres', () => {
+gulp.task('minifyinline', ['inlinesource'], () => gulp
+  .src('./public/**/*.html')
+  .pipe(minifyInline())
+  .pipe(gulp.dest('./public')),
+);
+
+gulp.task('fonts', () => gulp
+  .src('./fonts.list')
+  .pipe(googleWebFonts({
+    fontsDir: 'fonts/',
+    cssDir: './',
+    cssFilename: 'fonts.css',
+  }))
+  .pipe(gulp.dest('./public')),
+);
+
+gulp.task('pageres', ['minifyinline', 'fonts'], () => {
   glob
     .sync('public/blog/*/index.html')
     .forEach((file: string) => {
@@ -63,16 +78,6 @@ gulp.task('pageres', () => {
     });
 });
 
-gulp.task('fonts', () => gulp
-  .src('./fonts.list')
-  .pipe(googleWebFonts({
-    fontsDir: 'fonts/',
-    cssDir: './',
-    cssFilename: 'fonts.css',
-  }))
-  .pipe(gulp.dest('./public')),
-);
-
 // we don't actually need to use this
 // since images are already compressed with imageoptim
 gulp.task('imagemin', () => gulp
@@ -81,4 +86,4 @@ gulp.task('imagemin', () => gulp
   .pipe(gulp.dest('./public')),
 );
 
-gulp.task('default', ['uncss', 'inlinesource', 'pageres', 'fonts']);
+gulp.task('default', ['pageres']);
