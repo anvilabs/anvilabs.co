@@ -14,17 +14,6 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
   const head = Helmet.rewind();
   const attrs = head.htmlAttributes.toComponent();
 
-  let css;
-  if (process.env.NODE_ENV !== 'development') {
-    css = (
-      <link
-        data-inline
-        rel="stylesheet"
-        href="/styles.css"
-      />
-    );
-  }
-
   /* eslint-disable max-len */
   return (
     <html
@@ -45,7 +34,7 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <link rel="mask-icon" href={require('./static/safari-pinned-tab.svg')} color="#ba4519" />
         <link rel="shortcut icon" href={require('!file?name=[name]-[hash].[ext]!./static/favicon.ico')} />
         <link rel="alternate" href={`${hostname}/feed.xml`} type="application/rss+xml" title="Блог компании Anvilabs" />
-        {css}
+        {process.env.NODE_ENV !== 'development' && <link data-inline rel="stylesheet" href="/styles.css" />}
 
         <meta name="apple-mobile-web-app-title" content="Anvilabs" />
         <meta name="application-name" content="Anvilabs" />
