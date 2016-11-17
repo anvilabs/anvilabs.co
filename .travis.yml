@@ -13,7 +13,7 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: yarn run deploy -- -t $NETLIFY_TOKEN
+  script: ./scripts/deploy.sh
   on:
     branch: master
 branches:
