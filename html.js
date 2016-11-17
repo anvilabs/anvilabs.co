@@ -58,7 +58,11 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <Analytics writeKey={analyticsKey} />
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js" />
         <WebFonts
-          config={{
+          config={process.env.NODE_ENV === 'development' ? {
+            google: {
+              families: ['Roboto+Mono:300,400:cyrillic'],
+            },
+          } : {
             custom: {
               families: ['Roboto Mono'],
               urls: ['/fonts.css'],
