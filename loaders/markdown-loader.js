@@ -50,6 +50,9 @@ const md = markdownIt({
     permalinkSymbol: '§',
     slugify: _.curry(slug)(_, { lower: true }),
   })
+  .use(require('markdown-it-table-of-contents'), {
+    slugify: _.curry(slug)(_, { lower: true }),
+  })
   .use(require('markdown-it-attrs'))
   .use(require('markdown-it-footnote'));
 
