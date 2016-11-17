@@ -37,16 +37,21 @@ code {
   font-size: 85%;
   border-radius: 0.25em;
 
-  pre & {
-    display: block;
-    padding: 1rem 1.5rem 1rem 1rem;
-    overflow: auto;
-  }
-
   &::before,
   &::after {
     letter-spacing: -0.2em;
     content: "\00a0";
+  }
+
+  pre & {
+    display: block;
+    padding: 1rem 1.5rem 1rem 1rem;
+    overflow: auto;
+
+    &::before,
+    &::after {
+      content: "";
+    }
   }
 
   @at-root .light-mode & {
