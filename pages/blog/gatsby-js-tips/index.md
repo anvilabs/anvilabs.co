@@ -347,7 +347,7 @@ deploy:
 ```bash
 #!/usr/bin/env bash
 
-yarn run deploy -- -t $NETLIFY_TOKEN
+npm run deploy --silent -- -t $NETLIFY_TOKEN
 ```
 
 Теперь если вы попробуете запушить новый коммит в GitHub, Travis должен автоматически сгенерировать сайт и загрузить его на Netlify. Магия ✨

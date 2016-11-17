@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-yarn run deploy -- -t $NETLIFY_TOKEN
+npm run deploy --silent -- -t $NETLIFY_TOKEN
