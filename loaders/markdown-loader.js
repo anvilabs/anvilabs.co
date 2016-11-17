@@ -80,7 +80,7 @@ export default function (content: string) {
     excerpt: excerpt || excerptHtml(body, {
       stripTags: false,
       pruneLength: 300,
-    }),
+    }).replace(/<sup.+<\/sup>/, ''),
     formattedDate: moment(date).format('D MMMM YYYY г.'),
     readingTime: moment(timeToRead + (60 * 1000)) // normalize
       .from(0, true)
