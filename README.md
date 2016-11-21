@@ -30,4 +30,4 @@ Images and md/text files containing information are licensed under [CC-BY-4.0](h
 
 ### Code
 
-Everything except content files is licensed under [MIT](https://opensource.org/licenses/MIT) and can be used for your learning purposes.
+Everything except content files is licensed under [GNU GPLv3](https://opensource.org/licenses/GPL-3.0) and can be used for your learning purposes.
