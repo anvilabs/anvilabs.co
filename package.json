@@ -84,7 +84,7 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-implicit-figures": "^0.3.2",
     "markdown-it-link-attributes": "^1.0.0",
-    "markdown-it-table-of-contents": "^0.2.3",
+    "markdown-it-table-of-contents": "^0.3.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.15.1",
     "open": "^0.0.5",
