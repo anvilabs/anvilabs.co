@@ -86,7 +86,7 @@
     "markdown-it-link-attributes": "^1.0.0",
     "markdown-it-table-of-contents": "^0.2.3",
     "mkdirp": "^0.5.1",
-    "moment": "^2.15.1",
+    "moment": "^2.17.0",
     "open": "^0.0.5",
     "plural-ru": "^1.1.1",
     "raf": "^3.3.0",
