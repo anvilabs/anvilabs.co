@@ -160,7 +160,7 @@
     "netlify-cli": "^1.1.0",
     "npm-run-all": "^3.1.1",
     "pageres": "^4.2.0",
-    "react-test-renderer": "^15.3.2",
+    "react-test-renderer": "^15.4.1",
     "rimraf": "^2.5.4",
     "stylefmt": "^4.3.1",
     "stylelint": "^7.4.2",
