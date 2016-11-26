@@ -74,7 +74,7 @@
     "excerpt-html": "^1.2.0",
     "front-matter": "^2.1.0",
     "highlight.js": "^9.7.0",
-    "inline-style-prefixer": "^2.0.4",
+    "inline-style-prefixer": "^2.0.5",
     "inquirer": "^1.2.2",
     "js-yaml": "^3.6.1",
     "lodash": "^4.15.0",
