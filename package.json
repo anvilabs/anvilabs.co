@@ -139,7 +139,7 @@
     "codecov": "^1.0.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
-    "eslint": "~3.9.1",
+    "eslint": "~3.10.2",
     "eslint-config-anvilabs": "^2.0.1",
     "flow-bin": "^0.35.0",
     "flow-coverage-report": "^0.2.0",
