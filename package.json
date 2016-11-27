@@ -68,7 +68,7 @@
     }
   },
   "dependencies": {
-    "axios": "^0.15.2",
+    "axios": "^0.15.3",
     "cheerio": "^0.22.0",
     "classnames": "2.2.5",
     "excerpt-html": "^1.2.0",
