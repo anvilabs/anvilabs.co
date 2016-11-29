@@ -162,7 +162,7 @@
     "pageres": "^4.2.0",
     "react-test-renderer": "^15.3.2",
     "rimraf": "^2.5.4",
-    "stylefmt": "^4.3.1",
+    "stylefmt": "^5.0.1",
     "stylelint": "^7.4.2",
     "stylelint-config-primer": "^1.3.0",
     "validate-commit-msg": "^2.8.2"
