@@ -158,7 +158,7 @@
     "imagemin-svgo": "^5.2.0",
     "jest": "^17.0.0",
     "netlify-cli": "^1.1.0",
-    "npm-run-all": "^3.1.1",
+    "npm-run-all": "^3.1.2",
     "pageres": "^4.2.0",
     "react-test-renderer": "^15.3.2",
     "rimraf": "^2.5.4",
