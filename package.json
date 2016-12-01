@@ -78,7 +78,7 @@
     "inquirer": "^1.2.2",
     "js-yaml": "^3.6.1",
     "lodash": "^4.15.0",
-    "markdown-it": "^8.0.1",
+    "markdown-it": "^8.2.0",
     "markdown-it-anchor": "^2.5.0",
     "markdown-it-attrs": "^0.8.0",
     "markdown-it-footnote": "^3.0.1",
