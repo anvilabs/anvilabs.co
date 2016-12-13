@@ -6224,10 +6224,6 @@ markdown-it-footnote@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/markdown-it-footnote/-/markdown-it-footnote-3.0.1.tgz#7f3730747cacc86e2fe0bf8a17a710f34791517a"
 
-markdown-it-implicit-figures@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-implicit-figures/-/markdown-it-implicit-figures-0.5.0.tgz#c7b35917586b5d3487340cde6faf607ae001e53c"
-
 markdown-it-link-attributes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/markdown-it-link-attributes/-/markdown-it-link-attributes-1.0.0.tgz#8da1ca1729f0fa16c65615b0b1075b79c8371a2e"

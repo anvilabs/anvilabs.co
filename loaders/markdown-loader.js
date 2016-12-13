@@ -37,9 +37,6 @@ const md = markdownIt({
   typographer: true,
   highlight,
 })
-  .use(require('markdown-it-implicit-figures'), {
-    figcaption: true,
-  })
   .use(require('markdown-it-link-attributes'), {
     target: '_blank',
     rel: 'noopener noreferrer',
