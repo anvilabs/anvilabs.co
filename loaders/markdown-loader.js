@@ -59,13 +59,23 @@ export default function (content: string) {
   const meta = frontMatter(content);
   const body = md.render(meta.body);
   const {
-    time: timeToRead,
+    time: timeToReadText,
     words: numberOfWords,
   } = readingTime(striptags(body), {
-    wordsPerMinute: 275, // from Medium
+    wordsPerMinute: 300,
   });
   const { description, date } = meta.attributes;
   const excerpt = description && md.render(description);
+
+  const imagesCount = (body.match(/<img/g) || []).length;
+  const timeToReadImages = _.range(0, imagesCount).reduce(
+    (acc: number, currIdx: number) => _.cond([
+      [_.eq(0), () => acc + 12],
+      [_.lt(_, 10), () => acc + (12 - currIdx)],
+      [_.stubTrue, () => acc + 3],
+    ])(currIdx),
+    0,
+  );
 
   const result = {
     ...meta.attributes,
@@ -79,7 +89,7 @@ export default function (content: string) {
       pruneLength: 300,
     }).replace(/<sup.+<\/sup>/, ''),
     formattedDate: moment(date).format('D MMMM YYYY г.'),
-    readingTime: moment(timeToRead + (60 * 1000)) // normalize
+    readingTime: moment(timeToReadText + timeToReadImages)
       .from(0, true)
       .replace('несколько секунд', 'меньше минуты'),
     numberOfWords: plural(numberOfWords, '%d слово', '%d слова', '%d слов'),
