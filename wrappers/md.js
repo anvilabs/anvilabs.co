@@ -4,10 +4,10 @@
 import { config } from 'config';
 import Headroom from 'react-headroom';
 import React from 'react';
+import ReactDisqusThread from 'react-disqus-thread';
 
 import {
   ContentContainer,
-  DisqusComments,
   Main,
   PageFooter,
   PageHelmet,
@@ -39,7 +39,12 @@ const MarkdownWrapper = ({ route }: {
       <Headroom><TopNavigation /></Headroom>
       <ContentContainer className="mw7-l center">
         <PostArticle post={post} full />
-        <DisqusComments path={route.path} />
+        <ReactDisqusThread
+          shortname="anvilabs"
+          identifier={route.path}
+          title={post.title}
+          url={`${hostname}${route.path}`}
+        />
       </ContentContainer>
       <Separator />
       <PageFooter />

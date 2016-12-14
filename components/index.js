@@ -3,7 +3,6 @@
 import Analytics from './Analytics';
 import ContactForm from './ContactForm';
 import ContentContainer from './ContentContainer';
-import DisqusComments from './DisqusComments';
 import Main from './Main';
 import PageFooter from './PageFooter';
 import PageHeader from './PageHeader';
@@ -20,7 +19,6 @@ export {
   Analytics,
   ContactForm,
   ContentContainer,
-  DisqusComments,
   Main,
   PageFooter,
   PageHeader,
