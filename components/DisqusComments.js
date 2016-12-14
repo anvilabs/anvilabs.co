@@ -10,10 +10,10 @@ const DisqusComments = (
   { path }: { path: string },
 ): ?React$Element<any> => {
   const snippet = `
-// var disqus_config = function() {
-//   this.page.url = '${hostname}${path}';
-//   this.page.identifier = '${path}';
-// };
+var disqus_config = function() {
+  this.page.url = '${hostname}${path}';
+  this.page.identifier = '${path}';
+};
 (function() {
   var d = document, s = d.createElement('script');
   s.src = 'https://anvilabs.disqus.com/embed.js';
