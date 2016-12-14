@@ -58,20 +58,24 @@ gulp.task('fonts', () => gulp
   .pipe(gulp.dest('./public')),
 );
 
-gulp.task('pageres', ['minifyinline', 'fonts'], () => {
+gulp.task('pageres', () => {
   glob
     .sync('public/blog/*/index.html')
     .forEach((file: string) => {
       const pageres = new Pageres({
         crop: true,
-        filename: 'screenshot-<%= size %>',
+        filename: 'post-screenshot',
         delay: 2,
-        css: '.headroom-wrapper { display: none } #content { padding: 2rem }',
+        scale: 2,
+        css: `
+          .headroom-wrapper { display: none }
+          #content { max-width: 44rem; padding: 2rem }
+        `,
         format: 'jpg',
       });
 
       pageres
-        .src(file, ['1200x630', '600x315'])
+        .src(file, ['1000x525'])
         .dest(path.dirname(file))
         .run((err: ?Error) => {
           if (err) {
@@ -89,4 +93,4 @@ gulp.task('imagemin', () => gulp
   .pipe(gulp.dest('./public')),
 );
 
-gulp.task('default', ['pageres']);
+gulp.task('default', ['minifyinline', 'fonts', 'pageres']);

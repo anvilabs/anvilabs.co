@@ -33,8 +33,8 @@ const MarkdownWrapper = ({ route }: {
         title={post.title}
         mixpanelTitle={post.title}
         description={post.description}
-        ogImageSrc={`${hostname}${path}screenshot-1200x630.jpg`}
-        twitterImageSrc={`${hostname}${path}screenshot-600x315.jpg`}
+        ogImageSrc={`${hostname}${path}post-screenshot.jpg`}
+        twitterImageSrc={`${hostname}${path}post-screenshot.jpg`}
       />
       <Headroom><TopNavigation /></Headroom>
       <ContentContainer className="mw7-l center">
