@@ -58,7 +58,7 @@ gulp.task('fonts', () => gulp
   .pipe(gulp.dest('./public')),
 );
 
-gulp.task('pageres', () => {
+gulp.task('pageres', ['minifyinline', 'fonts'], () => {
   glob
     .sync('public/blog/*/index.html')
     .forEach((file: string) => {
@@ -69,7 +69,7 @@ gulp.task('pageres', () => {
         scale: 2,
         css: `
           .headroom-wrapper { display: none }
-          #content { max-width: 44rem; padding: 2rem }
+          #content { max-width: 525px; padding: 2rem }
         `,
         format: 'jpg',
       });
