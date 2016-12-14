@@ -21,6 +21,7 @@ const PostArticle = ({ post, full }: {
   full: boolean,
 }) => (
   <article
+    className="mb4"
     itemScope
     itemType="http://schema.org/Article"
   >

@@ -7,6 +7,7 @@ import React from 'react';
 
 import {
   ContentContainer,
+  DisqusComments,
   Main,
   PageFooter,
   PageHelmet,
@@ -20,6 +21,7 @@ const { hostname } = config;
 
 const MarkdownWrapper = ({ route }: {
   route: {
+    path: string,
     page: { data: BlogPost } & { path: string },
   },
 }): React$Element<any> => {
@@ -37,6 +39,7 @@ const MarkdownWrapper = ({ route }: {
       <Headroom><TopNavigation /></Headroom>
       <ContentContainer className="mw7-l center">
         <PostArticle post={post} full />
+        <DisqusComments path={route.path} />
       </ContentContainer>
       <Separator />
       <PageFooter />
