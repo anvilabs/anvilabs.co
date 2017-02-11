@@ -1,4 +1,8 @@
 {
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+
   "files.associations": {
     ".flowconfig": "ini",
     ".stylelintrc": "json",
@@ -6,9 +10,7 @@
     "yarn.lock": "yaml"
   },
 
-  "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80],
-  "editor.tabSize": 2,
+  "flow.useNPMPackagedFlow": true,
 
   "javascript.validate.enable": false,
 
