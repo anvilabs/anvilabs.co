@@ -3,6 +3,10 @@
   "editor.rulers": [80],
   "editor.tabSize": 2,
 
+  "eslint.autoFixOnSave": true,
+
+  "files.autoSave": "off",
+
   "files.associations": {
     ".flowconfig": "ini",
     ".stylelintrc": "json",
