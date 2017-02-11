@@ -2,7 +2,6 @@
 
 import path from 'path';
 
-/* eslint-disable import/no-extraneous-dependencies */
 import glob from 'glob';
 import googleWebFonts from 'gulp-google-webfonts';
 import gulp from 'gulp';
@@ -11,7 +10,6 @@ import inlinesource from 'gulp-inline-source';
 import minifyInline from 'gulp-minify-inline';
 import Pageres from 'pageres';
 import uncss from 'gulp-uncss';
-/* eslint-enable import/no-extraneous-dependencies */
 
 gulp.task('uncss', () => gulp
   .src('./public/styles.css')

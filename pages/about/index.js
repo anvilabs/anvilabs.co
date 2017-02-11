@@ -14,7 +14,6 @@ import {
 } from '../../components';
 import team from '../../data/team';
 
-/* eslint-disable max-len */
 const ContactPage = (): React$Element<any> => (
   <Main>
     <PageHelmet mixpanelTitle="About" />
@@ -33,6 +32,5 @@ const ContactPage = (): React$Element<any> => (
     <PageFooter />
   </Main>
 );
-/* eslint-enable max-len */
 
 export default ContactPage;

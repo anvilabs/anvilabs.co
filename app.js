@@ -14,4 +14,4 @@ const loadContext = (callback: (context: Object) => void) => {
   callback(context);
 };
 
-export { loadContext }; // eslint-disable-line import/prefer-default-export
+export { loadContext };

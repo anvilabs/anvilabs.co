@@ -2,7 +2,6 @@
 
 import type { Work } from '../types';
 
-/* eslint-disable max-len */
 const works: Array<Work> = [{
   title: 'Сеансы',
   subtitle: 'Лучшее в своем роде iOS приложение для просмотра афиши в кинотеатрах Казахстана.',
@@ -66,6 +65,5 @@ const works: Array<Work> = [{
   }],
   imageUrl: '/work/metio.png',
 }];
-/* eslint-enable max-len */
 
 export default works;

@@ -76,14 +76,12 @@ const PageHelmet = (
   );
 };
 
-/* eslint-disable max-len */
 PageHelmet.defaultProps = {
   title: siteTitle,
   description: siteDescription,
   ogImageSrc: `${hostname}${((require('../static/og-image.jpg'): any): string)}`,
   twitterImageSrc: `${hostname}${((require('../static/twitter-image.jpg'): any): string)}`,
 };
-/* eslint-enable max-len */
 PageHelmet.contextTypes = {
   location: PropTypes.object.isRequired,
 };

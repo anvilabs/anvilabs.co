@@ -53,6 +53,7 @@ const md = markdownIt({
   .use(require('markdown-it-attrs'))
   .use(require('markdown-it-footnote'));
 
+/* eslint-disable babel/no-invalid-this */
 export default function (content: string) {
   this.cacheable();
 
@@ -99,3 +100,4 @@ export default function (content: string) {
 
   return `module.exports = ${JSON.stringify(result)}`;
 }
+/* eslint-enable babel/no-invalid-this */

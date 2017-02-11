@@ -18,4 +18,4 @@ const onRouteUpdate = (location: Object) => {
   }
 };
 
-export { onRouteUpdate }; // eslint-disable-line import/prefer-default-export
+export { onRouteUpdate };

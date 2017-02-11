@@ -23,7 +23,6 @@ const NavigationLink = ({ to, title, className }: {
       <span>{title}</span>
     </a>
   ) : (
-    // eslint-disable-next-line react/jsx-indent
     <Link
       to={to}
       className={cx(

@@ -57,6 +57,7 @@ export default class TopNavigation extends Component {
             isDarkMode ? 'bg-dark-gray' : 'bg-white',
           )}
         >
+          {/* eslint-disable jsx-a11y/no-static-element-interactions */}
           <a
             className={cx(
               'f4 dib db dn-ns pointer',
@@ -70,6 +71,7 @@ export default class TopNavigation extends Component {
           >
             {mobileMenuVisible ? 'Закрыть' : 'Меню'}
           </a>
+          {/* eslint-enable jsx-a11y/no-static-element-interactions */}
           <Link to="/">
             <ResponsiveImage
               srcSet={isDarkMode ? [

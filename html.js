@@ -14,7 +14,6 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
   const head = Helmet.rewind();
   const attrs = head.htmlAttributes.toComponent();
 
-  /* eslint-disable max-len */
   return (
     <html
       lang="en"
@@ -73,7 +72,6 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
       </body>
     </html>
   );
-  /* eslint-enable max-len */
 };
 
 export default Html;

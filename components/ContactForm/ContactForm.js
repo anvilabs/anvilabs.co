@@ -46,10 +46,12 @@ export default class ContactForm extends Component {
 
     const action = `https://formspree.io/${contactEmail}`;
 
+    /* eslint-disable promise/prefer-await-to-then */
     axios
       .post(action, this.state.model)
       .then(this._onSubmitSuccess)
       .catch(this._showError);
+    /* eslint-enable promise/prefer-await-to-then */
   };
 
   _onSubmitSuccess = ({ status }: { status: number }) => {
