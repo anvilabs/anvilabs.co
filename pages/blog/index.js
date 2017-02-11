@@ -12,14 +12,19 @@ import {
   Separator,
   TopNavigation,
 } from '../../components';
-import { blogPostsFromPages } from '../../utils';
-import type { BlogPost } from '../../types';
+import {blogPostsFromPages} from '../../utils';
+import type {BlogPost} from '../../types';
 
-const BlogPage = ({ route }: {
-  route: { pages: Array<Object> },
-}): React$Element<any> => {
-  const blogPosts = blogPostsFromPages(route.pages)
-    .filter(({ draft }: { draft?: boolean }) => !draft);
+const BlogPage = (
+  {
+    route,
+  }: {
+    route: {pages: Array<Object>},
+  },
+): React$Element<any> => {
+  const blogPosts = blogPostsFromPages(route.pages).filter(
+    ({draft}: {draft?: boolean}) => !draft,
+  );
 
   return (
     <Main>

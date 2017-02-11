@@ -2,22 +2,24 @@
 
 import prefixAll from 'inline-style-prefixer/static';
 import raf from 'raf';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import TopNavigation from './TopNavigation';
 
-const getViewportHeight = (): number => (
-  window.innerHeight
-    || document.documentElement.clientHeight
-    || document.body.clientHeight
-);
+const getViewportHeight = (): number =>
+  window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
 const getDocumentHeight = (): number => {
-  const { body, documentElement } = document;
+  const {body, documentElement} = document;
 
   return Math.max(
-    body.scrollHeight, documentElement.scrollHeight,
-    body.offsetHeight, documentElement.offsetHeight,
-    body.clientHeight, documentElement.clientHeight,
+    body.scrollHeight,
+    documentElement.scrollHeight,
+    body.offsetHeight,
+    documentElement.offsetHeight,
+    body.clientHeight,
+    documentElement.clientHeight,
   );
 };
 const getScrollY = (): number => {
@@ -27,11 +29,9 @@ const getScrollY = (): number => {
     return window.scrollTop;
   }
 
-  return (
-    document.documentElement ||
+  return (document.documentElement ||
     document.body.parentNode ||
-    document.body
-  ).scrollTop;
+    document.body).scrollTop;
 };
 
 type State = {
@@ -83,10 +83,10 @@ export default class StickyNavigation extends Component {
 
       if (currentScrollY <= sideNavBottom || distanceScrolled > 0) {
         // we're at the top or past the header and scrolling down
-        this.setState({ pinned: false });
+        this.setState({pinned: false});
       } else if (distanceScrolled < -5) {
         // we're scrolling up
-        this.setState({ pinned: true });
+        this.setState({pinned: true});
       }
     }
 
@@ -107,4 +107,3 @@ export default class StickyNavigation extends Component {
     );
   }
 }
-

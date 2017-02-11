@@ -1,19 +1,19 @@
 /* @flow */
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import { config } from 'config';
+import {config} from 'config';
 import axios from 'axios';
 import cx from 'classnames';
 import Form from 'react-formal';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import yup from 'yup';
 
-import { isDarkMode } from '../../utils';
+import {isDarkMode} from '../../utils';
 import ErrorMessage from './ErrorMessage';
 import FormField from './FormField';
 import ThankYouMessage from './ThankYouMessage';
 
-const { contactEmail } = config;
+const {contactEmail} = config;
 const contactFormSchema = yup.object({
   name: yup.string().required('Пожалуйста, введите ваше имя'),
   email: yup
@@ -42,7 +42,7 @@ export default class ContactForm extends Component {
   };
 
   _onSubmit = () => {
-    this.setState({ status: 'submitting' });
+    this.setState({status: 'submitting'});
 
     const action = `https://formspree.io/${contactEmail}`;
 
@@ -54,7 +54,7 @@ export default class ContactForm extends Component {
     /* eslint-enable promise/prefer-await-to-then */
   };
 
-  _onSubmitSuccess = ({ status }: { status: number }) => {
+  _onSubmitSuccess = ({status}: {status: number}) => {
     if (status === 200) {
       this._showThankYou();
     } else {
@@ -63,15 +63,15 @@ export default class ContactForm extends Component {
   };
 
   _showError = () => {
-    this.setState({ status: 'error' });
+    this.setState({status: 'error'});
   };
 
   _showThankYou = () => {
-    this.setState({ status: 'submitted' });
+    this.setState({status: 'submitted'});
   };
 
   render(): React$Element<any> {
-    const { status } = this.state;
+    const {status} = this.state;
 
     if (status === 'error') return <ErrorMessage />;
     if (status === 'submitted') return <ThankYouMessage />;
@@ -82,7 +82,7 @@ export default class ContactForm extends Component {
       <Form
         schema={contactFormSchema}
         value={this.state.model}
-        onChange={(model: Model) => this.setState({ model })}
+        onChange={(model: Model) => this.setState({model})}
         onSubmit={this._onSubmit}
       >
         <fieldset
@@ -91,7 +91,7 @@ export default class ContactForm extends Component {
             isDarkMode ? 'b--white' : 'b--dark-gray',
             status === 'submitting' && 'o-50',
           )}
-          style={submitting ? { pointerEvents: 'none' } : {}}
+          style={submitting ? {pointerEvents: 'none'} : {}}
         >
           <legend className="ph3 f4 f3-l">Написать нам</legend>
 
@@ -109,11 +109,7 @@ export default class ContactForm extends Component {
             />
           </div>
 
-          <FormField
-            name="message"
-            placeholder="Привет, Anvilabs!"
-            textarea
-          />
+          <FormField name="message" placeholder="Привет, Anvilabs!" textarea />
         </fieldset>
         <Form.Button
           type="submit"

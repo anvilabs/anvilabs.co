@@ -1,10 +1,10 @@
 /* @flow */
 
-import { writeFileSync } from 'fs';
+import {writeFileSync} from 'fs';
 
-import { prompt } from 'inquirer';
-import { safeDump as dumpYaml } from 'js-yaml';
-import { sync as mkdirpSync } from 'mkdirp';
+import {prompt} from 'inquirer';
+import {safeDump as dumpYaml} from 'js-yaml';
+import {sync as mkdirpSync} from 'mkdirp';
 import moment from 'moment';
 import open from 'open';
 import slug from 'slug';
@@ -20,7 +20,7 @@ const questions = [
     name: 'slug',
     message: 'Set a slug:',
     // $FlowMissingDefinition
-    default: ({ title }: { title: string }) => slug(title, { lower: true }),
+    default: ({title}: {title: string}) => slug(title, {lower: true}),
   },
   {
     type: 'input',
@@ -53,12 +53,10 @@ const questions = [
       author: answers.author,
       draft: true,
     };
-    writeFileSync(
-      `${dir}/index.md`,
-      `---\n${dumpYaml(meta)}---\n`,
-      { encoding: 'utf-8' },
-    );
-    console.log(`\n${dir}`);// eslint-disable-line no-console
+    writeFileSync(`${dir}/index.md`, `---\n${dumpYaml(meta)}---\n`, {
+      encoding: 'utf-8',
+    });
+    console.log(`\n${dir}`); // eslint-disable-line no-console
 
     open(`${dir}/index.md`);
   } catch (err) {

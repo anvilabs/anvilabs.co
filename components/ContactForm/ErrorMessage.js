@@ -1,10 +1,10 @@
 /* @flow */
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import { config } from 'config';
+import {config} from 'config';
 import React from 'react';
 
-const { contactEmail } = config;
+const {contactEmail} = config;
 
 const ErrorMessage = (): React$Element<any> => (
   <div>

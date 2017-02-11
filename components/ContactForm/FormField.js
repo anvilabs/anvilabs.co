@@ -4,14 +4,21 @@ import cx from 'classnames';
 import React from 'react';
 import Form from 'react-formal';
 
-import { isDarkMode } from '../../utils';
+import {isDarkMode} from '../../utils';
 
-const FormField = ({ name, placeholder, className, textarea }: {
-  name: string,
-  placeholder?: string,
-  className?: string,
-  textarea?: boolean,
-}) => (
+const FormField = (
+  {
+    name,
+    placeholder,
+    className,
+    textarea,
+  }: {
+    name: string,
+    placeholder?: string,
+    className?: string,
+    textarea?: boolean,
+  },
+) => (
   <div className={className}>
     <Form.Field
       name={name}
@@ -21,10 +28,12 @@ const FormField = ({ name, placeholder, className, textarea }: {
         isDarkMode ? 'b--white white' : 'b--dark-gray dark-gray',
       )}
       errorClass="b--red"
-      {...(textarea ? {
-        type: 'textarea',
-        style: { resize: 'none' },
-      } : {})}
+      {...textarea
+        ? {
+            type: 'textarea',
+            style: {resize: 'none'},
+          }
+        : {}}
     />
     <Form.Message
       className="red"

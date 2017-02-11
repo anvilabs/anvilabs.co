@@ -14,7 +14,7 @@ import striptags from 'striptags';
 moment.locale('ru');
 
 const highlight = (str: string, lang: string) => {
-  if ((lang !== null) && hljs.getLanguage(lang)) {
+  if (lang !== null && hljs.getLanguage(lang)) {
     try {
       return hljs.highlight(lang, str).value;
     } catch (err) {
@@ -45,16 +45,16 @@ const md = markdownIt({
     permalink: true,
     permalinkBefore: true,
     permalinkSymbol: '§',
-    slugify: _.curry(slug)(_, { lower: true }),
+    slugify: _.curry(slug)(_, {lower: true}),
   })
   .use(require('markdown-it-table-of-contents'), {
-    slugify: _.curry(slug)(_, { lower: true }),
+    slugify: _.curry(slug)(_, {lower: true}),
   })
   .use(require('markdown-it-attrs'))
   .use(require('markdown-it-footnote'));
 
 /* eslint-disable babel/no-invalid-this */
-export default function (content: string) {
+export default function(content: string) {
   this.cacheable();
 
   const meta = frontMatter(content);
@@ -65,30 +65,37 @@ export default function (content: string) {
   } = readingTime(striptags(body), {
     wordsPerMinute: 300,
   });
-  const { description, date } = meta.attributes;
+  const {description, date} = meta.attributes;
   const excerpt = description && md.render(description);
 
   const imagesCount = (body.match(/<img/g) || []).length;
   const timeToReadImages = _.range(0, imagesCount).reduce(
-    (acc: number, currIdx: number) => _.cond([
-      [_.eq(0), () => acc + 12],
-      [_.lt(_, 10), () => acc + (12 - currIdx)],
-      [_.stubTrue, () => acc + 3],
-    ])(currIdx),
+    (acc: number, currIdx: number) =>
+      _.cond([
+        [_.eq(0), () => acc + 12],
+        [_.lt(_, 10), () => acc + (12 - currIdx)],
+        [_.stubTrue, () => acc + 3],
+      ])(currIdx),
     0,
   );
 
   const result = {
     ...meta.attributes,
     body,
-    description: (excerpt && striptags(excerpt)) || excerptHtml(body, {
-      stripTags: true,
-      pruneLength: 250,
-    }),
-    excerpt: excerpt || excerptHtml(body, {
-      stripTags: false,
-      pruneLength: 300,
-    }).replace(/<sup.+<\/sup>/, ''),
+    description: (
+      excerpt && striptags(excerpt) ||
+        excerptHtml(body, {
+          stripTags: true,
+          pruneLength: 250,
+        })
+    ),
+    excerpt: (
+      excerpt ||
+        excerptHtml(body, {
+          stripTags: false,
+          pruneLength: 300,
+        }).replace(/<sup.+<\/sup>/, '')
+    ),
     formattedDate: moment(date).format('D MMMM YYYY г.'),
     readingTime: moment(timeToReadText + timeToReadImages)
       .from(0, true)

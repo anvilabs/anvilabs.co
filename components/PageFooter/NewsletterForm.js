@@ -1,13 +1,13 @@
 /* @flow */
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import { config } from 'config';
+import {config} from 'config';
 import cx from 'classnames';
 import React from 'react';
 
-import { isDarkMode } from '../../utils';
+import {isDarkMode} from '../../utils';
 
-const NewsletterForm = ({ className }: { className?: string }) => (
+const NewsletterForm = ({className}: {className?: string}) => (
   <form
     action={config.mailchimpActionUrl}
     method="post"
@@ -19,10 +19,7 @@ const NewsletterForm = ({ className }: { className?: string }) => (
     <fieldset className="bn ma0 pa0">
       <legend>Подпишитесь на нашу рассылку</legend>
       <div
-        className={cx(
-          'flex bb mt2',
-          isDarkMode ? 'b--white' : 'b--dark-gray',
-        )}
+        className={cx('flex bb mt2', isDarkMode ? 'b--white' : 'b--dark-gray')}
       >
         <input
           type="email"
@@ -33,9 +30,9 @@ const NewsletterForm = ({ className }: { className?: string }) => (
             'bg-transparent input-reset bn pv2 outline-0 w-100',
             isDarkMode ? 'white' : 'dark-gray',
           )}
-          style={{ flexGrow: 1 }}
+          style={{flexGrow: 1}}
         />
-        <div style={{ position: 'absolute', left: -5000 }} aria-hidden>
+        <div style={{position: 'absolute', left: -5000}} aria-hidden>
           <input
             type="text"
             name="b_983b78ee49621c4871e7a16ea_0da8d3b335"

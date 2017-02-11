@@ -1,18 +1,23 @@
 /* @flow */
 
-import { Link } from 'react-router';
+import {Link} from 'react-router';
 import cx from 'classnames';
 import React from 'react';
 
-import { isDarkMode } from '../utils';
+import {isDarkMode} from '../utils';
 
-const NavigationLink = ({ to, title, className }: {
-  to: string,
-  title: string,
-  className?: string,
-}) => (
-  to.startsWith('#') ? (
-    <a
+const NavigationLink = (
+  {
+    to,
+    title,
+    className,
+  }: {
+    to: string,
+    title: string,
+    className?: string,
+  },
+) => to.startsWith('#')
+  ? <a
       href={to}
       className={cx(
         'strikethrough',
@@ -22,8 +27,7 @@ const NavigationLink = ({ to, title, className }: {
     >
       <span>{title}</span>
     </a>
-  ) : (
-    <Link
+  : <Link
       to={to}
       className={cx(
         'strikethrough',
@@ -34,8 +38,6 @@ const NavigationLink = ({ to, title, className }: {
       onlyActiveOnIndex
     >
       <span>{title}</span>
-    </Link>
-  )
-);
+    </Link>;
 
 export default NavigationLink;

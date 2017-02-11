@@ -1,24 +1,21 @@
 /* @flow */
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import { config } from 'config';
+import {config} from 'config';
 import Helmet from 'react-helmet';
 import React from 'react';
 
-import { Analytics, WebFonts } from './components';
+import {Analytics, WebFonts} from './components';
 
-const { hostname, analyticsKey } = config;
+const {hostname, analyticsKey} = config;
 const BUILD_TIME = new Date().getTime();
 
-const Html = ({ body }: { body: string }): React$Element<any> => {
+const Html = ({body}: {body: string}): React$Element<any> => {
   const head = Helmet.rewind();
   const attrs = head.htmlAttributes.toComponent();
 
   return (
-    <html
-      lang="en"
-      {...attrs}
-    >
+    <html lang="en" {...attrs}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0" />
@@ -26,18 +23,55 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         {head.title.toComponent()}
         {head.meta.toComponent()}
 
-        <link rel="apple-touch-icon" sizes="180x180" href={require('./static/apple-touch-icon.png')} />
-        <link rel="icon" type="image/png" href={require('./static/favicon-32x32.png')} sizes="32x32" />
-        <link rel="icon" type="image/png" href={require('./static/favicon-16x16.png')} sizes="16x16" />
-        <link rel="manifest" href={require('!file?name=[name]-[hash].[ext]!./static/manifest.json')} />
-        <link rel="mask-icon" href={require('./static/safari-pinned-tab.svg')} color="#ba4519" />
-        <link rel="shortcut icon" href={require('!file?name=[name]-[hash].[ext]!./static/favicon.ico')} />
-        <link rel="alternate" href={`${hostname}/feed.xml`} type="application/rss+xml" title="Блог компании Anvilabs" />
-        {process.env.NODE_ENV !== 'development' && <link data-inline rel="stylesheet" href="/styles.css" />}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={require('./static/apple-touch-icon.png')}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href={require('./static/favicon-32x32.png')}
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href={require('./static/favicon-16x16.png')}
+          sizes="16x16"
+        />
+        <link
+          rel="manifest"
+          href={require(
+            '!file?name=[name]-[hash].[ext]!./static/manifest.json',
+          )}
+        />
+        <link
+          rel="mask-icon"
+          href={require('./static/safari-pinned-tab.svg')}
+          color="#ba4519"
+        />
+        <link
+          rel="shortcut icon"
+          href={require('!file?name=[name]-[hash].[ext]!./static/favicon.ico')}
+        />
+        <link
+          rel="alternate"
+          href={`${hostname}/feed.xml`}
+          type="application/rss+xml"
+          title="Блог компании Anvilabs"
+        />
+        {process.env.NODE_ENV !== 'development' &&
+          <link data-inline rel="stylesheet" href="/styles.css" />}
 
         <meta name="apple-mobile-web-app-title" content="Anvilabs" />
         <meta name="application-name" content="Anvilabs" />
-        <meta name="msapplication-config" content={require('!file?name=[name]-[hash].[ext]!./static/browserconfig.xml')} />
+        <meta
+          name="msapplication-config"
+          content={require(
+            '!file?name=[name]-[hash].[ext]!./static/browserconfig.xml',
+          )}
+        />
         <meta name="theme-color" content="#ffffff" />
 
         <meta property="og:site_name" content="Anvilabs" />
@@ -52,21 +86,27 @@ const Html = ({ body }: { body: string }): React$Element<any> => {
         <div
           id="react-mount"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: body }}
+          dangerouslySetInnerHTML={{__html: body}}
         />
         <Analytics writeKey={analyticsKey} />
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js" />
+        <script
+          src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"
+        />
         <WebFonts
-          config={process.env.NODE_ENV === 'development' ? {
-            google: {
-              families: ['Roboto+Mono:300,400:cyrillic'],
-            },
-          } : {
-            custom: {
-              families: ['Roboto Mono'],
-              urls: ['/fonts.css'],
-            },
-          }}
+          config={
+            process.env.NODE_ENV === 'development'
+              ? {
+                  google: {
+                    families: ['Roboto+Mono:300,400:cyrillic'],
+                  },
+                }
+              : {
+                  custom: {
+                    families: ['Roboto Mono'],
+                    urls: ['/fonts.css'],
+                  },
+                }
+          }
         />
         <script src={`/bundle.js?t=${BUILD_TIME}`} />
       </body>

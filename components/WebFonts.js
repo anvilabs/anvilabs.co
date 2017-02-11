@@ -3,7 +3,7 @@
 import React from 'react';
 
 const WebFonts = (
-  { config }: { config: { [key: string]: Object } },
+  {config}: {config: {[key: string]: Object}},
 ): ?React$Element<any> => {
   const snippet = `
 (function() {
@@ -15,7 +15,7 @@ const WebFonts = (
     <script
       type="text/javascript"
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{ __html: snippet }}
+      dangerouslySetInnerHTML={{__html: snippet}}
     />
   );
 };

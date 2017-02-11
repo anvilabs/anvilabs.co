@@ -3,11 +3,15 @@
 import cx from 'classnames';
 import React from 'react';
 
-import { isDarkMode } from '../utils';
+import {isDarkMode} from '../utils';
 
-const Main = ({ children }: {
-  children?: React$Element<any> | Array<React$Element<any>>,
-}) => (
+const Main = (
+  {
+    children,
+  }: {
+    children?: React$Element<any> | Array<React$Element<any>>,
+  },
+) => (
   <main
     className={cx(
       'fw3',

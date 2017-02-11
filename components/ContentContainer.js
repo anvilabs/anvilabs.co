@@ -3,12 +3,17 @@
 import cx from 'classnames';
 import React from 'react';
 
-import { isDarkMode } from '../utils';
+import {isDarkMode} from '../utils';
 
-const ContentContainer = ({ className, children }: {
-  className?: string,
-  children?: React$Element<any> | Array<React$Element<any>>,
-}) => (
+const ContentContainer = (
+  {
+    className,
+    children,
+  }: {
+    className?: string,
+    children?: React$Element<any> | Array<React$Element<any>>,
+  },
+) => (
   <section
     id="content"
     className={cx('lh-copy pa3 pa5-ns', !isDarkMode && 'dark-gray', className)}

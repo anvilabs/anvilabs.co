@@ -3,7 +3,7 @@
 import cx from 'classnames';
 import React from 'react';
 
-import { isDarkMode } from '../../utils';
+import {isDarkMode} from '../../utils';
 import CTA from './CTA';
 import FooterLinks from './FooterLinks';
 import NewsletterForm from './NewsletterForm';

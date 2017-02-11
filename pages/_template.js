@@ -2,7 +2,7 @@
 
 import _ from 'lodash/fp';
 import Helmet from 'react-helmet';
-import { Component, PropTypes } from 'react';
+import {Component, PropTypes} from 'react';
 
 import '../styles/styles.scss';
 
@@ -11,10 +11,9 @@ const trackPageView = () => {
   const helmet = Helmet.peek();
 
   window.analytics.page('Website', {
-    Page: _.flow(
-      _.find(['name', 'mixpanelTitle']),
-      _.result('content'),
-    )(helmet.metaTags),
+    Page: _.flow(_.find(['name', 'mixpanelTitle']), _.result('content'))(
+      helmet.metaTags,
+    ),
   });
 };
 
@@ -35,9 +34,9 @@ class Template extends Component {
   };
 
   getChildContext() {
-    const { location } = this.props;
+    const {location} = this.props;
 
-    return { location };
+    return {location};
   }
 
   componentDidMount() {
@@ -45,7 +44,7 @@ class Template extends Component {
   }
 
   componentDidUpdate(prevProps: Props) {
-    const { pathname, state } = this.props.location;
+    const {pathname, state} = this.props.location;
     const previousPath = prevProps.children.props.location.pathname;
     const forceTrack = state && state.forceTrack;
 

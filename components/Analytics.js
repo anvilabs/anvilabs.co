@@ -2,9 +2,7 @@
 
 import React from 'react';
 
-const Analytics = (
-  { writeKey }: { writeKey?: ?string },
-): ?React$Element<any> => {
+const Analytics = ({writeKey}: {writeKey?: ?string}): ?React$Element<any> => {
   if (!writeKey) return null;
 
   const snippet = `
@@ -99,7 +97,7 @@ const Analytics = (
     <script
       type="text/javascript"
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{ __html: snippet }}
+      dangerouslySetInnerHTML={{__html: snippet}}
     />
   );
 };

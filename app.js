@@ -14,4 +14,4 @@ const loadContext = (callback: (context: Object) => void) => {
   callback(context);
 };
 
-export { loadContext };
+export {loadContext};

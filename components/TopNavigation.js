@@ -1,16 +1,16 @@
 /* @flow */
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import { config } from 'config';
-import { Link } from 'react-router';
+import {config} from 'config';
+import {Link} from 'react-router';
 import cx from 'classnames';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-import { isDarkMode } from '../utils';
+import {isDarkMode} from '../utils';
 import NavigationLink from './NavigationLink';
 import ResponsiveImage from './ResponsiveImage';
 
-const { menuLinks } = config;
+const {menuLinks} = config;
 
 type Props = {
   mobileMenuVisible: boolean,
@@ -46,8 +46,8 @@ export default class TopNavigation extends Component {
   }
 
   render(): React$Element<any> {
-    const { className, style } = this.props;
-    const { mobileMenuVisible } = this.state;
+    const {className, style} = this.props;
+    const {mobileMenuVisible} = this.state;
 
     return (
       <nav className={className} style={style}>
@@ -74,23 +74,27 @@ export default class TopNavigation extends Component {
           {/* eslint-enable jsx-a11y/no-static-element-interactions */}
           <Link to="/">
             <ResponsiveImage
-              srcSet={isDarkMode ? [
-                require('../static/logo-white.png'),
-                require('../static/logo-white@2x.png'),
-                require('../static/logo-white@3x.png'),
-              ] : [
-                require('../static/logo.png'),
-                require('../static/logo@2x.png'),
-                require('../static/logo@3x.png'),
-              ]}
+              srcSet={
+                isDarkMode
+                  ? [
+                      require('../static/logo-white.png'),
+                      require('../static/logo-white@2x.png'),
+                      require('../static/logo-white@3x.png'),
+                    ]
+                  : [
+                      require('../static/logo.png'),
+                      require('../static/logo@2x.png'),
+                      require('../static/logo@3x.png'),
+                    ]
+              }
               alt="Anvilabs Logo"
               className="dib w-auto"
-              style={{ height: '3rem' }}
+              style={{height: '3rem'}}
             />
           </Link>
           <div className="dn db-ns">
             {menuLinks.map((
-              { to, title }: { to: string, title: string },
+              {to, title}: {to: string, title: string},
               idx: number,
             ) => (
               <NavigationLink
@@ -99,7 +103,7 @@ export default class TopNavigation extends Component {
                 title={title}
                 className={cx(
                   'f5 f4-l dib',
-                  (idx < menuLinks.length - 1) && 'mr3 mr4-ns',
+                  idx < menuLinks.length - 1 && 'mr3 mr4-ns',
                 )}
               />
             ))}
@@ -118,9 +122,7 @@ export default class TopNavigation extends Component {
             transition: 'transform 0.2s ease, opacity 0.2s ease, visibility 0s',
           }}
         >
-          {menuLinks.map((
-            { to, title }: { to: string, title: string },
-          ) => (
+          {menuLinks.map(({to, title}: {to: string, title: string}) => (
             <NavigationLink
               key={to}
               to={to}

@@ -3,8 +3,8 @@
 import fs from 'fs';
 import path from 'path';
 
-import { load as parseHtml } from 'cheerio';
-import { parse as parseToml } from 'toml';
+import {load as parseHtml} from 'cheerio';
+import {parse as parseToml} from 'toml';
 import _ from 'lodash/fp';
 import frontMatter from 'front-matter';
 import markdownIt from 'markdown-it';
@@ -12,13 +12,13 @@ import moment from 'moment';
 import RSS from 'rss';
 import sm from 'sitemap';
 
-import { blogPostsFromPages } from './utils';
-import type { BlogPost } from './types';
+import {blogPostsFromPages} from './utils';
+import type {BlogPost} from './types';
 
 const config = parseToml(
   String(fs.readFileSync(path.join(__dirname, '/config.toml'))),
 );
-const { siteTitle, siteDescription, hostname } = config;
+const {siteTitle, siteDescription, hostname} = config;
 
 const generateSitemapUrl = (page: mixed): ?Object => {
   let pagePath;
@@ -50,10 +50,7 @@ const generateSitemapUrl = (page: mixed): ?Object => {
 };
 
 const generateSitemap = (pages: Array<mixed>) => {
-  const sitemapUrls = _.flow(
-    _.map(generateSitemapUrl),
-    _.compact,
-  )(pages);
+  const sitemapUrls = _.flow(_.map(generateSitemapUrl), _.compact)(pages);
 
   const sitemap = sm.createSitemap({
     hostname,
@@ -86,11 +83,8 @@ const generateFeed = (pages: Array<mixed>) => {
   // eslint-disable-next-line lodash-fp/no-unused-result
   _.flow(
     blogPostsFromPages,
-    _.filter(({ draft }: { draft?: boolean }) => !draft),
-    _.map((post: BlogPost & {
-      path: string,
-      requirePath: string,
-    }) => {
+    _.filter(({draft}: {draft?: boolean}) => !draft),
+    _.map((post: BlogPost) => {
       // read the markdown file
       const content = String(
         fs.readFileSync(path.join(__dirname, `/pages/${post.requirePath}`)),
@@ -109,9 +103,9 @@ const generateFeed = (pages: Array<mixed>) => {
         $(elem).attr('src', `${hostname}${post.path}${src}`);
       });
 
-      return { ...post, body: $.html() };
+      return {...post, body: $.html()};
     }),
-    _.forEach((post: BlogPost & { path: string }) => {
+    _.forEach((post: BlogPost & {path: string}) => {
       feed.item({
         ..._.pick(['title', 'author', 'date'], post),
         description: post.body,
@@ -122,7 +116,7 @@ const generateFeed = (pages: Array<mixed>) => {
 
   fs.writeFileSync(
     path.join(__dirname, './public/feed.xml'),
-    feed.xml({ indent: true }),
+    feed.xml({indent: true}),
   );
 };
 
@@ -131,10 +125,7 @@ const generateRobots = () => {
     'Allow: /\n\n' +
     `Sitemap: ${hostname}/sitemap.xml`;
 
-  fs.writeFileSync(
-    path.join(__dirname, '/public/robots.txt'),
-    fileContent,
-  );
+  fs.writeFileSync(path.join(__dirname, '/public/robots.txt'), fileContent);
 };
 
 export default (pages: Array<mixed>, callback: () => void) => {

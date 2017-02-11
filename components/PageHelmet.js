@@ -1,11 +1,11 @@
 /* @flow */
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import { config } from 'config';
+import {config} from 'config';
 import Helmet from 'react-helmet';
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 
-const { siteTitle, siteDescription, hostname } = config;
+const {siteTitle, siteDescription, hostname} = config;
 
 const PageHelmet = (
   {
@@ -21,8 +21,10 @@ const PageHelmet = (
     ogImageSrc?: string,
     twitterImageSrc?: string,
   },
-  { location }: {
-    location: { pathname: string },
+  {
+    location,
+  }: {
+    location: {pathname: string},
   },
 ): React$Element<any> => {
   const meta: Array<{
@@ -68,19 +70,18 @@ const PageHelmet = (
     },
   ];
 
-  return (
-    <Helmet
-      title={title}
-      meta={meta}
-    />
-  );
+  return <Helmet title={title} meta={meta} />;
 };
 
 PageHelmet.defaultProps = {
   title: siteTitle,
   description: siteDescription,
-  ogImageSrc: `${hostname}${((require('../static/og-image.jpg'): any): string)}`,
-  twitterImageSrc: `${hostname}${((require('../static/twitter-image.jpg'): any): string)}`,
+  ogImageSrc: (
+    `${hostname}${((require('../static/og-image.jpg'): any): string)}`
+  ),
+  twitterImageSrc: (
+    `${hostname}${((require('../static/twitter-image.jpg'): any): string)}`
+  ),
 };
 PageHelmet.contextTypes = {
   location: PropTypes.object.isRequired,
