@@ -31,7 +31,6 @@
     "lint:css": "stylelint styles/**/*.scss",
     "lint:css:fix": "stylefmt R styles/",
     "typecheck": "flow check .",
-    "typecheck:coverage": "flow-coverage-report -i '{!(node_modules|flow-typed|public)/**/*.js,*.js}' -t text",
     "commitmsg": "validate-commit-msg",
     "prepush": "npm test"
   },
@@ -121,7 +120,6 @@
     "eslint": "~3.9.1",
     "eslint-config-anvilabs": "^2.1.0",
     "flow-bin": "^0.37.0",
-    "flow-coverage-report": "^0.2.0",
     "gatsby": "0.12.19",
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
