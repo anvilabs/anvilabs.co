@@ -113,7 +113,7 @@
     "codecov": "^1.0.1",
     "eslint": "~3.9.1",
     "eslint-config-anvilabs": "^2.1.0",
-    "flow-bin": "^0.37.0",
+    "flow-bin": "^0.39.0",
     "gatsby": "^0.12.34",
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
