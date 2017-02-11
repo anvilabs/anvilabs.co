@@ -21,7 +21,6 @@
     "new:post": "babel-node scripts/new-post",
     "start": "gatsby develop",
     "build": "rimraf public && gatsby build && gulp",
-    "commit": "git-cz",
     "test": "npm-run-all --parallel typecheck lint:* jest",
     "test:ci": "npm-run-all --parallel typecheck lint:* jest:coverage && codecov",
     "jest": "jest",
@@ -47,9 +46,6 @@
     ]
   },
   "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    },
     "validate-commit-msg": {
       "types": [
         "ci",
@@ -115,8 +111,6 @@
     "babel-preset-react": "^6.16.0",
     "chokidar": "^1.6.1",
     "codecov": "^1.0.1",
-    "commitizen": "^2.8.6",
-    "cz-conventional-changelog": "^1.2.0",
     "eslint": "~3.9.1",
     "eslint-config-anvilabs": "^2.1.0",
     "flow-bin": "^0.37.0",
