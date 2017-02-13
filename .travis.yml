@@ -1,15 +1,12 @@
 language: node_js
 node_js:
 - '6'
-install:
-- npm install -g yarn
-- yarn
-cache:
-  directories:
-  - "~/.yarn-cache"
-  - "~/.nvm"
 script:
 - yarn test:ci
+cache:
+  yarn: true
+  directories:
+    - node_modules
 deploy:
   provider: script
   skip_cleanup: true
