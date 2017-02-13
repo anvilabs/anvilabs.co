@@ -7,7 +7,6 @@ import {Component, PropTypes} from 'react';
 import '../styles/styles.scss';
 
 const trackPageView = () => {
-  // $FlowMissingDefinition
   const helmet = Helmet.peek();
 
   window.analytics.page('Website', {

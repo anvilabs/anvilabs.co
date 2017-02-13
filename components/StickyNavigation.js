@@ -8,10 +8,10 @@ import TopNavigation from './TopNavigation';
 
 const getViewportHeight = (): number =>
   window.innerHeight ||
-    document.documentElement.clientHeight ||
-    document.body.clientHeight;
+    (document.documentElement: any).clientHeight ||
+    (document.body: any).clientHeight;
 const getDocumentHeight = (): number => {
-  const {body, documentElement} = document;
+  const {body, documentElement} = (document: any);
 
   return Math.max(
     body.scrollHeight,
@@ -30,7 +30,7 @@ const getScrollY = (): number => {
   }
 
   return (document.documentElement ||
-    document.body.parentNode ||
+    (document.body: any).parentNode ||
     document.body).scrollTop;
 };
 
@@ -78,7 +78,7 @@ export default class StickyNavigation extends Component {
 
     if (!pastTop && !pastBottom) {
       const distanceScrolled = currentScrollY - this.lastKnownScrollY;
-      const sideNav = document.getElementById('side-nav');
+      const sideNav = (document.getElementById('side-nav'): any);
       const sideNavBottom = sideNav.offsetTop + sideNav.offsetHeight;
 
       if (currentScrollY <= sideNavBottom || distanceScrolled > 0) {

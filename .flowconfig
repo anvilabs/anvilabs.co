@@ -8,6 +8,7 @@
 .*/node_modules/findup/test/
 .*/node_modules/flow-coverage-report/
 .*/node_modules/gatsby/
+.*/node_modules/stylelint/
 .*/node_modules/systemjs-builder/
 <PROJECT_ROOT>/public/
 

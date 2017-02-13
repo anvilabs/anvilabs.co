@@ -1,5 +1,6 @@
 /* @flow */
 
+import assert from 'assert';
 import fs from 'fs';
 import path from 'path';
 
@@ -84,7 +85,7 @@ const generateFeed = (pages: Array<mixed>) => {
   _.flow(
     blogPostsFromPages,
     _.filter(({draft}: {draft?: boolean}) => !draft),
-    _.map((post: BlogPost) => {
+    _.map((post: BlogPost & {path: string, requirePath: string}) => {
       // read the markdown file
       const content = String(
         fs.readFileSync(path.join(__dirname, `/pages/${post.requirePath}`)),
