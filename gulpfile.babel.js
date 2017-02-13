@@ -68,13 +68,13 @@ gulp.task('pageres', ['minifyinline', 'fonts'], () => {
       css: (
         `
           .headroom-wrapper { display: none }
-          #content { max-width: 525px; padding: 2rem }
+          #content { max-width: 48rem }
         `
       ),
       format: 'jpg',
     });
 
-    pageres.src(file, ['1000x525']).dest(path.dirname(file)).run((
+    pageres.src(file, ['1200x630']).dest(path.dirname(file)).run((
       err: ?Error,
     ) => {
       if (err) {
