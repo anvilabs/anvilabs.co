@@ -12,15 +12,16 @@
     "url": "http://yenbekbay.me"
   },
   "engines": {
-    "node": ">=6.0",
-    "npm": ">=3.0"
+    "node": ">=6.0.0"
   },
   "scripts": {
     "deploy": "npm run build && netlify deploy",
+    "prepush": "npm test",
+    "commitmsg": "validate-commit-msg",
     "serve": "gatsby serve-build",
-    "new:post": "babel-node scripts/new-post",
-    "start": "gatsby develop",
     "build": "rimraf public && gatsby build && gulp",
+    "start": "gatsby develop",
+    "new:post": "babel-node scripts/new-post",
     "test": "npm-run-all --parallel typecheck lint:* jest",
     "test:ci": "npm-run-all --parallel typecheck lint:* jest:coverage && codecov",
     "jest": "jest",
@@ -29,21 +30,19 @@
     "lint:js:fix": "eslint --fix .",
     "lint:css": "stylelint styles/**/*.scss",
     "lint:css:fix": "stylefmt R styles/",
-    "typecheck": "flow check .",
-    "commitmsg": "validate-commit-msg",
-    "prepush": "npm test"
+    "typecheck": "flow check ."
   },
   "jest": {
+    "collectCoverageFrom": [
+      "components/**/*.js"
+    ],
     "coverageReporters": [
       "lcov"
     ],
     "testPathDirs": [
       "<rootDir>/components"
     ],
-    "testRegex": "/__tests__/.*-test\\.js$",
-    "collectCoverageFrom": [
-      "components/**/*.js"
-    ]
+    "testRegex": "/__tests__/.*-test\\.js$"
   },
   "config": {
     "validate-commit-msg": {
