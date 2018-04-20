@@ -70,7 +70,7 @@ const generateFeed = (pages: Array<mixed>) => {
     description: siteDescription,
     feed_url: `${hostname}/feed.xml`,
     site_url: hostname,
-    copyright: '© 2016 ТОО «Anvilabs»',
+    copyright: '© 2018 ТОО «Anvilabs»',
     language: 'ru',
     pubDate: moment().toJSON(),
   });

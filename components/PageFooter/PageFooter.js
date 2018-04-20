@@ -16,7 +16,7 @@ const PageFooter = () => (
       <NewsletterForm className="w-100 w-60-m w-30-l ma0" />
     </div>
     <div className="flex flex-wrap">
-      <p className="w-100 w-50-ns ma0">© 2016 ТОО «Anvilabs»</p>
+      <p className="w-100 w-50-ns ma0">© 2018 ТОО «Anvilabs»</p>
       <p className="w-100 w-50-ns tr-ns ma0">
         Привет из Алматы, 🇰🇿 (
         <a href="https://github.com/anvilabs/anvilabs.co">
