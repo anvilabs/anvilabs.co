@@ -27,8 +27,10 @@
     "stylelint.fix.all": "yarn run stylelint.fix styles/",
     "jest": "jest",
     "jest.coverage": "jest --coverage",
-    "test": "run-p --silent --print-label type-check eslint.all stylelint.all jest",
-    "test.ci": "run-p --silent --print-label type-check eslint.all stylelint.all jest:coverage && codecov",
+    "test":
+      "run-p --silent --print-label type-check eslint.all stylelint.all jest",
+    "test.ci":
+      "run-p --silent --print-label type-check eslint.all stylelint.all jest.coverage && codecov",
     "start": "NODE_ENV=develpment gatsby develop",
     "precommit": "lint-staged",
     "commitmsg": "commitlint -e",
@@ -47,12 +49,8 @@
       "utils/**/*.js",
       "wrappers/**/*.js"
     ],
-    "coverageReporters": [
-      "lcov"
-    ],
-    "testPathDirs": [
-      "<rootDir>/components"
-    ],
+    "coverageReporters": ["lcov"],
+    "testPathDirs": ["<rootDir>/components"],
     "testRegex": "/__tests__/.*-test\\.js$"
   },
   "prettier": {
@@ -66,10 +64,7 @@
     "useTabs": false,
     "overrides": [
       {
-        "files": [
-          "*.js",
-          ".*.js"
-        ],
+        "files": ["*.js", ".*.js"],
         "options": {
           "trailingComma": "es5"
         }
@@ -77,24 +72,12 @@
     ]
   },
   "lint-staged": {
-    "{*.js,*/**/*.js}": [
-      "yarn run eslint.fix",
-      "yarn run format",
-      "git add"
-    ],
-    "{*.json,*/**/*.json": [
-      "yarn run format",
-      "git add"
-    ],
-    "styles/**/*.scss": [
-      "yarn run stylelint.fix",
-      "git add"
-    ]
+    "{*.js,*/**/*.js}": ["yarn run eslint.fix", "yarn run format", "git add"],
+    "{*.json,*/**/*.json": ["yarn run format", "git add"],
+    "styles/**/*.scss": ["yarn run stylelint.fix", "git add"]
   },
   "commitlint": {
-    "extends": [
-      "@anvilabs/commitlint-config"
-    ]
+    "extends": ["@anvilabs/commitlint-config"]
   },
   "dependencies": {
     "axios": "^0.15.3",
