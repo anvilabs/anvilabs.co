@@ -12,6 +12,14 @@ const works: $ReadOnlyArray<WorkType> = [
         title: 'Пройти на seansy.kz',
         href: 'http://seansy.kz',
       },
+      {
+        title: 'Скачать с App Store',
+        href: 'https://itunes.apple.com/app/id980255991',
+      },
+      {
+        title: 'Посмотреть исходный код',
+        href: 'https://github.com/yenbekbay/seansy',
+      },
     ],
     imageUrl: '/work/seansy.png',
   },
