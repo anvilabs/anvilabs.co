@@ -23,13 +23,12 @@ const NotFoundPage = (): React$Element<any> => (
     <PageHeader
       title="404 – Страница не найдена."
       subtitle={
-        (
-          <span>
-            Страница, которую вы искали, не существует.
-            <br /><br />
-            <Link to="/">Перейти на главную.</Link>
-          </span>
-        )
+        <span>
+          Страница, которую вы искали, не существует.
+          <br />
+          <br />
+          <Link to="/">Перейти на главную.</Link>
+        </span>
       }
     />
     <Separator />

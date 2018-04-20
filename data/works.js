@@ -1,11 +1,12 @@
 /* @flow */
 
-import type {Work} from '../types';
+import {type WorkType} from '../types';
 
-const works: Array<Work> = [
+const works: $ReadOnlyArray<WorkType> = [
   {
     title: 'Сеансы',
-    subtitle: 'Лучшее в своем роде iOS приложение для просмотра афиши в кинотеатрах Казахстана.',
+    subtitle:
+      'Лучшее в своем роде iOS приложение для просмотра афиши в кинотеатрах Казахстана.',
     links: [
       {
         title: 'Пройти на seansy.kz',
@@ -31,7 +32,8 @@ const works: Array<Work> = [
   },
   {
     title: 'WeVote',
-    subtitle: 'Независимая социальная сеть для политических выборов. Наше первое приложение написанное на React Native.',
+    subtitle:
+      'Независимая социальная сеть для политических выборов. Наше первое приложение написанное на React Native.',
     links: [
       {
         title: 'Скачать с App Store',
@@ -39,14 +41,16 @@ const works: Array<Work> = [
       },
       {
         title: 'Скачать с Google Play',
-        href: 'https://play.google.com/store/apps/details?id=org.wevotenow.wevotenow',
+        href:
+          'https://play.google.com/store/apps/details?id=org.wevotenow.wevotenow',
       },
     ],
     imageUrl: '/work/wevote.png',
   },
   {
     title: 'Sozdik Bot',
-    subtitle: 'Бот на Telegram и Facebook Messenger, умеющий переводить слова и фразы с русского на казахский и обратно.',
+    subtitle:
+      'Бот на Telegram и Facebook Messenger, умеющий переводить слова и фразы с русского на казахский и обратно.',
     links: [
       {
         title: 'Написать в Telegram',
@@ -65,7 +69,8 @@ const works: Array<Work> = [
   },
   {
     title: 'Metio',
-    subtitle: 'iOS приложение, показывающее местную погоду на простом языке со всей нужной информацией для принятия решения.',
+    subtitle:
+      'iOS приложение, показывающее местную погоду на простом языке со всей нужной информацией для принятия решения.',
     links: [
       {
         title: 'Скачать с App Store',
@@ -80,7 +85,8 @@ const works: Array<Work> = [
   },
   {
     title: 'Never Drink Alone',
-    subtitle: 'iOS приложение, которое предлагает одно деловое знакомство в день с самыми интересными людьми вашего города (Проект закрыт).',
+    subtitle:
+      'iOS приложение, которое предлагает одно деловое знакомство в день с самыми интересными людьми вашего города (Проект закрыт).',
     links: [
       {
         title: 'Посмотреть исходный код',
@@ -91,7 +97,8 @@ const works: Array<Work> = [
   },
   {
     title: 'Kogershin',
-    subtitle: 'iOS приложение, позволяющее вам следить за вашими посылками через сервис Казпочты (Проект закрыт).',
+    subtitle:
+      'iOS приложение, позволяющее вам следить за вашими посылками через сервис Казпочты (Проект закрыт).',
     links: [
       {
         title: 'Посмотреть исходный код',
@@ -102,7 +109,8 @@ const works: Array<Work> = [
   },
   {
     title: 'Galileo',
-    subtitle: 'iOS приложение для чтения избранных статей из Википедии (Проект закрыт).',
+    subtitle:
+      'iOS приложение для чтения избранных статей из Википедии (Проект закрыт).',
     links: [
       {
         title: 'Посмотреть исходный код',
@@ -113,7 +121,8 @@ const works: Array<Work> = [
   },
   {
     title: 'Instamaniac ',
-    subtitle: 'iOS приложение для просмотра нестандартной статистики вашего аккаунта в Инстаграме (Проект закрыт).',
+    subtitle:
+      'iOS приложение для просмотра нестандартной статистики вашего аккаунта в Инстаграме (Проект закрыт).',
     links: [
       {
         title: 'Посмотреть исходный код',

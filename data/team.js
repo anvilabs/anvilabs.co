@@ -1,8 +1,8 @@
 /* @flow */
 
-import type {TeamMember} from '../types';
+import {type TeamMemberType} from '../types';
 
-const team: Array<TeamMember> = [
+const team: $ReadOnlyArray<TeamMemberType> = [
   {
     name: 'Аян Енбекбай',
     role: 'Основатель // дизайнер, full-stack мобильный и веб разработчик',

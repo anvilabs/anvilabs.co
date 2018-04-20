@@ -9,7 +9,7 @@ import moment from 'moment';
 import open from 'open';
 import slug from 'slug';
 
-const questions = [
+const QUESTIONS = [
   {
     type: 'input',
     name: 'title',
@@ -41,7 +41,7 @@ const questions = [
       slug: string,
       description: string,
       author: string,
-    } = await prompt(questions);
+    } = await prompt(QUESTIONS);
 
     const dir = `./pages/blog/${answers.slug}`;
     mkdirpSync(dir);

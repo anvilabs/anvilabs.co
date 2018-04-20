@@ -1,7 +1,6 @@
 /* @flow */
 
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import {config} from 'config';
+import {config} from 'config'; // eslint-disable-line import/no-unresolved, import/extensions
 import React from 'react';
 
 const {contactEmail} = config;
@@ -11,9 +10,7 @@ const ErrorMessage = (): React$Element<any> => (
     <p className="fw4 f4">Произошла ошибка при отправке сообщения.</p>
     <p>
       {'Извиняемся за неудобства. Пожалуйста, напишите нам на '}
-      <a href={`mailto:${contactEmail}`}>
-        {contactEmail}
-      </a>.
+      <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
     </p>
   </div>
 );

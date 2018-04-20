@@ -6,38 +6,39 @@ import React from 'react';
 
 import {isDarkMode} from '../utils';
 
-const NavigationLink = (
-  {
-    to,
-    title,
-    className,
-  }: {
-    to: string,
-    title: string,
-    className?: string,
-  },
-) => to.startsWith('#')
-  ? <a
+const NavigationLink = ({
+  to,
+  title,
+  className,
+}: {
+  to: string,
+  title: string,
+  className?: string,
+}) =>
+  to.startsWith('#') ? (
+    <a
       href={to}
       className={cx(
         'strikethrough',
         isDarkMode ? 'white' : 'dark-gray',
-        className,
+        className
       )}
     >
       <span>{title}</span>
     </a>
-  : <Link
+  ) : (
+    <Link
       to={to}
       className={cx(
         'strikethrough',
         isDarkMode ? 'white' : 'dark-gray',
-        className,
+        className
       )}
       activeClassName="active"
       onlyActiveOnIndex
     >
       <span>{title}</span>
-    </Link>;
+    </Link>
+  );
 
 export default NavigationLink;

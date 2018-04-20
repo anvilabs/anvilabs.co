@@ -4,12 +4,12 @@ import cx from 'classnames';
 import React from 'react';
 
 import {isDarkMode} from '../utils';
+import {type TeamMemberType} from '../types';
 import ResponsiveImage, {srcSetFromImageUrl} from './ResponsiveImage';
-import type {TeamMember} from '../types';
 
-const TeamList = ({team}: {team: Array<TeamMember>}) => (
+const TeamList = ({team}: {team: $ReadOnlyArray<TeamMemberType>}) => (
   <section className="flex w-100 flex-wrap">
-    {team.map(({name, role, photoUrl, links}: TeamMember) => (
+    {team.map(({name, role, photoUrl, links}: TeamMemberType) => (
       <article key={name} className="w-100 w-50-m w-25-l">
         <div className="aspect-ratio aspect-ratio--1x1">
           <ResponsiveImage
@@ -21,17 +21,9 @@ const TeamList = ({team}: {team: Array<TeamMember>}) => (
         <div className="pv3 pl0 pr3">
           <h3 className="fw3 f4 mt0 mb2">{name}</h3>
           <h4 className="fw3 mt0 mb2">{role}</h4>
-          {links &&
+          {links && (
             <ul className="list pa0">
-              {links.map((
-                {
-                  title,
-                  href,
-                }: {
-                  title: string,
-                  href: string,
-                },
-              ) => (
+              {links.map(({title, href}: {title: string, href: string}) => (
                 <li key={href} className="db">
                   <a
                     href={href}
@@ -41,7 +33,8 @@ const TeamList = ({team}: {team: Array<TeamMember>}) => (
                   </a>
                 </li>
               ))}
-            </ul>}
+            </ul>
+          )}
         </div>
       </article>
     ))}

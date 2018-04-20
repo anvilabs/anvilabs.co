@@ -1,7 +1,6 @@
 /* @flow */
 
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import {config} from 'config';
+import {config} from 'config'; // eslint-disable-line import/no-unresolved, import/extensions
 import Headroom from 'react-headroom';
 import React from 'react';
 import ReactDisqusThread from 'react-disqus-thread';
@@ -15,20 +14,18 @@ import {
   Separator,
   TopNavigation,
 } from '../components';
-import type {BlogPost} from '../types';
+import {type BlogPostType} from '../types';
 
 const {hostname} = config;
 
-const MarkdownWrapper = (
-  {
-    route,
-  }: {
-    route: {
-      path: string,
-      page: {data: BlogPost} & {path: string},
-    },
+const MarkdownWrapper = ({
+  route,
+}: {
+  route: {
+    path: string,
+    page: {data: BlogPostType} & {path: string},
   },
-): React$Element<any> => {
+}): React$Element<any> => {
   const {data: post, path} = route.page;
 
   return (
@@ -40,7 +37,9 @@ const MarkdownWrapper = (
         ogImageSrc={`${hostname}${path}post-screenshot.jpg`}
         twitterImageSrc={`${hostname}${path}post-screenshot.jpg`}
       />
-      <Headroom><TopNavigation /></Headroom>
+      <Headroom>
+        <TopNavigation />
+      </Headroom>
       <ContentContainer className="mw7-l center">
         <PostArticle post={post} full />
         <ReactDisqusThread

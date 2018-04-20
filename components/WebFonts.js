@@ -2,9 +2,11 @@
 
 import React from 'react';
 
-const WebFonts = (
-  {config}: {config: {[key: string]: Object}},
-): ?React$Element<any> => {
+const WebFonts = ({
+  config,
+}: {
+  config: {[key: string]: Object},
+}): ?React$Element<any> => {
   const snippet = `
 (function() {
   if (WebFont) WebFont.load(${JSON.stringify(config)});

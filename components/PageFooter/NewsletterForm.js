@@ -1,7 +1,6 @@
 /* @flow */
 
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import {config} from 'config';
+import {config} from 'config'; // eslint-disable-line import/no-unresolved, import/extensions
 import cx from 'classnames';
 import React from 'react';
 
@@ -28,7 +27,7 @@ const NewsletterForm = ({className}: {className?: string}) => (
           placeholder="username@gmail.com"
           className={cx(
             'bg-transparent input-reset bn pv2 outline-0 w-100',
-            isDarkMode ? 'white' : 'dark-gray',
+            isDarkMode ? 'white' : 'dark-gray'
           )}
           style={{flexGrow: 1}}
         />
@@ -46,7 +45,7 @@ const NewsletterForm = ({className}: {className?: string}) => (
           name="subscribe"
           className={cx(
             'dim input-reset outline-0 bn tr pv2 pointer w3 bg-transparent',
-            isDarkMode ? 'white' : 'dark-gray',
+            isDarkMode ? 'white' : 'dark-gray'
           )}
         />
       </div>

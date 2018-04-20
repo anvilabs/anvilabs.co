@@ -8,8 +8,8 @@ import TopNavigation from './TopNavigation';
 
 const getViewportHeight = (): number =>
   window.innerHeight ||
-    (document.documentElement: any).clientHeight ||
-    (document.body: any).clientHeight;
+  (document.documentElement: any).clientHeight ||
+  (document.body: any).clientHeight;
 const getDocumentHeight = (): number => {
   const {body, documentElement} = (document: any);
 
@@ -19,7 +19,7 @@ const getDocumentHeight = (): number => {
     body.offsetHeight,
     documentElement.offsetHeight,
     body.clientHeight,
-    documentElement.clientHeight,
+    documentElement.clientHeight
   );
 };
 const getScrollY = (): number => {
@@ -29,31 +29,31 @@ const getScrollY = (): number => {
     return window.scrollTop;
   }
 
-  return (document.documentElement ||
+  return (
+    document.documentElement ||
     (document.body: any).parentNode ||
-    document.body).scrollTop;
+    document.body
+  ).scrollTop;
 };
 
-type State = {
+type StateType = {
   pinned: boolean,
 };
 
-export default class StickyNavigation extends Component {
-  state: State;
+class StickyNavigation extends Component {
+  state: StateType;
 
-  /* eslint-disable react/sort-comp */
   lastKnownScrollY = 0;
   ticking = false;
   state = {
     pinned: false,
   };
-  /* eslint-enable react/sort-comp */
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   }
 
-  shouldComponentUpdate(nextProps: any, nextState: State) {
+  shouldComponentUpdate(nextProps: any, nextState: StateType) {
     return nextState.pinned !== this.state.pinned;
   }
 
@@ -84,7 +84,10 @@ export default class StickyNavigation extends Component {
       if (currentScrollY <= sideNavBottom || distanceScrolled > 0) {
         // we're at the top or past the header and scrolling down
         this.setState({pinned: false});
-      } else if (distanceScrolled < -5) {
+      } else if (
+        // eslint-disable-next-line no-magic-numbers
+        distanceScrolled < -5
+      ) {
         // we're scrolling up
         this.setState({pinned: true});
       }
@@ -107,3 +110,5 @@ export default class StickyNavigation extends Component {
     );
   }
 }
+
+export default StickyNavigation;

@@ -1,7 +1,6 @@
 /* @flow */
 
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import {config} from 'config';
+import {config} from 'config'; // eslint-disable-line import/no-unresolved, import/extensions
 import Helmet from 'react-helmet';
 import React from 'react';
 
@@ -42,9 +41,10 @@ const Html = ({body}: {body: string}): React$Element<any> => {
         />
         <link
           rel="manifest"
-          href={require(
-            '!file?name=[name]-[hash].[ext]!./static/manifest.json',
-          )}
+          href={
+            // eslint-disable-next-line import/no-webpack-loader-syntax
+            require('!file?name=[name]-[hash].[ext]!./static/manifest.json') // eslint-disable-line import/no-unresolved
+          }
         />
         <link
           rel="mask-icon"
@@ -53,6 +53,7 @@ const Html = ({body}: {body: string}): React$Element<any> => {
         />
         <link
           rel="shortcut icon"
+          // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
           href={require('!file?name=[name]-[hash].[ext]!./static/favicon.ico')}
         />
         <link
@@ -61,16 +62,18 @@ const Html = ({body}: {body: string}): React$Element<any> => {
           type="application/rss+xml"
           title="Блог компании Anvilabs"
         />
-        {process.env.NODE_ENV !== 'development' &&
-          <link data-inline rel="stylesheet" href="/styles.css" />}
+        {process.env.NODE_ENV !== 'development' && (
+          <link data-inline rel="stylesheet" href="/styles.css" />
+        )}
 
         <meta name="apple-mobile-web-app-title" content="Anvilabs" />
         <meta name="application-name" content="Anvilabs" />
         <meta
           name="msapplication-config"
-          content={require(
-            '!file?name=[name]-[hash].[ext]!./static/browserconfig.xml',
-          )}
+          content={
+            // eslint-disable-next-line import/no-webpack-loader-syntax
+            require('!file?name=[name]-[hash].[ext]!./static/browserconfig.xml') // eslint-disable-line import/no-unresolved
+          }
         />
         <meta name="theme-color" content="#ffffff" />
 
@@ -89,9 +92,7 @@ const Html = ({body}: {body: string}): React$Element<any> => {
           dangerouslySetInnerHTML={{__html: body}}
         />
         <Analytics writeKey={analyticsKey} />
-        <script
-          src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"
-        />
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js" />
         <WebFonts
           config={
             process.env.NODE_ENV === 'development'

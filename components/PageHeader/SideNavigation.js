@@ -1,7 +1,6 @@
 /* @flow */
 
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import {config} from 'config';
+import {config} from 'config'; // eslint-disable-line import/no-unresolved, import/extensions
 import {Link} from 'react-router';
 import cx from 'classnames';
 import React from 'react';

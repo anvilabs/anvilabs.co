@@ -11,12 +11,12 @@ const trackPageView = () => {
 
   window.analytics.page('Website', {
     Page: _.flow(_.find(['name', 'mixpanelTitle']), _.result('content'))(
-      helmet.metaTags,
+      helmet.metaTags
     ),
   });
 };
 
-type Props = {
+type PropsType = {
   location: {
     pathname: string,
     state: ?Object,
@@ -26,7 +26,7 @@ type Props = {
 };
 
 class Template extends Component {
-  props: Props;
+  props: PropsType;
 
   static childContextTypes = {
     location: PropTypes.object,
@@ -42,7 +42,7 @@ class Template extends Component {
     trackPageView();
   }
 
-  componentDidUpdate(prevProps: Props) {
+  componentDidUpdate(prevProps: PropsType) {
     const {pathname, state} = this.props.location;
     const previousPath = prevProps.children.props.location.pathname;
     const forceTrack = state && state.forceTrack;

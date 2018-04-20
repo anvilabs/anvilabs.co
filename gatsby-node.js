@@ -3,9 +3,8 @@
 import postBuild from './post-build';
 
 const modifyWebpackConfig = (config: Object, stage: string) => {
-  const imageLoader = stage !== 'develop'
-    ? 'file?name=[name]-[hash].[ext]'
-    : 'file';
+  const imageLoader =
+    stage !== 'develop' ? 'file?name=[name]-[hash].[ext]' : 'file';
 
   config.removeLoader('images');
   config.loader('images', {

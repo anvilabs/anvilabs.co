@@ -1,7 +1,6 @@
 /* @flow */
 
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import {config} from 'config';
+import {config} from 'config'; // eslint-disable-line import/no-unresolved, import/extensions
 import {Link} from 'react-router';
 import cx from 'classnames';
 import React, {Component} from 'react';
@@ -12,24 +11,24 @@ import ResponsiveImage from './ResponsiveImage';
 
 const {menuLinks} = config;
 
-type Props = {
+type PropsType = {
   mobileMenuVisible: boolean,
   className?: string,
   style?: string,
 };
-type State = {
+type StateType = {
   mobileMenuVisible: boolean,
 };
 
-export default class TopNavigation extends Component {
-  props: Props;
-  state: State;
+class TopNavigation extends Component {
+  props: PropsType;
+  state: StateType;
 
   static defaultProps = {
     mobileMenuVisible: false,
   };
 
-  constructor(props: Props) {
+  constructor(props: PropsType) {
     super(props);
 
     this.state = {
@@ -37,7 +36,7 @@ export default class TopNavigation extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps: Props) {
+  componentWillReceiveProps(nextProps: PropsType) {
     if (nextProps.mobileMenuVisible !== this.state.mobileMenuVisible) {
       this.setState({
         mobileMenuVisible: nextProps.mobileMenuVisible,
@@ -54,14 +53,14 @@ export default class TopNavigation extends Component {
         <div
           className={cx(
             'z-1 relative pa3 ph5-ns flex items-center justify-between',
-            isDarkMode ? 'bg-dark-gray' : 'bg-white',
+            isDarkMode ? 'bg-dark-gray' : 'bg-white'
           )}
         >
-          {/* eslint-disable jsx-a11y/no-static-element-interactions */}
+          {/* eslint-disable jsx-a11y/anchor-is-valid, jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
           <a
             className={cx(
               'f4 dib db dn-ns pointer',
-              isDarkMode ? 'white' : 'dark-gray',
+              isDarkMode ? 'white' : 'dark-gray'
             )}
             onClick={() => {
               this.setState({
@@ -71,7 +70,7 @@ export default class TopNavigation extends Component {
           >
             {mobileMenuVisible ? 'Закрыть' : 'Меню'}
           </a>
-          {/* eslint-enable jsx-a11y/no-static-element-interactions */}
+          {/* eslint-enable jsx-a11y/anchor-is-valid, jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
           <Link to="/">
             <ResponsiveImage
               srcSet={
@@ -93,26 +92,25 @@ export default class TopNavigation extends Component {
             />
           </Link>
           <div className="dn db-ns">
-            {menuLinks.map((
-              {to, title}: {to: string, title: string},
-              idx: number,
-            ) => (
-              <NavigationLink
-                key={to}
-                to={to}
-                title={title}
-                className={cx(
-                  'f5 f4-l dib',
-                  idx < menuLinks.length - 1 && 'mr3 mr4-ns',
-                )}
-              />
-            ))}
+            {menuLinks.map(
+              ({to, title}: {to: string, title: string}, idx: number) => (
+                <NavigationLink
+                  key={to}
+                  to={to}
+                  title={title}
+                  className={cx(
+                    'f5 f4-l dib',
+                    idx < menuLinks.length - 1 && 'mr3 mr4-ns'
+                  )}
+                />
+              )
+            )}
           </div>
         </div>
         <div
           className={cx(
             'relative pa3 db dn-ns w-100',
-            isDarkMode ? 'bg-dark-gray' : 'bg-white',
+            isDarkMode ? 'bg-dark-gray' : 'bg-white'
           )}
           style={{
             maxHeight: mobileMenuVisible ? '100%' : 0,
@@ -135,3 +133,5 @@ export default class TopNavigation extends Component {
     );
   }
 }
+
+export default TopNavigation;

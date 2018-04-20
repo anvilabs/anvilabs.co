@@ -9,28 +9,34 @@
   "author": {
     "name": "Ayan Yenbekbay",
     "email": "ayan.yenb@gmail.com",
-    "url": "http://yenbekbay.me"
+    "url": "https://yenbekbay.me"
   },
   "engines": {
     "node": ">=6.0.0"
   },
   "scripts": {
-    "deploy": "npm run build && netlify deploy",
-    "prepush": "npm test",
-    "commitmsg": "validate-commit-msg",
-    "serve": "gatsby serve-build",
-    "build": "rimraf public && gatsby build && gulp",
-    "start": "gatsby develop",
-    "new:post": "babel-node scripts/new-post",
-    "test": "npm-run-all --parallel typecheck lint:* jest",
-    "test:ci": "npm-run-all --parallel typecheck lint:* jest:coverage && codecov",
+    "format": "prettier --write",
+    "type-check": "flow check .",
+    "eslint": "eslint --ext .js,.ts --cache",
+    "eslint.all": "yarn run eslint .",
+    "eslint.fix": "yarn run eslint --fix",
+    "eslint.fix.all": "yarn run eslint.fix .",
+    "stylelint": "stylelint",
+    "stylelint.all": "yarn run stylelint styles/**/*.scss",
+    "stylelint.fix": "stylefmt R",
+    "stylelint.fix.all": "yarn run stylelint.fix styles/",
     "jest": "jest",
-    "jest:coverage": "jest --coverage",
-    "lint:js": "eslint .",
-    "lint:js:fix": "eslint --fix .",
-    "lint:css": "stylelint styles/**/*.scss",
-    "lint:css:fix": "stylefmt R styles/",
-    "typecheck": "flow check ."
+    "jest.coverage": "jest --coverage",
+    "test": "run-p --silent --print-label type-check eslint.all stylelint.all jest",
+    "test.ci": "run-p --silent --print-label type-check eslint.all stylelint.all jest:coverage && codecov",
+    "start": "NODE_ENV=develpment gatsby develop",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e",
+    "prepush": "yarn test",
+    "build": "rimraf public && NODE_ENV=production gatsby build && gulp",
+    "serve": "gatsby serve-build",
+    "deploy": "npm run build && netlify deploy",
+    "new:post": "babel-node scripts/new-post"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -49,22 +55,46 @@
     ],
     "testRegex": "/__tests__/.*-test\\.js$"
   },
-  "config": {
-    "validate-commit-msg": {
-      "types": [
-        "ci",
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "perf",
-        "test",
-        "chore",
-        "revert",
-        "blog"
-      ]
-    }
+  "prettier": {
+    "bracketSpacing": false,
+    "jsxBracketSameLine": false,
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false,
+    "overrides": [
+      {
+        "files": [
+          "*.js",
+          ".*.js"
+        ],
+        "options": {
+          "trailingComma": "es5"
+        }
+      }
+    ]
+  },
+  "lint-staged": {
+    "{*.js,*/**/*.js}": [
+      "yarn run eslint.fix",
+      "yarn run format",
+      "git add"
+    ],
+    "{*.json,*/**/*.json": [
+      "yarn run format",
+      "git add"
+    ],
+    "styles/**/*.scss": [
+      "yarn run stylelint.fix",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@anvilabs/commitlint-config"
+    ]
   },
   "dependencies": {
     "axios": "^0.15.3",
@@ -105,18 +135,23 @@
     "yup": "^0.21.3"
   },
   "devDependencies": {
+    "@anvilabs/commitlint-config": "^1.0.0",
+    "@anvilabs/eslint-config": "^17.5.2",
+    "@anvilabs/eslint-config-react": "^17.3.0",
+    "@commitlint/cli": "^6.1.3",
     "babel-cli": "^6.22.2",
     "babel-jest": "^18.0.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-loader": "6.3.2",
     "babel-plugin-flow-react-proptypes": "^0.21.0",
     "babel-plugin-lodash": "^3.2.11",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
     "chokidar": "^1.6.1",
     "codecov": "^1.0.1",
-    "eslint": "^3.15.0",
-    "eslint-config-anvilabs": "^5.2.0",
+    "eslint": "^4.19.1",
     "flow-bin": "^0.39.0",
     "gatsby": "^0.12.34",
     "glob": "^7.1.1",
@@ -132,15 +167,15 @@
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^5.2.0",
     "jest": "^18.1.0",
+    "lint-staged": "^7.0.4",
     "netlify-cli": "^1.1.0",
     "npm-run-all": "^4.0.1",
     "pageres": "^4.3.0",
-    "prettier": "^0.16.0",
+    "prettier": "^1.12.1",
     "react-test-renderer": "^15.4.2",
     "rimraf": "^2.5.4",
-    "stylefmt": "^5.1.2",
-    "stylelint": "^7.8.0",
-    "stylelint-config-primer": "^1.4.0",
-    "validate-commit-msg": "^2.11.1"
+    "stylefmt": "^6.0.0",
+    "stylelint": "7.13.0",
+    "stylelint-config-primer": "^2.2.5"
   }
 }

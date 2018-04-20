@@ -1,25 +1,26 @@
 /* @flow */
 
-type MenuLink = {
+type MenuLinkType = {
   to: string,
   title: string,
 };
-type FooterLink = {
+type FooterLinkType = {
   href: string,
   title: string,
 };
 
-type Config = {
+type ConfigType = {
   siteTitle: string,
   siteDescription: string,
   analyticsKey: string,
   contactEmail: string,
   hostname: string,
   mailchimpActionUrl: string,
-  menuLinks: Array<MenuLink>,
-  footerLinks: Array<FooterLink>,
+  menuLinks: $ReadOnlyArray<MenuLinkType>,
+  footerLinks: $ReadOnlyArray<FooterLinkType>,
 };
-const emptyConfig: Config = {
+
+const emptyConfig: ConfigType = {
   siteTitle: '',
   siteDescription: '',
   analyticsKey: '',
@@ -30,4 +31,6 @@ const emptyConfig: Config = {
   footerLinks: [],
 };
 
-export const config = emptyConfig;
+const config = emptyConfig;
+
+export {config};

@@ -6,15 +6,13 @@ import SideNavigation from './SideNavigation';
 import HeaderTitle from './HeaderTitle';
 import HeaderSubtitle from './HeaderSubtitle';
 
-const PageHeader = (
-  {
-    title,
-    subtitle,
-  }: {
-    title?: string | React$Element<any> | Array<React$Element<any>>,
-    subtitle?: string | React$Element<any> | Array<React$Element<any>>,
-  },
-) => (
+const PageHeader = ({
+  title,
+  subtitle,
+}: {
+  title?: string | React$Element<any> | $ReadOnlyArray<React$Element<any>>,
+  subtitle?: string | React$Element<any> | $ReadOnlyArray<React$Element<any>>,
+}) => (
   <header
     className="pa3 pa5-ns flex flex-column flex-row-l justify-between"
     style={{
@@ -33,10 +31,13 @@ const PageHeader = (
 PageHeader.defaultProps = {
   title: (
     <span>
-      Кузница<br /><span className="emphasize">мобильных</span><br />решений.
+      Кузница<br />
+      <span className="emphasize">мобильных</span>
+      <br />решений.
     </span>
   ),
-  subtitle: 'Проектируем и разрабатываем инновационные мобильные и веб приложения.',
+  subtitle:
+    'Проектируем и разрабатываем инновационные мобильные и веб приложения.',
 };
 
 export default PageHeader;

@@ -1,22 +1,35 @@
 {
-  "editor.renderWhitespace": "boundary",
+  "editor.formatOnSave": false,
+  "editor.insertSpaces": true,
   "editor.rulers": [80],
   "editor.tabSize": 2,
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
 
   "eslint.autoFixOnSave": true,
-
-  "files.autoSave": "off",
 
   "files.associations": {
     ".flowconfig": "ini",
     ".stylelintrc": "json",
     "*.js.flow": "javascript",
-    "yarn.lock": "yaml"
+  },
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/.git/": true,
+    "**/.DS_Store": true,
+    "api/.webpack/": true,
+    "*/build/": true,
+    ".eslintcache": true
   },
 
   "flow.useNPMPackagedFlow": true,
 
-  "javascript.validate.enable": false,
-
-  "scss.validate": false
+  "javascript.validate.enable": false
 }

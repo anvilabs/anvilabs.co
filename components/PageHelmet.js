@@ -1,7 +1,6 @@
 /* @flow */
 
-// eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import {config} from 'config';
+import {config} from 'config'; // eslint-disable-line import/no-unresolved, import/extensions
 import Helmet from 'react-helmet';
 import React, {PropTypes} from 'react';
 
@@ -25,9 +24,9 @@ const PageHelmet = (
     location,
   }: {
     location: {pathname: string},
-  },
+  }
 ): React$Element<any> => {
-  const meta: Array<{
+  const meta: $ReadOnlyArray<{
     name?: string,
     property?: string,
     content: ?string,
@@ -76,12 +75,8 @@ const PageHelmet = (
 PageHelmet.defaultProps = {
   title: siteTitle,
   description: siteDescription,
-  ogImageSrc: (
-    `${hostname}${((require('../static/og-image.jpg'): any): string)}`
-  ),
-  twitterImageSrc: (
-    `${hostname}${((require('../static/twitter-image.jpg'): any): string)}`
-  ),
+  ogImageSrc: `${hostname}${((require('../static/og-image.jpg'): any): string)}`,
+  twitterImageSrc: `${hostname}${((require('../static/twitter-image.jpg'): any): string)}`,
 };
 PageHelmet.contextTypes = {
   location: PropTypes.object.isRequired,

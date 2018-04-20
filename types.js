@@ -1,24 +1,24 @@
 /* @flow */
 
-export type Work = {
+export type WorkType = {
   title: string,
   subtitle: string,
-  links?: Array<{
+  links?: $ReadOnlyArray<{
     title: string,
     href: string,
   }>,
   imageUrl: string,
 };
-export type TeamMember = {
+export type TeamMemberType = {
   name: string,
   role: string,
   photoUrl: string,
-  links?: Array<{
+  links?: $ReadOnlyArray<{
     title: string,
     href: string,
   }>,
 };
-export type BlogPost = {
+export type BlogPostType = {
   title: string,
   body: string,
   description: string,

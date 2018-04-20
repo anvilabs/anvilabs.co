@@ -18,10 +18,12 @@ const PageFooter = () => (
     <div className="flex flex-wrap">
       <p className="w-100 w-50-ns ma0">© 2018 ТОО «Anvilabs»</p>
       <p className="w-100 w-50-ns tr-ns ma0">
-        Привет из Алматы, 🇰🇿 (
-        <a href="https://github.com/anvilabs/anvilabs.co">
-          Исходники сайта
-        </a>
+        Привет из Алматы,{' '}
+        <span role="img" aria-label="Kazakhstan flag">
+          🇰🇿
+        </span>{' '}
+        (
+        <a href="https://github.com/anvilabs/anvilabs.co">Исходники сайта</a>
         )
       </p>
     </div>

@@ -1,6 +1,7 @@
 /* @flow */
 
-type CSSModule = {[key: string]: string};
-const emptyCSSModule: CSSModule = {};
+type CssModuleType = {[key: string]: string};
+
+const emptyCSSModule: CssModuleType = {};
 
 export default emptyCSSModule;

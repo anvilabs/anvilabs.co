@@ -13,17 +13,15 @@ import {
   TopNavigation,
 } from '../../components';
 import {blogPostsFromPages} from '../../utils';
-import type {BlogPost} from '../../types';
+import {type BlogPostType} from '../../types';
 
-const BlogPage = (
-  {
-    route,
-  }: {
-    route: {pages: Array<Object>},
-  },
-): React$Element<any> => {
+const BlogPage = ({
+  route,
+}: {
+  route: {pages: $ReadOnlyArray<Object>},
+}): React$Element<any> => {
   const blogPosts = blogPostsFromPages(route.pages).filter(
-    ({draft}: {draft?: boolean}) => !draft,
+    ({draft}: {draft?: boolean}) => !draft
   );
 
   return (
@@ -33,9 +31,11 @@ const BlogPage = (
         description="Блог компании Anvilabs"
         mixpanelTitle="Blog"
       />
-      <Headroom><TopNavigation /></Headroom>
+      <Headroom>
+        <TopNavigation />
+      </Headroom>
       <ContentContainer className="mw7-l center">
-        {blogPosts.map((post: BlogPost, idx: number) => (
+        {blogPosts.map((post: BlogPostType, idx: number) => (
           <div key={post.date}>
             <PostArticle post={post} full={false} />
             {idx < blogPosts.length - 1 && <Separator className="pv5" />}

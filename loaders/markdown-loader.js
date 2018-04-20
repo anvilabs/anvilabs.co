@@ -54,17 +54,17 @@ const md = markdownIt({
   .use(require('markdown-it-footnote'));
 
 /* eslint-disable babel/no-invalid-this */
-export default function(content: string) {
+function markdownLoader(content: string) {
   this.cacheable();
 
   const meta = frontMatter(content);
   const body = md.render(meta.body);
-  const {
-    time: timeToReadText,
-    words: numberOfWords,
-  } = readingTime(striptags(body), {
-    wordsPerMinute: 300,
-  });
+  const {time: timeToReadText, words: numberOfWords} = readingTime(
+    striptags(body),
+    {
+      wordsPerMinute: 300,
+    }
+  );
   const {description, date} = meta.attributes;
   const excerpt = description && md.render(description);
 
@@ -72,30 +72,30 @@ export default function(content: string) {
   const timeToReadImages = _.range(0, imagesCount).reduce(
     (acc: number, currIdx: number) =>
       _.cond([
+        /* eslint-disable no-magic-numbers */
         [_.eq(0), () => acc + 12],
         [_.lt(_, 10), () => acc + (12 - currIdx)],
         [_.stubTrue, () => acc + 3],
+        /* eslint-enable no-magic-numbers */
       ])(currIdx),
-    0,
+    0
   );
 
   const result = {
     ...meta.attributes,
     body,
-    description: (
-      excerpt && striptags(excerpt) ||
-        excerptHtml(body, {
-          stripTags: true,
-          pruneLength: 250,
-        })
-    ),
-    excerpt: (
+    description:
+      (excerpt && striptags(excerpt)) ||
+      excerptHtml(body, {
+        stripTags: true,
+        pruneLength: 250,
+      }),
+    excerpt:
       excerpt ||
-        excerptHtml(body, {
-          stripTags: false,
-          pruneLength: 300,
-        }).replace(/<sup.+<\/sup>/, '')
-    ),
+      excerptHtml(body, {
+        stripTags: false,
+        pruneLength: 300,
+      }).replace(/<sup.+<\/sup>/, ''),
     formattedDate: moment(date).format('D MMMM YYYY г.'),
     readingTime: moment(timeToReadText + timeToReadImages)
       .from(0, true)
@@ -108,3 +108,5 @@ export default function(content: string) {
   return `module.exports = ${JSON.stringify(result)}`;
 }
 /* eslint-enable babel/no-invalid-this */
+
+export default markdownLoader;

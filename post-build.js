@@ -13,10 +13,10 @@ import RSS from 'rss';
 import sm from 'sitemap';
 
 import {blogPostsFromPages} from './utils';
-import type {BlogPost} from './types';
+import {type BlogPostType} from './types';
 
 const config = parseToml(
-  String(fs.readFileSync(path.join(__dirname, '/config.toml'))),
+  String(fs.readFileSync(path.join(__dirname, '/config.toml')))
 );
 const {siteTitle, siteDescription, hostname} = config;
 
@@ -35,7 +35,7 @@ const generateSitemapUrl = (page: mixed): ?Object => {
     _.includes(pagePath, nonIndexedPages),
     _.some(
       (nonIndexedPage: string) => _.startsWith(nonIndexedPage, pagePath),
-      nonIndexedPages,
+      nonIndexedPages
     ),
   ]);
   const isImportantPage = _.includes(pagePath, importantPages);
@@ -45,12 +45,14 @@ const generateSitemapUrl = (page: mixed): ?Object => {
   return {
     url: pagePath,
     changefreq: isImportantPage ? 'daily' : 'monthly',
-    priority: isRootPath ? 1 : 0.85,
+    priority: isRootPath ? 1 : 0.85, // eslint-disable-line no-magic-numbers
   };
 };
 
-const generateSitemap = (pages: Array<mixed>) => {
-  const sitemapUrls = _.flow(_.map(generateSitemapUrl), _.compact)(pages);
+const generateSitemap = (pages: $ReadOnlyArray<mixed>) => {
+  const sitemapUrls = _.flow(_.map(x => generateSitemapUrl(x)), _.compact)(
+    pages
+  );
 
   const sitemap = sm.createSitemap({
     hostname,
@@ -60,11 +62,11 @@ const generateSitemap = (pages: Array<mixed>) => {
 
   fs.writeFileSync(
     path.join(__dirname, '/public/sitemap.xml'),
-    sitemap.toString(),
+    sitemap.toString()
   );
 };
 
-const generateFeed = (pages: Array<mixed>) => {
+const generateFeed = (pages: $ReadOnlyArray<mixed>) => {
   const feed = new RSS({
     title: siteTitle,
     description: siteDescription,
@@ -80,14 +82,13 @@ const generateFeed = (pages: Array<mixed>) => {
     typographer: true,
   });
 
-  // eslint-disable-next-line lodash-fp/no-unused-result
   _.flow(
     blogPostsFromPages,
     _.filter(({draft}: {draft?: boolean}) => !draft),
-    _.map((post: BlogPost & {path: string, requirePath: string}) => {
+    _.map((post: BlogPostType & {path: string, requirePath: string}) => {
       // read the markdown file
       const content = String(
-        fs.readFileSync(path.join(__dirname, `/pages/${post.requirePath}`)),
+        fs.readFileSync(path.join(__dirname, `/pages/${post.requirePath}`))
       );
       // extract yaml meta tags
       const meta = frontMatter(content);
@@ -99,39 +100,43 @@ const generateFeed = (pages: Array<mixed>) => {
         decodeEntities: false,
       });
       $('img').each((idx: number, elem: Object) => {
-        const src = _.last($(elem).attr('src').split('./'));
+        const src = _.last(
+          $(elem)
+            .attr('src')
+            .split('./')
+        );
         $(elem).attr('src', `${hostname}${post.path}${src}`);
       });
 
       return {...post, body: $.html()};
     }),
-    _.forEach((post: BlogPost & {path: string}) => {
+    _.forEach((post: BlogPostType & {path: string}) => {
       feed.item({
         ..._.pick(['title', 'author', 'date'], post),
         description: post.body,
         url: `${hostname}${post.path}`,
       });
-    }),
+    })
   )(pages);
 
   fs.writeFileSync(
     path.join(__dirname, './public/feed.xml'),
-    feed.xml({indent: true}),
+    feed.xml({indent: true})
   );
 };
 
 const generateRobots = () => {
-  const fileContent = 'User-agent: *\n' +
-    'Allow: /\n\n' +
-    `Sitemap: ${hostname}/sitemap.xml`;
+  const fileContent = `User-agent: *\nAllow: /\n\nSitemap: ${hostname}/sitemap.xml`;
 
   fs.writeFileSync(path.join(__dirname, '/public/robots.txt'), fileContent);
 };
 
-export default (pages: Array<mixed>, callback: () => void) => {
+const postBuild = (pages: $ReadOnlyArray<mixed>, callback: () => void) => {
   generateSitemap(pages);
   generateFeed(pages);
   generateRobots();
 
   callback();
 };
+
+export default postBuild;

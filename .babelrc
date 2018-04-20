@@ -1,18 +1,9 @@
 {
-  "presets": [
-    "react",
-    "es2015",
-    "stage-0"
-  ],
+  "presets": ["env", "react", "flow"],
   "plugins": [
-    "transform-flow-strip-types",
-    "transform-decorators-legacy",
     "add-module-exports",
-    "lodash"
-  ],
-  "env": {
-    "development": {
-      "plugins": ["flow-react-proptypes"]
-    }
-  }
+    "lodash",
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ]
 }
