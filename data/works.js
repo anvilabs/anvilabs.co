@@ -9,7 +9,7 @@ const works: $ReadOnlyArray<WorkType> = [
       'Лучшее в своем роде iOS приложение для просмотра афиши в кинотеатрах Казахстана.',
     links: [
       {
-        title: 'Пройти на seansy.kz',
+        title: 'Перейти на seansy.kz',
         href: 'http://seansy.kz',
       },
       {
